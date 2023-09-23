@@ -61,7 +61,7 @@ export default function Navbar() {
     ];
     const catMenu = category.map(target =>
         <li key={target.id}>
-            <Link className="navitem w-full text-right sm:text-left p-6 sm:pl-11 inline-block " href={target.address} onClick={showNav}>
+            <Link className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 inline-block " href={target.address} onClick={showNav}>
                 {target.title}
             </Link>
         </li>);
@@ -73,7 +73,7 @@ export default function Navbar() {
                     background-color: ${nav ? "var(--overlay)" : "var(--bg)"}
                 }`}
             </style>
-            <h1 className="navText" style={{opacity: scrollY>200 ? 1 : 0}}>Rafli</h1>
+            <p className="navText" style={{opacity: scrollY>200 ? 1 : 0}}>Rafli</p>
 
             <nav id="navmenu">
                 <ul className={"sidebar h-full fixed z-10 top-0 right-0 overflow-x-hidden pt-28 " + (nav ? "w-full sm:w-1/3" : "w-0")} >

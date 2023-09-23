@@ -66,7 +66,7 @@ export default function Footer(){
                 height={50}
                 alt="Picture of Rafli Malik"
             />
-            <h1 className="">Rafli Malik</h1>
+            <h5 className="">Rafli Malik</h5>
         </div>
         <div className="social  w-1/2 flex flex-col items-end gap-4 float-left">
             {socialList}
