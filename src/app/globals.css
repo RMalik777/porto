@@ -18,6 +18,14 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -27,7 +35,7 @@ body {
 .navText{
   font-size: clamp(1.5rem, 1.0238rem + 1.1905vw, 4rem);
   font-weight: 700;
-  color: var(--textlight);
+  color: var(--text);
   opacity: 0;
   mix-blend-mode: difference;
   transition-duration: 0.3s;
@@ -59,12 +67,51 @@ body {
 }
 
 
+.title, .subtitle{
+  font-size: clamp(3rem, 1.9286rem + 2.6786vw, 4.5rem);
+  color: var(--text);
+}
+.title{
+  font-weight: 700;
+}
+.subtitle{
+  font-weight: 400;
+}
+.contactbtn{
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  border: 5px solid var(--accent);
+  font-size: clamp(0.75rem, 0.2143rem + 1.3393vw, 1.5rem);
+  transition: 250ms;
+}
+.contactbtn:hover{
+  background-color: var(--accent);
+  box-shadow: 6px 6px black;
+  color: white;
+  transition: 250ms;
+}
 
+.content{
+  transition: 10s;
+}
+.contentTitle{
+  font-size: clamp(3rem, 2.2857rem + 1.7857vw, 4rem);
+  font-weight: 700;
+  color: var(--text);
+}
+.contentText{
+  font-size: clamp(1rem, 0.7143rem + 0.7143vw, 2.5rem);
+  font-weight: 500;
+  max-inline-size: 66ch;
+  color: var(--text);
+  letter-spacing: 0.01rem;
+}
 
 
 footer h1{
   font-size: clamp(0.75rem, 0.2143rem + 1.3393vw, 1.5rem);
-  font-weight: 500;
+  font-weight: 700;
 }
 footer img{
   height: auto;
@@ -83,7 +130,7 @@ footer img{
   transition: 350ms;
 }
 .social p:hover{
-  color: var(--accentlight);
+  color: var(--accent);
   text-decoration: underline;
   font-weight: 600;
 }

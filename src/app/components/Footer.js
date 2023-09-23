@@ -3,9 +3,62 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer(){
+    const social=[
+        {
+            id : 0,
+            name: "Instagram",
+            showas: "play.playy" ,
+            logo: "/Instagram.png",
+            link: "https://www.instagram.com/play.playy/",
+            alt: "Instagram Logo",
+        },{
+            id : 1,
+            name: "WhatsApp",
+            showas: "+628170817483" ,
+            logo: "/whatsapp.png",
+            link: "https://wa.me/628170817483",
+            alt: "WhatsApp Logo",
+        },{
+            id : 2,
+            name: "LinkedIn",
+            showas: "Rafli Malik" ,
+            logo: "/linkedin.png",
+            link: "https://www.linkedin.com/in/rafli-malik/",
+            alt: "LinkedIn Logo",
+        },{
+            id : 3,
+            name: "Discord",
+            showas: "play7" ,
+            logo: "/discord.png",
+            link: "https://discord.com/users/432877551640117249",
+            alt: "Discord Logo",
+        },{
+            id : 4,
+            name: "Email",
+            showas: "Rafli.Malik@gmail.com" ,
+            logo: "/gmail.png",
+            link: "mailto:Rafli.Malik@gmail.com",
+            alt:" Gmail Logo",
+        },
+    ]
+    const socialList = social.map(target =>
+        <div key={target.id} className="instagram">
+            <Link className="block" href={target.link} target="_blank" rel="noopener noreferrer">
+                <p>{target.showas}</p>
+                <Image
+                    className=""
+                    src={target.logo}
+                    width={50}
+                    height={50}
+                    alt={target.alt}
+                />
+            </Link>
+        </div>
+    )
+
     return(
-        <footer id="endcredit" className="w-auto flex flex-row justify-between items-center py-4">
-        <div className="profile w-1/2">
+        <footer id="endcredit" className="w-auto flex flex-row justify-between items-center py-4 mt-16">
+        <div className="profile w-1/2 flex items-center">
             <Image
                 className="float-left mr-2"
                 src="/Placeholder.png"
@@ -16,66 +69,7 @@ export default function Footer(){
             <h1 className="">Rafli Malik</h1>
         </div>
         <div className="social  w-1/2 flex flex-col items-end gap-4 float-left">
-            <div className="instagram">
-                <Link className="block" href="https://www.instagram.com/play.playy/" target="_blank" rel="noopener noreferrer">
-                    <p>play.playy</p>
-                    <Image
-                        className=""
-                        src="/instagram.png"
-                        width={50}
-                        height={50}
-                        alt="Instagram Logo"
-                    />
-                </Link>
-            </div>
-            <div className="whatsapp">
-                <Link className="block" href="https://wa.me/628170817483" target="_blank" rel="noopener noreferrer">
-                    <p>+628170817483</p>
-                    <Image
-                        className=""
-                        src="/whatsapp.png"
-                        width={50}
-                        height={50}
-                        alt="WhatsApp Logo"
-                    />
-                </Link>
-            </div>
-            <div className="linkedin">
-                <Link className="block" href="https://www.linkedin.com/in/rafli-malik/" target="_blank" rel="noopener noreferrer">
-                    <p>Rafli Malik</p>
-                    <Image
-                        className=""
-                        src="/linkedin.png"
-                        width={50}
-                        height={50}
-                        alt="LinkedIn Logo"
-                    />
-                </Link>
-            </div>
-            <div className="discord">
-                <Link className="block" href="https://discord.com/users/432877551640117249" target="_blank" rel="noopener noreferrer">
-                    <p>play7</p>
-                    <Image
-                        className=""
-                        src="/discord.png"
-                        width={50}
-                        height={50}
-                        alt="Discord Logo"
-                    />
-                </Link>
-            </div>
-            <div className="email">
-                <Link className="block" href="mailto:Rafli.Malik@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <p>Rafli.Malik@gmail.com</p>
-                    <Image
-                        className=""
-                        src="/gmail.png"
-                        width={50}
-                        height={50}
-                        alt="GMail Logo"
-                    />
-                </Link>
-            </div>
+            {socialList}
         </div>
     </footer>
     )
