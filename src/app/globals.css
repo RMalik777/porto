@@ -3,25 +3,87 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --overlay: #f6eced;
+  --bg: #FFF5F6;
+  --text: #000000;
+  --accent: #aa4465
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --overlay: #f6eced;
+    --bg: #FFF5F6;
+    --text: #000000;
+    --accent: #aa4465
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--bg);
+  color: var(--text);
+  transition: 300ms;
+}
+
+.navText{
+  font-size: clamp(1.5rem, 1.0238rem + 1.1905vw, 4rem);
+  font-weight: 700;
+  color: var(--textlight);
+  opacity: 0;
+  mix-blend-mode: difference;
+  transition-duration: 0.3s;
+}.navText:hover{
+  color: var(--accent);
+}
+
+.sidebar {
+  background-color: var(--bg);
+  transition: 300ms;
+}
+.sidebar a {
+  font-size: clamp(1.75rem, 0.6786rem + 2.6786vw, 3.25rem);
+  font-weight: 400;
+  color: black;
+  transition: 250ms;
+}
+.sidebar a:hover {
+  font-size: clamp(1.75rem, 0.6786rem + 2.6786vw, 3.25rem);
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 0.1rem;
+}
+.closebtn, .navBtn{
+  transition: 250ms;
+}
+.closebtn:hover, .navBtn:hover{
+  filter: invert(34%) sepia(81%) saturate(556%) hue-rotate(291deg) brightness(84%) contrast(83%);
+}
+
+
+
+
+
+footer h1{
+  font-size: clamp(0.75rem, 0.2143rem + 1.3393vw, 1.5rem);
+  font-weight: 500;
+}
+footer img{
+  height: auto;
+  width: auto;
+}
+.social img, .social p{
+  font-size: clamp(0.75rem, 0.4821rem + 0.6696vw, 1.125rem);
+  font-weight: 500;
+  float: left;
+  height: 2rem;
+  width: auto;
+  margin-inline: 0.5rem;
+  transition: 200ms;
+}
+.social img:hover{
+  transition: 350ms;
+}
+.social p:hover{
+  color: var(--accentlight);
+  text-decoration: underline;
+  font-weight: 600;
 }
