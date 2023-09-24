@@ -29,7 +29,7 @@ export default function Skills() {
       <div id="intro" className=" h-screen flex flex-col items-center justify-center">
         <h1 className="title text-center">Skills</h1>
         <h2 className="subtitle text-center">UI/UX // Web // Android // IOS <br /> Video Editing // Programming</h2>
-        <button className="contactbtn rounded-full px-8 py-3"><a href="#projectarea">See My Work</a></button>
+        <button className="defaultbtn rounded-full px-8 py-3"><a href="#projectarea">See My Work</a></button>
       </div>
 
       <div id="content" className="h-auto md:h-screen flex flex-col md:flex-row justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">

@@ -3,10 +3,15 @@ import Link from "next/link"
 export default function notFound(){
   return(
     <main>
-      <div className=" h-screen flex flex-col items-center justify-center">
-        <h1 className="title text-center">404</h1>
-        <h2 className="subtitle text-center">It&apos;s look like you are lost</h2>
-        <button className="contactbtn rounded-full px-8 py-3"><Link href="/">Back to Home</Link></button>
+      <div className=" h-screen flex flex-col items-center justify-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <h1 className="title text-center">404</h1>
+          <div className="verticalLine w-1/2 md:w-0 md:h-full border-solid border-l-0 border-b-4 md:border-l-4 md:border-b-0 border-black">
+
+          </div>
+          <h2 className="subtitle text-center">It&apos;s look like you are lost</h2>
+        </div>
+        <button className="defaultbtn rounded-full px-8 py-3"><Link href="/">Back to Home</Link></button>
       </div>
         
         <div id="content" className="h-auto md:h-screen flex flex-col md:flex-row justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">

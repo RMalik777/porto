@@ -34,42 +34,37 @@ body {
 
 h1 {
   font-size: 3.815rem;
-  font-size: clamp(3.815rem, 0.0007142857142858894rem + 9.535714285714285vw, 9.155rem);
+  font-size: clamp(3.815rem, 3.2699999999999996rem + 1.3625000000000005vw, 4.578rem);
+  
 }
-
 h2 {
   font-size: 3.052rem;
-  font-size: clamp(3.052rem, 0.00007142857142872217rem + 7.629821428571429vw, 7.3247rem);
+  font-size: clamp(3.052rem, 2.616rem + 1.0899999999999996vw, 3.6624rem);
 }
-
 h3 {
   font-size: 2.441rem;
-  font-size: clamp(2.441rem, 0.0005714285714288891rem + 6.101071428571428vw, 5.8576rem);
+  font-size: clamp(2.441rem, 2.092285714285714rem + 0.8717857142857142vw, 2.9292rem);
 }
 
 h4 {
   font-size: 1.953rem;
-  font-size: clamp(1.953rem, 0.00014285714285722229rem + 4.882142857142857vw, 4.687rem);
+  font-size: clamp(1.953rem, 1.6740000000000002rem + 0.6974999999999997vw, 2.3436rem);
 }
-
 h5{
   font-size: 1.563rem;
-  font-size: clamp(1.563rem, 0rem + 3.9074999999999998vw, 3.7512rem);
+  font-size: clamp(1.563rem, 1.3397142857142856rem + 0.5582142857142857vw, 1.8756rem);
 }
-
 h6 {
   font-size: 1.25rem;
-  font-size: clamp(1.25rem, 0rem + 3.125vw, 3rem);
+  font-size: clamp(1.25rem, 1.0714285714285714rem + 0.4464285714285714vw, 1.5rem);
 }
-
 p {
   font-size: 1rem;
-  font-size: clamp(1rem, 1.1102230246251565e-16rem + 2.5vw, 2.4rem);
-  ;
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
 }
 small{
   font-size: 0.8rem;
-  font-size: clamp(0.8rem, 0.0071428571428572285rem + 1.982142857142857vw, 1.91rem);
+  font-size: clamp(0.8rem, 0.6857142857142858rem + 0.28571428571428553vw, 0.96rem);
 }
 
 .navText {
@@ -90,14 +85,14 @@ small{
 }
 
 .sidebar a {
-  font-size: clamp(1.777rem, 0.0005714285714286671rem + 4.441071428571428vw, 4.264rem);
+  font-size: 1.953rem;
+  font-size: clamp(1.953rem, 1.6740000000000002rem + 0.6974999999999997vw, 2.3436rem);
   font-weight: 400;
   color: black;
   transition: 250ms;
 }
 
 .sidebar a:hover {
-  font-size: clamp(1.777rem, 0.0005714285714286671rem + 4.441071428571428vw, 4.264rem);
   font-weight: 900;
   color: var(--accent);
   letter-spacing: 0.1rem;
@@ -127,16 +122,17 @@ small{
   font-weight: 400;
 }
 
-.contactbtn {
+.defaultbtn {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
   background-color: transparent;
   color: black;
   font-weight: 600;
   border: 5px solid var(--accent);
-  font-size: clamp(0.75rem, 0.2143rem + 1.3393vw, 1.5rem);
   transition: 250ms;
 }
 
-.contactbtn:hover {
+.defaultbtn:hover {
   background-color: var(--accent);
   box-shadow: 6px 6px black;
   color: white;
@@ -159,10 +155,11 @@ small{
   max-inline-size: 66ch;
   color: var(--text);
   letter-spacing: 0.01rem;
+  line-height: 1.7;
 }
 
 
-footer h1 {
+footer h6 {
   font-weight: 700;
 }
 
@@ -171,14 +168,8 @@ footer img {
   width: auto;
 }
 
-.social img,
-.social p {
-  font-size: clamp(0.75rem, 0.4821rem + 0.6696vw, 1.125rem);
+.social p, .social img{
   font-weight: 500;
-  float: left;
-  height: 2rem;
-  width: auto;
-  margin-inline: 0.5rem;
   transition: 200ms;
 }
 

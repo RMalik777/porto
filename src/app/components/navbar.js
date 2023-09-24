@@ -73,10 +73,10 @@ export default function Navbar() {
                     background-color: ${nav ? "var(--overlay)" : "var(--bg)"}
                 }`}
             </style>
-            <p className="navText" style={{opacity: scrollY>200 ? 1 : 0}}>Rafli</p>
+            <h6 className="navText" style={{opacity: scrollY>200 ? 1 : 0}}>Rafli</h6>
 
             <nav id="navmenu">
-                <ul className={"sidebar h-full fixed z-10 top-0 right-0 overflow-x-hidden pt-28 " + (nav ? "w-full sm:w-1/3" : "w-0")} >
+                <ul className={"sidebar h-full fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 " + (nav ? "w-full sm:w-1/3" : "w-0")} >
                     <Image
                         className="cursor-pointer closebtn w-auto p-4 absolute top-0 right-0 px-3 pd:px-6 lg:px-12 xl:px-14"
                         onClick={showNav}
