@@ -3,17 +3,41 @@ import Image from "next/image";
 import styles from "./aboutStyle.module.css"
 import { about } from "./aboutdata"
 
+const education = [
+  {
+    id: 1,
+    name: "BINUS University",
+    desc: "Computer Science",
+    gpa: "3.46",
+  },
+  {
+    id: 2,
+    name: "SMAN 3 Tangerang",
+    desc: "Science Major",
+    gpa: "",
+  },
+]
+
 export default function About() {
+  const eduList = education.map(target =>
+    <div key={target.id} className={(styles.school) + " w-full mb-6"}>
+        <h3 className="w-full">{target.name}</h3>
+        <h5 className="w-full">{target.desc}</h5>
+        <h5>{target.gpa}</h5>
+      </div>
+  ) 
+
+
   const expList = about.map(target =>
     <div key={target.id} className="expcard flex flex-col gap-4">
       <Image
         src={target.thumbnail}
         alt="Project Thumbnail"
-        width={50}
-        height={50}
+        width={1000}
+        height={1000}
         className="w-auto h-auto" />
       <div className="expinfo">
-        <h3 className="">{target.title}</h3>
+        <h5 className="">{target.title}</h5>
         <p className="text-left">{target.desc} </p>
       </div>
     </div>
@@ -32,31 +56,17 @@ export default function About() {
         <p className="contentText w-full md:w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolore nobis distinctio fugiat facere dolorum corporis reprehenderit porro corrupti expedita, sint labore quod quaerat perspiciatis ut, aliquam modi velit ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque corporis voluptatem dolore voluptates, tempore quaerat est enim. Pariatur, doloremque. Eum asperiores maxime hic id, facilis placeat nobis eveniet exercitationem dolores!</p>
       </div>
 
-      <div className="flex md:h-screen justify-center items-center">
-        <div id="education" className="h-auto w-full grid md:grid-rows-2 items-center justify-items-center py-4 mb-12 md:mb-6 gap-2 md:gap-4">
-          <h1 className="contentTitle w-full md:w-1/2 text-center col-span-2 row-span-2">Education</h1>
-          <Image
-            className="col-span-2 md:col-span-1 md:row-span-2 md:col-start-3 hidden md:block"
-            src="/Circle.svg"
-            width={125}
-            height={125}
-            alt="Decoration"
-          />
-          <div className={(styles.school) + " w-full md:col-start-4 md:self-start"}>
-            <h2 className="w-full">BINUS University</h2>
-            <h3 className="w-full">Computer Science</h3>
-            <h3>GPA 3.46</h3>
-          </div>
-          <div className={(styles.school) + " w-full md:col-start-4 md:row-start-2 md:self-end"}>
-            <h2>SMAN 3 Tangerang</h2>
-            <h3>Science Major</h3>
+      
+        <div id="education" className="h-auto md:h-screen w-auto= flex flex-col md:flex-row justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
+          <h1 className="contentTitle w-full md:w-1/2 text-center">Education</h1>
+          <div className="w-full md:w-1/2">
+            {eduList}
           </div>
         </div>
-      </div>
 
       <div className={(styles.experience)+ " h-auto mb-32"}>
-        <h2 className="header md:col-span-3 self-end sticky py-4">Experience</h2>
-        <div id="experience" className={(styles.experience) + " h-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 md:gap-y-32"}>
+        <h3 className="header md:col-span-3 self-end sticky py-4">Experience</h3>
+        <div id="experience" className={(styles.experience) + " h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 md:gap-y-32"}>
             {expList}
         </div>
       </div>

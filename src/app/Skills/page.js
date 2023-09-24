@@ -5,20 +5,20 @@ import { project } from "./projectdata"
 
 export default function Skills() {
   const projectList = project.map(target =>
-    <div key={target.id} className="projectcard flex gap-4">
+    <div key={target.id} className="projectcard flex flex-col sm:flex-row gap-4">
       <Image
         src={target.thumbnail}
         alt="Project Thumbnail"
-        width={50}
-        height={50}
-        className="w-auto h-28 inline-block" />
+        width={1000}
+        height={1000}
+        className="w-28 h-20 pt-2 object-cover inline-block" />
       <div className="projectinfo inline-block">
-        <h3 className="">{target.title}</h3>
+        <h5 className="">{target.title}</h5>
         <p className="text-left">{target.desc} </p>
         <div className="langicon flex gap-6">
-          <Image src={target.img1} alt="" width={0} height={0} className="w-auto h-6" />
-          <Image src={target.img2} alt="" width={0} height={0} className="w-auto h-6" />
-          <Image src={target.img3} alt="" width={0} height={0} className="w-auto h-6" />
+          <Image src={target.img1} alt="" width={250} height={250} className="w-auto h-6" />
+          <Image src={target.img2} alt="" width={250} height={250} className="w-auto h-6" />
+          <Image src={target.img3} alt="" width={250} height={250} className="w-auto h-6" />
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ export default function Skills() {
       </div>
 
       <div id="projectarea" className={(styles.project) + " h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12"}>
-        <h2 className="header md:col-span-2 self-center sticky py-4">Projects</h2>
+        <h3 className="header md:col-span-2 self-center sticky py-4">Projects</h3>
         {projectList}
       </div>
 

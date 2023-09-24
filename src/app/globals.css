@@ -61,6 +61,8 @@ h6 {
 p {
   font-size: 1rem;
   font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
+  letter-spacing: 0.01rem;
+  line-height: 1.7;
 }
 small{
   font-size: 0.8rem;
