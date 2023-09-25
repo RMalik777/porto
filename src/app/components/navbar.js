@@ -21,16 +21,11 @@ export default function Navbar() {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
-
         handleScroll();
-
         window.addEventListener("scroll", handleScroll);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     });
 
     const [nav, setNav] = React.useState(false);

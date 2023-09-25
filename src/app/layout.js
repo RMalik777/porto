@@ -7,8 +7,15 @@ import { DM_Sans } from 'next/font/google'
 const DMS = DM_Sans({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Rafli Malik',
+  title: {
+    template: '%s | Rafli Malik',
+    default: 'Rafli Malik',
+  },
   description: 'Personal Portoflio Website',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'var(--bg)' },
+    { media: '(prefers-color-scheme: dark)', color: 'var(--bg)' },
+  ],
 }
 
 export default function RootLayout({ children }) {

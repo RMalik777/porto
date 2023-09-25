@@ -1,5 +1,12 @@
 import Link from "next/link"
 
+export const metadata = {
+  title: {
+    absolute: "404 Not Found"
+  },
+  description: "Page not found."
+}
+
 export default function notFound(){
   return(
     <main>

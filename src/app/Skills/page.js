@@ -3,6 +3,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { project } from "./projectdata"
 
+export const metadata = {
+  title: "Skills",
+  description: "See all my recent and past work"
+}
+
 export default function Skills() {
   const projectList = project.map(target =>
     <div key={target.id} className="projectcard flex flex-col sm:flex-row gap-4">

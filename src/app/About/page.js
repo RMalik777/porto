@@ -18,6 +18,11 @@ const education = [
   },
 ]
 
+export const metadata = {
+  title: "About",
+  description: "Get to know me more"
+}
+
 export default function About() {
   const eduList = education.map(target =>
     <div key={target.id} className={(styles.school) + " w-full mb-6"}>

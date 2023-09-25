@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Contact",
+  description: "How to contact me"
+}
+
 export default function Contact(){
   return(
       <main>
