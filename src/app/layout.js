@@ -13,8 +13,8 @@ export const metadata = {
   },
   description: 'Personal Portoflio Website',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'var(--bg)' },
-    { media: '(prefers-color-scheme: dark)', color: 'var(--bg)' },
+    { media: '(prefers-color-scheme: light)', color: '#FFF5F6' },
+    { media: '(prefers-color-scheme: dark)', color: '#121212' },
   ],
 }
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={"mx-6 md:mx-8 lg:mx-12 xl:mx-14 " + (DMS.className)}>
+      <body className={"mx-6 md:mx-8 lg:mx-12 xl:mx-14 duration-300 ease-out " + (DMS.className)}>
         <Navbar/>
         {children}
         <Footer/>

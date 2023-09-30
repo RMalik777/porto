@@ -1,12 +1,5 @@
-.project h3 {
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.01rem;
-
-}
-
-.project h5 {
-  font-weight: 600;
-  letter-spacing: 0.01rem;
-
+.card:hover {
+  background-color: var(--accent);
+  box-shadow: 16px 16px var(--text);
+  color: var(--textinvert);
 }

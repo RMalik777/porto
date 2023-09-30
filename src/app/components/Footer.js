@@ -44,12 +44,12 @@ export default function Footer(){
     const socialList = social.map(target =>
         <div key={target.id} className="">
             <Link className="flex flex-row items-center gap-4" href={target.link} target="_blank" rel="noopener noreferrer">
-                <p className=""><small>{target.showas}</small></p>
+                <p className="font-medium duration-300 ease-out hover:underline hover:font-semibold"><small>{target.showas}</small></p>
                 <Image
-                    className="w-8"
+                    className="h-auto w-8 font-medium duration-300 ease-out"
                     src={target.logo}
-                    width={50}
-                    height={50}
+                    width={250}
+                    height={250}
                     alt={target.alt}
                 />
             </Link>
@@ -66,7 +66,7 @@ export default function Footer(){
                 height={50}
                 alt="Picture of Rafli Malik"
             />
-            <h6 className="">Rafli Malik</h6>
+            <h6 className="font-bold">Rafli Malik</h6>
         </div>
         <div className="social w-1/2 flex flex-col items-end gap-4">
             {socialList}
