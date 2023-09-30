@@ -122,6 +122,12 @@ header{
   color: var(--textinvert);
 }
 
+.card:hover {
+  background-color: var(--accent);
+  box-shadow: 10px 10px var(--text);
+  color: var(--textinvert);
+}
+
 .contentTitle {
   font-size: clamp(3rem, 2.2857rem + 1.7857vw, 4rem);
   color: var(--text);

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./aboutStyle.module.css"
 import { about } from "./aboutdata"
 
 const education = [
@@ -34,7 +33,7 @@ export default function About() {
 
 
   const expList = about.map(target =>
-    <div key={target.id} className={(styles.card) +" card flex flex-col gap-2 p-8 sm:p-6 md:p-12 rounded-xl duration-300 ease-out"}>
+    <div key={target.id} className={" card flex flex-col gap-2 p-8 sm:p-6 md:p-12 rounded-xl duration-300 ease-out"}>
       <Image
         src={target.thumbnail}
         alt="Project Thumbnail"

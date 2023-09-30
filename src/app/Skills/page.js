@@ -1,4 +1,3 @@
-import styles from "./skillsStyle.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import { project } from "./projectdata"
@@ -10,7 +9,7 @@ export const metadata = {
 
 export default function Skills() {
   const projectList = project.map(target =>
-    <div key={target.id} className={(styles.card) + " flex flex-col sm:flex-row gap-4 px-6 py-4 rounded-2xl duration-300 ease-out"}>
+    <div key={target.id} className={"card flex flex-col sm:flex-row gap-4 px-6 py-4 rounded-2xl duration-300 ease-out"}>
       <Image
         src={target.thumbnail}
         alt="Project Thumbnail"

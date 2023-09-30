@@ -1,5 +1,0 @@
-.card:hover {
-  background-color: var(--accent);
-  box-shadow: 16px 16px var(--text);
-  color: var(--textinvert);
-}
