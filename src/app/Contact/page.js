@@ -7,7 +7,7 @@ export const metadata = {
   description: "How to contact me"
 }
 
-export default function Contact(){
+export default function Contact() {
   const contactList = contactInfo.map(target =>
     <Link key={target.key} href={target.url}>
       <div className={"card flex flex-col sm:flex-row gap-4 px-6 py-4 rounded-2xl duration-300 ease-out"}>
@@ -20,8 +20,8 @@ export default function Contact(){
   )
 
 
-  return(
-      <main>
+  return (
+    <main>
       <div id="intro" className=" h-screen flex flex-col items-center justify-center">
         <h2 className="title font-bold text-center">Get In Touch With Me</h2>
         <h4 className="subtitle font-normal text-center max-w-prose italic">&quot;A lot of problems in the world would be solved if we talked to each other instead of about each other.&quot;<br /><span className="font-semibold not-italic">- Nicky Gumbel</span></h4>
@@ -34,9 +34,9 @@ export default function Contact(){
 
       <div id="projectarea" className={" h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12"}>
         <h3 className="header md:col-span-2 self-center py-4 font-bold">Contact Me</h3>
-          {contactList}
-          
-          
+        {contactList}
+
+
       </div>
     </main>
   )

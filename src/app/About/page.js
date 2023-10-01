@@ -24,12 +24,12 @@ export const metadata = {
 
 export default function About() {
   const eduList = education.map(target =>
-    <div key={target.id} className={ " w-full mb-6 font-bold"}>
-        <h3 className="w-full">{target.name}</h3>
-        <h5 className="w-full font-medium">{target.desc}</h5>
-        <h5 className="w-full font-medium">{target.gpa}</h5>
-      </div>
-  ) 
+    <div key={target.id} className={" w-full mb-6 font-bold"}>
+      <h3 className="w-full">{target.name}</h3>
+      <h5 className="w-full font-medium">{target.desc}</h5>
+      <h5 className="w-full font-medium">{target.gpa}</h5>
+    </div>
+  )
 
 
   const expList = about.map(target =>
@@ -60,18 +60,18 @@ export default function About() {
         <p className="contentText font-medium max-w-prose w-full md:w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolore nobis distinctio fugiat facere dolorum corporis reprehenderit porro corrupti expedita, sint labore quod quaerat perspiciatis ut, aliquam modi velit ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque corporis voluptatem dolore voluptates, tempore quaerat est enim. Pariatur, doloremque. Eum asperiores maxime hic id, facilis placeat nobis eveniet exercitationem dolores!</p>
       </div>
 
-      
-        <div id="education" className="h-auto md:h-screen w-auto= flex flex-col md:flex-row justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
-          <h1 className="contentTitle w-full md:w-1/2 text-center">Education</h1>
-          <div className="w-full md:w-1/2">
-            {eduList}
-          </div>
+
+      <div id="education" className="h-auto md:h-screen w-auto= flex flex-col md:flex-row justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
+        <h1 className="contentTitle w-full md:w-1/2 text-center">Education</h1>
+        <div className="w-full md:w-1/2">
+          {eduList}
         </div>
+      </div>
 
       <div className={" h-auto mb-32"}>
         <h3 className="header md:col-span-3 self-end py-4 font-bold">Experience</h3>
         <div id="experience" className={" h-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 md:gap-y-12"}>
-            {expList}
+          {expList}
         </div>
       </div>
 

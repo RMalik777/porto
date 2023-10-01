@@ -23,9 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={"mx-6 md:mx-8 lg:mx-12 xl:mx-14 duration-300 ease-out " + (DMS.className)}>
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )

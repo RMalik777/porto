@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -61,16 +61,16 @@ export default function Navbar() {
                 {target.title}
             </Link>
         </li>
-        )
+    )
 
     return (
-        <header className={"fixed top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 w-full h-auto flex flex-row justify-between duration-300 ease-out backdrop-blur-md " + (scrollY>200? " shadow-sm ": " bg-white/0 shadow-none ")}>
+        <header className={"fixed top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 w-full h-auto flex flex-row justify-between duration-300 ease-out backdrop-blur-md " + (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ")}>
             <style jsx global>{`
                 body {
                     background-color: ${nav ? "var(--overlay)" : "var(--bg)"}
                 }`}
             </style>
-            <h6 className="navText duration-300 ease-out opacity-0 font-bold" style={{opacity: scrollY>200 ? 1 : 0}}>Rafli</h6>
+            <h6 className="navText duration-300 ease-out opacity-0 font-bold" style={{ opacity: scrollY > 200 ? 1 : 0 }}>Rafli</h6>
 
             <nav id="navmenu">
                 <ul className={"sidebar h-screen fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " + (nav ? "w-full sm:w-1/3 shadow-md" : "w-0 shadow-none")} >

@@ -29,5 +29,10 @@ export const contactInfo = [
     desc: "r.malik",
     url: "https://line.me/ti/p/yb_6K7-AZi"
   },
-  
+  , {
+    id: 3,
+    name: "Discord",
+    desc: "play7",
+    url: "https://discord.com/users/432877551640117249",
+  },
 ]
