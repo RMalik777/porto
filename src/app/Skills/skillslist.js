@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { project, skills } from "./skillsdata";
 
-import githubblack from "/project/logo/githubmarkblack.png";
-import githubwhite from "/project/logo/githubmarkwhite.png";
-import figmacolor from "/project/logo/figmacolor.svg";
+import githubblack from "/public/project/logo/githubmarkblack.png";
+import githubwhite from "/public/project/logo/githubmarkwhite.png";
+import figmacolor from "/public/project/logo/figmacolor.svg";
 
 function imageLogo(source) {
   if (source === "Github") {
