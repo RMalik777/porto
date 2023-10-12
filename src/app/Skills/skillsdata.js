@@ -49,7 +49,7 @@ export const project = [
     title: "KpopZtation",
     desc: "Part of university final project. Created a website for a music album shopping. Build using <b>ASP.NET</b> and <b>SQL Server.</b>",
     thumbnail: "/project/thumbnail/kpopztation.jpeg",
-    url: "https://miniporto.raflimalik.com",
+    url: "",
     source: "Github",
     sourceurl: "https://github.com/RMalik777/PSD_Lab.git"
   },
