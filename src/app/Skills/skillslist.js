@@ -30,7 +30,7 @@ export const projectList = project.reverse().map((target) => (
     />
     <div className="projectinfo inline-block">
       <h5 className="font-semibold">{target.title}</h5>
-      <p className="text-left">{target.desc}</p>
+      <p className="text-left" dangerouslySetInnerHTML={{__html: target.desc}}></p>
       <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
         <Link href={target.url} target="_blank" rel="noopener noreferrer">
           <button

@@ -29,7 +29,7 @@ export const project = [
   {
     id: 3,
     title: "NOKA",
-    desc: "Part of university project. Created a website for a game launch event. Contain information about the launch date, future plan and esports. Build with HTML and CSS.",
+    desc: "Part of university project. Created a website for a game launch event. Contain information about the launch date, future plan and esports. Build with <b>HTML</b> and <b>CSS.</b>",
     thumbnail: "/project/Thumbnail/NOKA.jpeg",
     url: "https://noka.raflimalik.com",
     source: "Github",
@@ -38,7 +38,7 @@ export const project = [
   {
     id: 4,
     title: "Astronom",
-    desc: "Part of university project. Created a space themed website. Containing information and images from Hubble Space Telescope. Build with HTML and CSS.",
+    desc: "Part of university project. Created a space themed website. Containing information and images from Hubble Space Telescope. Build with <b>HTML</b> and <b>CSS.</b>",
     thumbnail: "/project/Thumbnail/astronom.jpeg",
     url: "https://astronom.raflimalik.com",
     source: "Github",
@@ -47,7 +47,7 @@ export const project = [
   {
     id: 5,
     title: "KpopZtation",
-    desc: "Part of university final project. Created a website for a music album shopping. Build using ASP.NET and SQL Server.",
+    desc: "Part of university final project. Created a website for a music album shopping. Build using <b>ASP.NET</b> and <b>SQL Server.</b>",
     thumbnail: "/project/Thumbnail/kpopztation.jpeg",
     url: "https://miniporto.raflimalik.com",
     source: "Github",
@@ -56,7 +56,7 @@ export const project = [
   {
     id: 6,
     title: "Mini Portfolio",
-    desc: "Part of Bina Nusantara Computer Club mid project. Created a website for a personal portfolio. Build using HTML, CSS, and JavaScript.",
+    desc: "Part of Bina Nusantara Computer Club mid project. Created a website for a personal portfolio. Build using <b>HTML, CSS</b>, and <b>JavaScript.</b>",
     thumbnail: "/project/Thumbnail/miniporto.jpeg",
     url: "https://miniporto.raflimalik.com",
     source: "Github",
@@ -65,7 +65,7 @@ export const project = [
   {
     id: 7,
     title: "Tech Event Website",
-    desc: "Part of Bina Nusantara Computer Club final project. Created a mockup website for a tech event called “Pudding Fest” by PT Musang. Created using HTML, Bootstrap, JavaScript with jQuery, and connected to Firebase database.",
+    desc: "Part of Bina Nusantara Computer Club final project. Created a mockup website for a tech event called “Pudding Fest” by PT Musang. Created using <b>HTML, CSS, Bootstrap, JavaScript with jQuery</b>, and connected to <b>Firebase database.</b>",
     thumbnail: "/project/Thumbnail/puddingfest.jpeg",
     url: "https://puddingfest.raflimalik.com",
     source: "Github",
