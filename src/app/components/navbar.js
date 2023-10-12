@@ -8,6 +8,7 @@ import Close from "/public/Close.svg"
 import Menu from "/public/Menu.svg"
 import dark from "/public/darkMode.svg"
 import light from "/public/lightMode.svg"
+import { waitUntilSymbol } from "next/dist/server/web/spec-extension/fetch-event";
 
 export async function getServerSideProps() {
     console.log("rendering now");
@@ -32,6 +33,13 @@ export default function Navbar() {
     const [nav, setNav] = React.useState(false);
     const showNav = () => {
         setNav(!nav);
+        setTimeout(() => {
+            if (nav == false) {
+                setNav(false);
+            }
+        }, 10000);
+
+
     }
     const category = [
         {
@@ -42,58 +50,70 @@ export default function Navbar() {
         {
             id: 1,
             title: "Skills",
-            address: "/Skills",
+            address: "#skills",
         },
         {
             id: 2,
-            title: "Contact",
-            address: "/Contact",
+            title: "About",
+            address: "#about",
         },
         {
             id: 3,
-            title: "About",
-            address: "/About",
+            title: "Contact",
+            address: "#contact",
         }
     ];
-    const catMenu = category.map(target =>
-        <li key={target.id}>
-            <Link className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 font-normal inline-block duration-200 ease-linear hover:tracking-wider hover:font-black" href={target.address} onClick={showNav}>
+    const catMenuVertical = category.map(target =>
+        <li key={target.id} className="list-none text-center">
+            <Link className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 font-normal inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black" href={target.address} onClick={showNav}>
+                {target.title}
+            </Link>
+        </li>
+    )
+    const catMenuHorizontal = category.map(target =>
+        <li key={target.id} className="list-none text-center w-1/6 hidden md:block">
+            <Link className="navitem font-normal duration-200 ease-linear hover:underline hover:font-black" href={target.address}>
                 {target.title}
             </Link>
         </li>
     )
 
     return (
-        <header className={"fixed top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 w-full h-auto flex flex-row justify-between duration-300 ease-out backdrop-blur-md " + (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ")}>
+        <header className={"scroll-smooth fixed h-auto w-full top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out backdrop-blur-md " + (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ")}>
             <style jsx global>{`
                 body {
                     background-color: ${nav ? "var(--overlay)" : "var(--bg)"}
                 }`}
             </style>
-            <h6 className="navText duration-300 ease-out opacity-0 font-bold" style={{ opacity: scrollY > 200 ? 1 : 0 }}>Rafli</h6>
+            <div className="w-full flex flex-row justify-between items-center">
+                <h6 className={"navText transition-all duration-500 ease-out opacity-0 font-bold"} style={scrollY > 200 ? { opacity: 1 } : { opacity: 0 }}>Rafli</h6>
 
-            <nav id="navmenu">
+                {catMenuHorizontal}
+
+                <div className="w-auto">
+                    <Image
+                        className="navBtn cursor-pointer inline-block md:hidden duration-300 ease-out z-50"
+                        onClick={showNav}
+                        src={Menu}
+                        alt="Menu Button"
+                        priority={true}
+                    />
+                </div>
+            </div>
+
+            <nav id="navmenu" className="block md:hidden">
                 <ul className={"sidebar h-screen fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " + (nav ? "w-full sm:w-1/3 shadow-md" : "w-0 shadow-none")} >
                     <Image
-                        className=" cursor-pointer closebtn w-auto p-4 absolute top-0 right-0 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out"
+                        className="closebtn w-auto p-4 absolute top-0 right-0 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out"
                         onClick={showNav}
                         src={Close}
                         alt="Close Button"
                         priority
                     />
-                    {catMenu}
+                    {catMenuVertical}
                 </ul>
-            </nav>
-            <div className="space-x-8">
 
-                <Image
-                    className="dark:invert navBtn cursor-pointer inline-block duration-300 ease-out z-50"
-                    onClick={showNav}
-                    src={Menu}
-                    alt="Menu Button"
-                    priority={true}
-                />
-            </div>
+            </nav>
         </header>
 
     );

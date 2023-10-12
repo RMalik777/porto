@@ -8,7 +8,7 @@ export default function Footer() {
             id: 0,
             name: "Instagram",
             showas: "play.playy",
-            logo: "/Instagram.png",
+            logo: "/instagram.svg",
             link: "https://www.instagram.com/play.playy/",
             alt: "Instagram Logo",
         }, {
@@ -24,7 +24,7 @@ export default function Footer() {
             showas: "Rafli.Malik@gmail.com",
             logo: "/gmail.png",
             link: "mailto:Rafli.Malik@gmail.com",
-            alt: " Gmail Logo",
+            alt: "Gmail Logo",
         },
     ]
     const socialList = social.map(target =>
@@ -34,8 +34,8 @@ export default function Footer() {
                 <Image
                     className="h-auto w-8 font-medium duration-300 ease-out"
                     src={target.logo}
-                    width={250}
-                    height={250}
+                    width={512}
+                    height={512}
                     alt={target.alt}
                 />
             </Link>
@@ -43,18 +43,18 @@ export default function Footer() {
     )
 
     return (
-        <footer id="endcredit" className="w-auto flex flex-row justify-between items-center py-4 mt-16">
-            <div className="profile w-1/2 flex items-center">
+        <footer id="endcredit" className="w-auto flex flex-col md:flex-row justify-between items-center py-4 mt-16">
+            <div className="profile w-auto flex items-center self-start">
                 <Image
-                    className="float-left mr-2"
-                    src="/Placeholder.png"
-                    width={50}
-                    height={50}
-                    alt="Picture of Rafli Malik"
+                    className="w-24 h-auto float-left mr-2 rounded-full"
+                    src="/photosquarezoom.jpg"
+                    width={1000}
+                    height={1000}
+                    alt="Picture of Rafli Malik, the owner of this website"
                 />
                 <h6 className="font-bold">Rafli Malik</h6>
             </div>
-            <div className="social w-1/2 flex flex-col items-end gap-4">
+            <div className="social w-auto flex flex-col items-end gap-4 self-end">
                 {socialList}
             </div>
         </footer>

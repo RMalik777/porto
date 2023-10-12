@@ -76,10 +76,6 @@ small{
   color: var(--text);
 }
 
-.navText:hover {
-  color: var(--accent);
-}
-
 .sidebar {
   background-color: var(--bg);
 }
@@ -93,7 +89,12 @@ header{
   color: var(--text);
 }
 
-.sidebar a:hover {
+.navitem{
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.0714285714285714rem + 0.4464285714285714vw, 1.5rem);
+}
+
+.navitem:hover, .sidebar a:hover {
   color: var(--accent);
 }
 
@@ -122,10 +123,41 @@ header{
   color: var(--textinvert);
 }
 
+.secondarybtn {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
+  color: var(--text);
+  font-weight: 600;
+  border:3px solid var(--accent);
+}
+
+.secondarybtn:hover {
+  background-color: var(--accent);
+  box-shadow: 6px 6px var(--text);
+  color: var(--textinvert);
+}
+
+.invertbtn{
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
+  color: var(--accent);
+  font-weight: 600;
+  border:4px solid var(--text);
+}
+.invertbtn:hover {
+  background-color: var(--text);
+  box-shadow: 10px 10px var(--accent);
+  color: var(--textinvert);
+}
+
 .card:hover {
   background-color: var(--accent);
   box-shadow: 10px 10px var(--text);
   color: var(--textinvert);
+}
+
+.skillslist{
+  background-color: var(--accent);
 }
 
 .contentTitle {

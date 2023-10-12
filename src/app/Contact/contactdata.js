@@ -31,7 +31,7 @@ export const contactInfo = [
   },
   , {
     id: 3,
-    name: "Discord",
+    title: "Discord",
     desc: "play7",
     url: "https://discord.com/users/432877551640117249",
   },
