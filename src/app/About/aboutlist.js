@@ -29,7 +29,7 @@ export const eduList = education.map((target) => (
   <div key={target.id} className={" w-full mb-6 font-bold"}>
     <h5 className="w-full">{target.name}</h5>
     <p className="w-full font-medium">{target.desc}</p>
-    <p className="w-full font-medium">GPA {target.gpa}</p>
+    <p className="w-full font-medium">{target.gpa}</p>
   </div>
 ));
 

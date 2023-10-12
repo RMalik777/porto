@@ -24,7 +24,7 @@ export const education = [
     id: 1,
     name: "BINUS University",
     desc: "Computer Science",
-    gpa: "3.46",
+    gpa: "GPA 3.46",
   },
   {
     id: 2,
