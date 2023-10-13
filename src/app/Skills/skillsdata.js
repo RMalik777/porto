@@ -65,7 +65,7 @@ export const project = [
   {
     id: 7,
     title: "Tech Event Website",
-    desc: "Part of Bina Nusantara Computer Club final project. Created a mockup website for a tech event called “Pudding Fest” by PT Musang. Created using <b>HTML, CSS, Bootstrap, JavaScript with jQuery</b>, and connected to <b>Firebase database.</b>",
+    desc: "Part of Bina Nusantara Computer Club final project. Created a mockup website for a tech event called “Pudding Fest” by PT Musang. Created using <b>HTML, CSS, Bootstrap, JavaScript with jQuery</b>, and connected to <b>Firebase</b> database.",
     thumbnail: "/project/thumbnail/puddingfest.jpeg",
     url: "https://puddingfest.raflimalik.com",
     source: "Github",
