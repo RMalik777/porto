@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -9,11 +9,6 @@ import Menu from "/public/Menu.svg"
 import dark from "/public/darkMode.svg"
 import light from "/public/lightMode.svg"
 import { waitUntilSymbol } from "next/dist/server/web/spec-extension/fetch-event";
-
-export async function getServerSideProps() {
-    console.log("rendering now");
-    return { props: {} };
-}
 
 export default function Navbar() {
 
@@ -45,7 +40,7 @@ export default function Navbar() {
         {
             id: 0,
             title: "Home",
-            address: "/",
+            address: "#intro",
         },
         {
             id: 1,

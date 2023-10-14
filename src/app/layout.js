@@ -1,20 +1,20 @@
 
-import './globals.css'
-import Navbar from './components/navbar'
-import Footer from './components/Footer'
-import { DM_Sans } from 'next/font/google'
+import "./globals.css"
+import Navbar from "./components/navbar"
+import Footer from "./components/Footer"
+import { DM_Sans } from "next/font/google"
 
-const DMS = DM_Sans({ subsets: ['latin'] })
+const DMS = DM_Sans({ subsets: ["latin"] })
 
 export const metadata = {
   title: {
-    template: '%s | Rafli Malik',
-    default: 'Rafli Malik',
+    template: "%s | Rafli Malik",
+    default: "Rafli Malik",
   },
-  description: 'Personal Portoflio Website',
+  description: "Personal Portoflio Website",
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFF5F6' },
-    { media: '(prefers-color-scheme: dark)', color: '#121212' },
+    { media: "(prefers-color-scheme: light)", color: "#FFF5F6" },
+    { media: "(prefers-color-scheme: dark)", color: "#121212" },
   ],
 }
 

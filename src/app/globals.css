@@ -8,6 +8,7 @@
   --text: #000000;
   --textinvert: #FFFFFF;
   --accent: #aa4465;
+  --accenttranslucent: rgba(170, 68, 101, 0.85);
   --navColor:rgba(255,245,246, 0.85);
 }
 
@@ -79,8 +80,13 @@ small{
 .sidebar {
   background-color: var(--bg);
 }
-header{
+header, .upbtn{
   background-color: var(--navColor);
+}
+
+.upbtn:hover{
+  background-color: white;
+  color: var(--textinvert);
 }
 
 .sidebar a {
