@@ -3,12 +3,13 @@ import Image from "next/image"
 import { contactList } from "./Contact/contactlist"
 import { eduList, expList, cvlist } from "./About/aboutlist"
 import { projectList, skillList } from "./Skills/skillslist"
+
 import up from "/public/up.svg"
 
 export default function Home() {
   return (
     <main>
-      <div className="upbtn fixed bottom-0 right-0 z-10 p-1 md:p-2 m-4 md:m-8 rounded-full border-solid border-2 border-white backdrop-blur-sm transition-all duration-200 ease-out shadow-md hover:shadow-lg">
+      <div className="upbtn fixed bottom-0 right-0 z-10 p-0 md:p-1 m-4 rounded-full border-solid border-2 border-white hover:backdrop-blur-sm transition-all duration-200 ease-out shadow-md hover:shadow-lg">
         <Link href={"#intro"}>
           <Image
             src={up}

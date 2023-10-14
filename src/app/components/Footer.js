@@ -6,6 +6,13 @@ export default function Footer() {
     const social = [
         {
             id: 0,
+            name: "Github",
+            showas: "RMalik777",
+            logo: "/project/logo/githubmarkblack.png",
+            link: "https://github.com/RMalik777",
+            alt: "GitHub Logo",
+        },{
+            id: 1,
             name: "Instagram",
             showas: "play.playy",
             logo: "/instagram.svg",
@@ -19,7 +26,7 @@ export default function Footer() {
             link: "https://www.linkedin.com/in/rafli-malik/",
             alt: "LinkedIn Logo",
         }, {
-            id: 4,
+            id: 3,
             name: "Email",
             showas: "Rafli.Malik@gmail.com",
             logo: "/gmail.png",
@@ -30,7 +37,7 @@ export default function Footer() {
     const socialList = social.map(target =>
         <div key={target.id} className="">
             <Link className="flex flex-row items-center gap-4" href={target.link} target="_blank" rel="noopener noreferrer">
-                <p className="font-medium duration-300 ease-out hover:underline hover:font-semibold"><small>{target.showas}</small></p>
+                <p className="font-medium duration-500 ease-out hover:underline hover:font-semibold"><small>{target.showas}</small></p>
                 <Image
                     className="h-auto w-8 font-medium duration-300 ease-out"
                     src={target.logo}
@@ -43,7 +50,7 @@ export default function Footer() {
     )
 
     return (
-        <footer id="endcredit" className="w-auto flex flex-col md:flex-row justify-between items-center py-4 mt-16">
+        <footer id="endcredit" className="w-auto flex flex-col md:flex-row justify-between items-center py-6 pb-12 mt-16">
             <div className="profile w-auto flex items-center self-start">
                 <Image
                     className="w-24 h-auto float-left mr-2 rounded-full"
