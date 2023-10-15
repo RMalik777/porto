@@ -1,4 +1,4 @@
-
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css"
 import Navbar from "./components/navbar"
 import Footer from "./components/Footer"
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={"mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " + (DMS.className)}>
         <Navbar />
         {children}
+        <Analytics/>
         <Footer />
       </body>
     </html>
