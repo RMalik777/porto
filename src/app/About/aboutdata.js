@@ -1,18 +1,21 @@
 export const about = [
   {
     id: 0,
+    htmlid: "FE2023",
     thumbnail: "/Experience/FE2023/1685975303351.jpg",
-    title: "2023 Jakara E-Prix",
+    title: "2023 Jakarta E-Prix",
     desc: "Volunteered for international racing series (Formula E) in Jakarta area. Providing information about food, beverage and payment for the spectator and tenant. Also helping the spectator navigate around the venue.",
   },
   {
     id: 1,
+    htmlid:"FE2022",
     thumbnail: "/Experience/FE2022/IMG-20220604-WA0050.jpg",
     title: "2022 Jakarta E-Prix",
     desc: "Volunteered for international racing series (Formula E) in Jakarta area. Managing the crowd and providing general information for the spectator.",
   },
   {
     id: 2,
+    htmlid:"FP2023",
     thumbnail: "/Experience/FP/1696381993698.jpg",
     title: "Freshmen Partner",
     desc: "Helped 20 new students adapt to university life by providing guidance and information about university. Mentoring and teaching about soft skills needed to have a great year in university.",
