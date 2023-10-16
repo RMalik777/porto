@@ -32,7 +32,7 @@ export default function Navbar() {
             if (nav == false) {
                 setNav(false);
             }
-        }, 10000);
+        }, 30000);
 
 
     }
@@ -40,22 +40,22 @@ export default function Navbar() {
         {
             id: 0,
             title: "Home",
-            address: "#intro",
+            address: "/#intro",
         },
         {
             id: 1,
             title: "Skills",
-            address: "#skills",
+            address: "/#skills",
         },
         {
             id: 2,
             title: "About",
-            address: "#about",
+            address: "/#about",
         },
         {
             id: 3,
             title: "Contact",
-            address: "#contact",
+            address: "/#contact",
         }
     ];
     const catMenuVertical = category.map(target =>
