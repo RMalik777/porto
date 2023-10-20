@@ -26,7 +26,7 @@ function getbuttontype(target){
   if (target === "") {
     return(
       <button
-        className="disabledbtn text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4" type="button">
+        className="disabledbtn cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4" type="button">
         Result
       </button>
     );
