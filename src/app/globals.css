@@ -137,6 +137,29 @@ header, .upbtn{
   color: var(--textinvert);
 }
 
+.secondarybtninvert {
+  font-size: 1rem;
+  background-color: var(--accent);
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
+  color: var(--textinvert);
+  font-weight: 600;
+  border:3px solid var(--accent);
+}
+
+.secondarybtninvert:hover {
+  background-color: var(--bg);
+  border-color: var(--text);
+  box-shadow: 6px 6px var(--text);
+  color: var(--text);
+}
+
+.disabledbtn{
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
+  font-weight: 600;
+  border:3px solid;  
+}
+
 .invertbtn{
   font-size: 1rem;
   font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);

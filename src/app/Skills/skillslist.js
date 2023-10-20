@@ -14,6 +14,51 @@ function imageLogo(source) {
   }
 }
 
+function buttontype(url){
+  if (url === ""){
+    return "disabledbtn cursor-default border-slate-400"
+  } else {
+    return "secondarybtn"
+  }
+}
+
+function getbuttontype(target){
+  if (target === "") {
+    return(
+      <button
+        className="disabledbtn text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4" type="button">
+        Result
+      </button>
+    );
+  } 
+  else{
+    return(
+      <Link href={target} target="_blank" rel="noopener noreferrer">
+          <button
+            className="secondarybtninvert min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4" type="button">
+            Result
+          </button>
+        </Link>
+    );
+  }
+}
+
+export const skillList = skills.map((target) => (
+  <div className="mb-4" key={target.category}>
+    <h5 className="font-bold">{target.category}</h5>
+    <div className="flex flex-wrap gap-4 justify-start items-start">
+      {target.skills.map((skill) => (
+        <p
+          key={skill.id}
+          className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full"
+        >
+          {skill.name}
+        </p>
+      ))}
+    </div>
+  </div>
+));
+
 export const projectList = project.reverse().map((target) => (
   <div
     key={target.id}
@@ -32,17 +77,10 @@ export const projectList = project.reverse().map((target) => (
       <h5 className="font-semibold">{target.title}</h5>
       <p className="text-left" dangerouslySetInnerHTML={{__html: target.desc}}></p>
       <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
-        <Link href={target.url} target="_blank" rel="noopener noreferrer">
-          <button
-            className="min-w-fit w-44 secondarybtn rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
-            type="button">
-            Result
-          </button>
-        </Link>
+        {getbuttontype(target.url)}
         <Link href={target.sourceurl} target="_blank" rel="noopener noreferrer">
           <button
-            className="min-w-fit w-44 secondarybtn rounded-full px-4 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4"
-            type="button"
+            className="min-w-fit w-44 secondarybtn rounded-full px-4 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4" type="button"
           >
             <Image
               className="h-6 w-auto inline-block"
@@ -57,18 +95,3 @@ export const projectList = project.reverse().map((target) => (
   </div>
 ));
 
-export const skillList = skills.map((target) => (
-  <div className="mb-4" key={target.category}>
-    <h5 className="font-bold">{target.category}</h5>
-    <div className="flex flex-wrap gap-4 justify-start items-start">
-      {target.skills.map((skill) => (
-        <p
-          key={skill.id}
-          className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full"
-        >
-          {skill.name}
-        </p>
-      ))}
-    </div>
-  </div>
-));
