@@ -33,6 +33,7 @@ export default function Navbar() {
                 setNav(false);
             }
         }, 30000);
+        clearTimeout();
 
 
     }

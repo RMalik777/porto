@@ -49,10 +49,7 @@ export const skillList = skills.map((target) => (
     <div className="flex flex-wrap gap-4 justify-start items-start">
       {target.skills.map((skill) => (
         <p
-          key={skill.id}
-          className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full"
-        >
-          {skill.name}
+          key={skill.id} translate="no" className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full">{skill.name}
         </p>
       ))}
     </div>
@@ -69,12 +66,12 @@ export const projectList = project.reverse().map((target) => (
     <Image
       src={target.thumbnail}
       alt="Project Thumbnail"
-      width={1000}
-      height={1000}
+      width={700}
+      height={700}
       className="w-28 h-auto mt-2 object-contain object-center inline-block rounded-md"
     />
     <div className="projectinfo inline-block">
-      <h5 className="font-semibold">{target.title}</h5>
+      <h5 translate="no" className="font-semibold">{target.title}</h5>
       <p className="text-left" dangerouslySetInnerHTML={{__html: target.desc}}></p>
       <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
         {getbuttontype(target.url)}

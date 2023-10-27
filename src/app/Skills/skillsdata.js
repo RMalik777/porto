@@ -6,7 +6,8 @@ export const project = [
     thumbnail: "/project/thumbnail/ECommerce.png",
     url: "https://www.figma.com/proto/bij8OTQPuLDjDyLsDVeNHv/HCI---Project?page-id=0%3A1&type=design&node-id=7-2&viewport=405%2C460%2C0.1&t=CcW2mXRwhCLusWs4-1&scaling=scale-down&starting-point-node-id=7%3A2&mode=design",
     source: "Figma",
-    sourceurl: "https://www.figma.com/file/bij8OTQPuLDjDyLsDVeNHv/HCI---Project?type=design&node-id=0%3A1&mode=design&t=mosRZ5ZIb083OhTC-1"
+    sourceurl:
+      "https://www.figma.com/file/bij8OTQPuLDjDyLsDVeNHv/HCI---Project?type=design&node-id=0%3A1&mode=design&t=mosRZ5ZIb083OhTC-1",
   },
   {
     id: 1,
@@ -15,7 +16,8 @@ export const project = [
     thumbnail: "/project/thumbnail/Wedding Planner.png",
     url: "https://www.figma.com/proto/tZ1g8qfiOXy4oYlyzwFPLr/HCI---Mid-Exam?page-id=0%3A1&type=design&node-id=2-40&viewport=294%2C568%2C0.47&t=2hrk8OTbLjy3ofxQ-1&scaling=scale-down&starting-point-node-id=2%3A40&mode=design",
     source: "Figma",
-    sourceurl: "https://www.figma.com/file/tZ1g8qfiOXy4oYlyzwFPLr/HCI---Mid-Exam?type=design&node-id=0%3A1&mode=design&t=hhIiCalCCuqud4Y0-1"
+    sourceurl:
+      "https://www.figma.com/file/tZ1g8qfiOXy4oYlyzwFPLr/HCI---Mid-Exam?type=design&node-id=0%3A1&mode=design&t=hhIiCalCCuqud4Y0-1",
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ export const project = [
     thumbnail: "/project/thumbnail/Tourism.png",
     url: "https://www.figma.com/proto/yvdpsRxRriroCLBme1aMEq/HCI---Final-Exam-2?page-id=2%3A2&type=design&node-id=4-24&viewport=589%2C294%2C0.09&t=A3L94ZgtCx0jDe3n-1&scaling=scale-down&starting-point-node-id=4%3A24&mode=design",
     source: "Figma",
-    sourceurl: "https://www.figma.com/file/yvdpsRxRriroCLBme1aMEq/HCI---Final-Exam-2?type=design&node-id=2%3A2&mode=design&t=udRyIo2NUwXqWOdV-1"
+    sourceurl:
+      "https://www.figma.com/file/yvdpsRxRriroCLBme1aMEq/HCI---Final-Exam-2?type=design&node-id=2%3A2&mode=design&t=udRyIo2NUwXqWOdV-1",
   },
   {
     id: 3,
@@ -33,7 +36,7 @@ export const project = [
     thumbnail: "/project/thumbnail/NOKA.jpeg",
     url: "https://noka.raflimalik.com",
     source: "Github",
-    sourceurl: "https://github.com/RMalik777/HCI_Project.git"
+    sourceurl: "https://github.com/RMalik777/HCI_Project.git",
   },
   {
     id: 4,
@@ -42,7 +45,7 @@ export const project = [
     thumbnail: "/project/thumbnail/astronom.jpeg",
     url: "https://astronom.raflimalik.com",
     source: "Github",
-    sourceurl: "https://github.com/RMalik777/Astronom.git"
+    sourceurl: "https://github.com/RMalik777/Astronom.git",
   },
   {
     id: 5,
@@ -51,7 +54,7 @@ export const project = [
     thumbnail: "/project/thumbnail/kpopztation.jpeg",
     url: "",
     source: "Github",
-    sourceurl: "https://github.com/RMalik777/PSD_Lab.git"
+    sourceurl: "https://github.com/RMalik777/PSD_Lab.git",
   },
   {
     id: 6,
@@ -60,7 +63,7 @@ export const project = [
     thumbnail: "/project/thumbnail/miniporto.jpeg",
     url: "https://miniporto.raflimalik.com",
     source: "Github",
-    sourceurl: "https://github.com/RMalik777/BNCC-Mid-Project.git"
+    sourceurl: "https://github.com/RMalik777/BNCC-Mid-Project.git",
   },
   {
     id: 7,
@@ -69,7 +72,7 @@ export const project = [
     thumbnail: "/project/thumbnail/puddingfest.jpeg",
     url: "https://puddingfest.raflimalik.com",
     source: "Github",
-    sourceurl: "https://github.com/RMalik777/BNCC-Final-Project.git"
+    sourceurl: "https://github.com/RMalik777/BNCC-Final-Project.git",
   },
 ];
 
