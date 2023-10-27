@@ -45,12 +45,11 @@ export default async function page({ params }) {
 
   const url =
     "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
-  const key = process.env.API_Key;
+  const key = process.env.NEXT_PUBLIC_.API_Key;
   const headers = {
     method: "GET",
     "X-Api-Key": key,
   };
-  // ?Fix API not updating
 
   const getQuote = async () => {
     try {
