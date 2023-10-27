@@ -118,8 +118,8 @@ export default async function page({ params }) {
           <Image
             className="w-full h-auto"
             src={img1.source}
-            width={800}
-            height={800}
+            width={700}
+            height={700}
             quality={100}
             alt={img1.alt}
           />
@@ -149,8 +149,8 @@ export default async function page({ params }) {
             <Image
               className="w-auto h-auto"
               src={img3.source}
-              width={800}
-              height={800}
+              width={700}
+              height={700}
               quality={100}
               alt={img3.alt}
             />
@@ -160,8 +160,8 @@ export default async function page({ params }) {
             <Image
               className="w-auto h-auto"
               src={img4.source}
-              width={800}
-              height={800}
+              width={700}
+              height={700}
               quality={100}
               alt={img4.alt}
             />

@@ -15,8 +15,8 @@ export const expList = about.map((target) => (
       <Image
         src={target.picture.thumbnail.source}
         alt="Project Thumbnail"
-        width={800}
-        height={800}
+        width={700}
+        height={700}
         className="w-auto h-auto rounded-lg"
       />
       <div className="expinfo">

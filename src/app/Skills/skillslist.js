@@ -66,8 +66,8 @@ export const projectList = project.reverse().map((target) => (
     <Image
       src={target.thumbnail}
       alt="Project Thumbnail"
-      width={700}
-      height={700}
+      width={600}
+      height={600}
       className="w-28 h-auto mt-2 object-contain object-center inline-block rounded-md"
     />
     <div className="projectinfo inline-block">
