@@ -44,19 +44,20 @@ export default async function page({ params }) {
   metadata.title = item.title;
   metadata.description = item.description;
 
-  const url = "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
+  const url =
+    "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
   const options = {
     method: "GET",
     headers: {
       "X-Api-Key": process.env.PUBLIC_NEXT_API_Key,
     },
-    "cache": "no-store",
+    cache: "no-store",
   };
-  
-    const getQuote = async () => {
-      try {
-        const result = await fetch(url, options);
-        
+
+  const getQuote = async () => {
+    try {
+      const result = await fetch(url, options);
+
       const data = await result.json();
       if (data.error) {
         throw new Error(data.error);
