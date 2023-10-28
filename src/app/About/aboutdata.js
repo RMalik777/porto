@@ -120,7 +120,7 @@ export const about = [
     htmlid: "FP2023",
     title: "Freshmen Partner",
     location: "Jakarta, Indonesia",
-    apicategory: "leadership",
+    apicategory: "knowledge",
     desc: "Helped 20 new students adapt to university life by providing guidance and information about university. Mentoring and teaching about soft skills needed to have a great year in university.",
     picture: {
       thumbnail: {
