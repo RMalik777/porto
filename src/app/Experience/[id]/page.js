@@ -48,7 +48,7 @@ export default async function page({ params }) {
   const options = {
     method: "GET",
     headers: {
-      "X-Api-Key": process.env.NEXT_PUBLIC_API_Key,
+      "X-Api-Key": process.env.NEXT_PUBLIC_API_Key
     },
   };
 
