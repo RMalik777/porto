@@ -54,7 +54,7 @@ export default async function page({ params }) {
 
   const getQuote = async () => {
     try {
-      const result = await fetch(url, options, { cache: "no-store" });
+      const result = await fetch(url, options, { cache: "no-store", next: { revalidate: 0 } });
       const data = await result.json();
       if (data.error) {
         throw new Error(data.error);
