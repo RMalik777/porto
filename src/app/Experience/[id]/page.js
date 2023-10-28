@@ -53,9 +53,7 @@ export default async function page({ params }) {
   const getQuote = async () => {
     try {
       const result = await fetch(url, {
-        headers: {
-          "X-Api-Key": key,
-        },
+        headers,
         cache: "no-store",
         revalidate: 0,
       });
