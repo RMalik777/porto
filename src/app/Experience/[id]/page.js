@@ -45,7 +45,7 @@ export default async function page({ params }) {
 
   const url =
     "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
-  const key = process.env.NEXT_PUBLIC_.API_Key;
+  const key = process.env.NEXT_PUBLIC_API_Key;
   const headers = {
     method: "GET",
     "X-Api-Key": key,
@@ -79,7 +79,7 @@ export default async function page({ params }) {
   };
   const getquotes = await getQuote();
   const quotes = getquotes[0];
-
+// !Fix image slow (change size)
   return (
     <main className="h-auto flex flex-col items-center pt-24 md:pt-32 lg:pt-48 px-2 lg:px-8">
       <div id="thumbnail" className="mb-4 lg:mb-16">
