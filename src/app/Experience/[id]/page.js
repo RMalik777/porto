@@ -49,7 +49,7 @@ export default async function page({ params }) {
   const options = {
     method: "GET",
     headers: {
-      "X-Api-Key": process.env.PUBLIC_NEXT_API_Key,
+      "X-Api-Key": process.env.PUBLIC_NEXT_API_Key
     },
     cache: "no-store",
   };
