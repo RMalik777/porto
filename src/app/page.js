@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <div id="intro" className=" h-screen flex flex-col items-center justify-center">
         <h1 className="title font-bold text-center">Hello</h1>
-        <h2 className="subtitle font-normal text-center">I&apos;m Rafli Malik</h2>
+        <h2 translate="no" className="subtitle font-normal text-center">I&apos;m Rafli Malik</h2>
         <Link href="#content">
           <button className="defaultbtn rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out ">Let&apos;s Get Started</button>
         </Link>
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       <div id="CV" className="h-full mb-32 scroll-mt-24">
-        <h2 className="header md:col-span-2 self-center py-4 font-bold">Curriculum Vitae </h2>
+        <h2 className="header md:col-span-2 self-center py-4 font-bold">Curriculum Vitae</h2>
         {cvlist}
       </div>
       

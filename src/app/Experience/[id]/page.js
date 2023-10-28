@@ -84,7 +84,7 @@ export default async function page({ params }) {
         <h1 translate="no" className="text-center font-bold tracking-wide">
           {item.title}
         </h1>
-        <h5 className="text-center font-medium">{item.location}</h5>
+        <h5 translate="no" className="text-center font-medium">{item.location}</h5>
       </div>
       <figure className="w-full py-8 mb-2 lg:mb-8">
         <Image
@@ -103,7 +103,7 @@ export default async function page({ params }) {
         <h6 className="max-w-prose w-full font-bold">
           &quot;{quotes.quote}&quot;
         </h6>
-        <cite className="font-medium">&ndash; {quotes.author}</cite>
+        <cite translate="no" className="font-medium">&ndash; {quotes.author}</cite>
       </blockquote>
 
       <div id="intro" className="mb-4 flex flex-col items-center ">
