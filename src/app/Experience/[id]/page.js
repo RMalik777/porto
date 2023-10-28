@@ -1,5 +1,6 @@
 import { about } from "@/app/About/aboutdata";
 import Image from "next/image";
+import { headers } from "../../../../next.config";
 
 export const dynamicParams = false;
 
@@ -43,18 +44,19 @@ export default async function page({ params }) {
   metadata.title = item.title;
   metadata.description = item.description;
 
-  const url =
-    "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
+  const url = "https://api.api-ninjas.com/v1/quotes?category=" + item.apicategory;
   const options = {
     method: "GET",
     headers: {
-      "X-Api-Key": process.env.NEXT_PUBLIC_API_Key
+      "X-Api-Key": process.env.PUBLIC_NEXT_API_Key,
     },
+    "cache": "no-store",
   };
-
-  const getQuote = async () => {
-    try {
-      const result = await fetch(url, options, { cache: "no-store", next: { revalidate: 0 } });
+  
+    const getQuote = async () => {
+      try {
+        const result = await fetch(url, options);
+        
       const data = await result.json();
       if (data.error) {
         throw new Error(data.error);
