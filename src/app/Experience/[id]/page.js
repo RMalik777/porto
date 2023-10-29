@@ -90,8 +90,8 @@ export default async function page({ params }) {
         <Image
           className="w-full h-auto"
           src={thumbnail.source}
-          width={900}
-          height={900}
+          width={960}
+          height={720}
           quality={100}
           alt={thumbnail.alt}
           priority={true}
@@ -118,8 +118,8 @@ export default async function page({ params }) {
           <Image
             className="w-full h-auto"
             src={img1.source}
-            width={700}
-            height={700}
+            width={720}
+            height={540}
             quality={100}
             alt={img1.alt}
           />
@@ -134,8 +134,8 @@ export default async function page({ params }) {
           <Image
             className="w-full h-auto"
             src={img2.source}
-            width={900}
-            height={900}
+            width={960}
+            height={720}
             quality={100}
             alt={img2.alt}
           />
@@ -149,8 +149,8 @@ export default async function page({ params }) {
             <Image
               className="w-auto h-auto"
               src={img3.source}
-              width={700}
-              height={700}
+              width={720}
+              height={540}
               quality={100}
               alt={img3.alt}
             />
@@ -160,8 +160,8 @@ export default async function page({ params }) {
             <Image
               className="w-auto h-auto"
               src={img4.source}
-              width={700}
-              height={700}
+              width={720}
+              height={540}
               quality={100}
               alt={img4.alt}
             />
