@@ -8,27 +8,27 @@ export const about = [
     desc: "Volunteered for international racing series (Formula E) in Jakarta area. Providing information about food, beverage and payment for the spectator and tenant. Also helping the spectator navigate around the venue.",
     picture: {
       thumbnail: {
-        source: "/Experience/FE2023/thumbnail.jpg",
+        source: "/Experience/FE2023/thumbnail.webp",
         alt: "Me and my partner in front of the tenant booth in Jakarta E-Prix",
         capt: "Day 2 Of 2023 Jakarta E-Prix",
       },
       img1: {
-        source: "/Experience/FE2023/thumbnail2.jpg",
+        source: "/Experience/FE2023/thumbnail2.webp",
         alt: "Me and my partner in front of the tenant booth in Jakarta E-Prix",
         capt: "Day 1 Of 2023 Jakarta E-Prix",
       },
       img2: {
-        source: "/Experience/FE2023/extra.jpg",
+        source: "/Experience/FE2023/extra.webp",
         alt: "Concert stage with 3 people standing in front of it",
         capt: "Me and my friend after closing party",
       },
       img3: {
-        source: "/Experience/FE2023/area1.jpeg",
+        source: "/Experience/FE2023/area1.webp",
         alt: "an empty circuit near the start and finish line",
         capt: "The circuit during our short track walk",
       },
       img4: {
-        source: "/Experience/FE2023/area2.jpg",
+        source: "/Experience/FE2023/area2.webp",
         alt: "Couple of tenant booth with people standing in front of it",
         capt: "Overview of the area I stationed at",
       },
@@ -66,27 +66,27 @@ export const about = [
     desc: "Volunteered for international racing series (Formula E) in Jakarta area. Managing the crowd and providing general information for the spectator.",
     picture: {
       thumbnail: {
-        source: "/Experience/FE2022/thumbnail.jpg",
+        source: "/Experience/FE2022/thumbnail.webp",
         alt: "Me and all the volunteer team after the event finished",
         capt: "2022 Jakarta E-Prix First Shift Team",
       },
       img1: {
-        source: "/Experience/FE2022/thumbnail2.jpg",
+        source: "/Experience/FE2022/thumbnail2.webp",
         alt: "Me and my team standing in front of the west gate",
         capt: "2022 Jakarta E-Prix West Gate Team",
       },
       img2: {
-        source: "/Experience/FE2022/extra.jpg",
+        source: "/Experience/FE2022/extra.webp",
         alt: "Bunch of people standing and sitting in ballroom of a stadium taking a picture",
         capt: "All the volunteer after the briefing in Jakarta International Stadium",
       },
       img3: {
-        source: "/Experience/FE2022/area1.jpg",
+        source: "/Experience/FE2022/area1.webp",
         alt: "A decorative gate with the 2022 Jakarta E-Prix sign in the road with a couple of bus parking",
         capt: "Gate to the circuit",
       },
       img4: {
-        source: "/Experience/FE2022/area2.jpg",
+        source: "/Experience/FE2022/area2.webp",
         alt: "A entrance gate with people standing in front of it and security watching",
         capt: "Overview of the area i stationed at",
       },
@@ -124,27 +124,27 @@ export const about = [
     desc: "Helped 20 new students adapt to university life by providing guidance and information about university. Mentoring and teaching about soft skills needed to have a great year in university.",
     picture: {
       thumbnail: {
-        source: "/Experience/FP/thumbnail.jpg",
+        source: "/Experience/FP/thumbnail.webp",
         alt: "Bunch of people standing in front of classroom",
         capt: "Me and all my mentee",
       },
       img1: {
-        source: "/Experience/FP/thumbnail2.jpg",
+        source: "/Experience/FP/thumbnail2.webp",
         alt: "Bunch of people standing in front of classroom while posing",
         capt: "Me and all my mentee",
       },
       img2: {
-        source: "/Experience/FP/extra.jpg",
+        source: "/Experience/FP/extra.webp",
         alt: "Classroom with bunch of people sitting and standing",
         capt: "Overview of the classroom when i was teaching",
       },
       img3: {
-        source: "/Experience/FP/area1.jpg",
+        source: "/Experience/FP/area1.webp",
         alt: "Classroom with bunch of people sitting and posing",
         capt: "Collaboration class with other group",
       },
       img4: {
-        source: "/Experience/FP/area2.jpg",
+        source: "/Experience/FP/area2.webp",
         alt: "Classroom with bunch of people sitting and talking to each other",
         capt: "Overview of the classroom when i was teaching",
       },
