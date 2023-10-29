@@ -88,10 +88,10 @@ export default async function page({ params }) {
       </div>
       <figure className="w-full py-8 mb-2 lg:mb-8">
         <Image
-          className="w-full h-auto duration-1000 ease-out"
+          className="w-full h-auto"
           src={thumbnail.source}
-          width={1000}
-          height={1000}
+          width={900}
+          height={900}
           quality={100}
           alt={thumbnail.alt}
           priority={true}
@@ -134,8 +134,8 @@ export default async function page({ params }) {
           <Image
             className="w-full h-auto"
             src={img2.source}
-            width={1000}
-            height={1000}
+            width={900}
+            height={900}
             quality={100}
             alt={img2.alt}
           />
