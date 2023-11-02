@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="m-0 p-0 max-w-full scroll-smooth box-border">
-      <body className={"mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " + (DMS.className)}>
+      <body className={"max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " + (DMS.className)}>
         <Navbar />
         {children}
         <Analytics/>

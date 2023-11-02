@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import nextblack from "/public/nextjs-black.svg";
+import nextwhite from "/public/nextjs-white.svg";
+
 export default function Footer() {
     const social = [
         {
@@ -50,19 +53,29 @@ export default function Footer() {
     )
 
     return (
-        <footer id="endcredit" className="w-auto flex flex-col md:flex-row justify-between items-center py-6 pb-12 mt-16">
-            <div className="profile w-auto flex items-center self-start">
-                <Image
-                    className="w-24 h-auto float-left mr-2 rounded-full"
-                    src="/photosquarezoom.jpg"
-                    width={1000}
-                    height={1000}
-                    alt="Picture of Rafli Malik, the owner of this website"
-                />
-                <h6 className="font-bold">Rafli Malik</h6>
+        <footer id="endcredit">
+            <div className="w-auto flex flex-col md:flex-row justify-between items-center py-6 pb-12 mt-16">
+                <div className="profile w-auto flex items-center self-start">
+                    <Image
+                        className="w-24 h-auto float-left mr-2 rounded-full"
+                        src="/photosquarezoom.jpg"
+                        width={1000}
+                        height={1000}
+                        alt="Picture of Rafli Malik, the owner of this website"
+                    />
+                    <h6 className="font-bold">Rafli Malik</h6>
+                </div>
+                <div className="social w-auto flex flex-col items-end gap-4 self-end">
+                    {socialList}
+                </div>
             </div>
-            <div className="social w-auto flex flex-col items-end gap-4 self-end">
-                {socialList}
+            <div className="h-auto w-full absolute left-0 p-2 px-6 md:px-8 lg:px-12 xl:px-14 bg-black bg-fixed flex flex-row gap-4 items-center justify-center">
+                <h6 className="text-white font-semibold">Made With</h6>
+                <Image
+                    className="w-auto h-5"
+                    src={nextwhite}
+                    alt="NextJS Logo"
+                />
             </div>
         </footer>
     )
