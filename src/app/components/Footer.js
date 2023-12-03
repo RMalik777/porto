@@ -44,8 +44,8 @@ export default function Footer() {
                 <Image
                     className="h-auto w-8 font-medium duration-300 ease-out"
                     src={target.logo}
-                    width={512}
-                    height={512}
+                    width={256}
+                    height={256}
                     alt={target.alt}
                 />
             </Link>
@@ -53,14 +53,14 @@ export default function Footer() {
     )
 
     return (
-        <footer id="endcredit">
+        <footer id="endcredit" className="h-auto">
             <div className="w-auto flex flex-col md:flex-row justify-between items-center py-6 pb-12 mt-16">
                 <div className="profile w-auto flex items-center self-start">
                     <Image
                         className="w-24 h-auto float-left mr-2 rounded-full"
                         src="/photosquarezoom.jpg"
-                        width={1000}
-                        height={1000}
+                        width={512}
+                        height={512}
                         alt="Picture of Rafli Malik, the owner of this website"
                     />
                     <h6 className="font-bold">Rafli Malik</h6>
@@ -69,7 +69,7 @@ export default function Footer() {
                     {socialList}
                 </div>
             </div>
-            <div className="h-auto w-full absolute left-0 p-2 px-6 md:px-8 lg:px-12 xl:px-14 bg-black bg-fixed flex flex-row gap-4 items-center justify-center">
+            <div className="h-auto w-full absolute left-0 right-0 p-2 px-6 md:px-8 lg:px-12 xl:px-14 bg-black bg-fixed flex flex-row gap-4 items-center justify-center">
                 <h6 className="text-white font-semibold">Made With</h6>
                 <Image
                     className="w-auto h-5"

@@ -25,7 +25,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div id="content" className="scroll-mt-16 h-auto grid auto-rows-min grid-cols-1 md:grid-cols-2 justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
+      <div className="scroll-mt-16 h-auto grid auto-rows-min grid-cols-1 md:grid-cols-2 justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
         <h1 className="contentTitle font-bold w-full text-center">what i do</h1>
         <p className="contentText font-medium max-w-prose w-full ">Front-End Development, UI/UX Design and sometimes graphic design. I can do little bit photo editing and little more in video editing. Maybe not much, but more than enough to cover all my related work. I can proudly say I&apos;m capable of speaking fluent English. I&apos;m good at teaching and mentoring other people.<br/>
         If you look below this page, I&apos;ve listed all the previous work I did in the past. You can contact me through the link below.</p>
@@ -41,12 +41,14 @@ export default function Home() {
 
       <div id="skills" className=" h-full flex flex-col items-start justify-center gap-2 mb-24 md:mb-32 scroll-mt-24">
         <h2 className="title font-bold text-left">Skills</h2>
-        {skillList}
+        <div>
+          {skillList}
+          </div>
       </div>
 
-      <div id="projectarea" className="h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+      <div className="h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
         <h2 className="header md:col-span-2 self-center py-4 font-bold">Projects</h2>
-        {projectList}
+          {projectList}
       </div>
 
       
@@ -56,7 +58,7 @@ export default function Home() {
           <h2 className="header self-end py-1 font-bold">Education</h2>
           {eduList}
         </div>
-        <div>
+        <div className="h-auto">
           <h2 className="header self-end py-4 font-bold">Experience</h2>
           <div id="experience" className="h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 md:gap-y-12">
             {expList}
