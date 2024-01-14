@@ -1,10 +1,10 @@
-import { Analytics } from '@vercel/analytics/react';
-import "./globals.css"
-import Navbar from "./components/navbar"
-import Footer from "./components/Footer"
-import { DM_Sans } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react";
+import "./globals.css";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
+import { DM_Sans } from "next/font/google";
 
-const DMS = DM_Sans({ subsets: ["latin"] })
+const DMS = DM_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
@@ -16,18 +16,21 @@ export const metadata = {
     { media: "(prefers-color-scheme: light)", color: "#FFF5F6" },
     { media: "(prefers-color-scheme: dark)", color: "#121212" },
   ],
-}
+};
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en" className="m-0 p-0 max-w-full scroll-smooth box-border">
-      <body className={"max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " + (DMS.className)}>
+      <body
+        className={
+          "max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " +
+          DMS.className
+        }>
         <Navbar />
         {children}
-        <Analytics/>
+        <Analytics />
         <Footer />
       </body>
     </html>
-  )
+  );
 }

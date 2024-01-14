@@ -49,7 +49,7 @@ export default async function page({ params }) {
   const options = {
     method: "GET",
     headers: {
-      "X-Api-Key": process.env.NEXT_PUBLIC_API_Key
+      "X-Api-Key": process.env.NEXT_PUBLIC_API_Key,
     },
     cache: "no-store",
   };
@@ -84,7 +84,9 @@ export default async function page({ params }) {
         <h1 translate="no" className="text-center font-bold tracking-wide">
           {item.title}
         </h1>
-        <h5 translate="no" className="text-center font-medium">{item.location}</h5>
+        <h5 translate="no" className="text-center font-medium">
+          {item.location}
+        </h5>
       </div>
       <figure className="w-full py-8 mb-2 lg:mb-8">
         <Image
@@ -103,7 +105,9 @@ export default async function page({ params }) {
         <h6 className="max-w-prose w-full font-bold">
           &quot;{quotes.quote}&quot;
         </h6>
-        <cite translate="no" className="font-medium">&ndash; {quotes.author}</cite>
+        <cite translate="no" className="font-medium">
+          &ndash; {quotes.author}
+        </cite>
       </blockquote>
 
       <div id="intro" className="mb-4 flex flex-col items-center ">
@@ -112,8 +116,7 @@ export default async function page({ params }) {
 
       <div
         id="main"
-        className="mb-4 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-center"
-      >
+        className="mb-4 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-center">
         <figure className="w-11/12 lg:w-1/2 pt-4">
           <Image
             className="w-full h-auto"
@@ -143,8 +146,7 @@ export default async function page({ params }) {
         </figure>
         <div
           id="imgarea"
-          className="w-full flex flex-col lg:flex-row gap-4 items-center justify-evenly"
-        >
+          className="w-full flex flex-col lg:flex-row gap-4 items-center justify-evenly">
           <figure className="w-full lg:w-2/5">
             <Image
               className="w-auto h-auto"
