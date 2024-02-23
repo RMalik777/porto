@@ -6,6 +6,7 @@ import { eduList, expList, cvlist } from "./About/aboutlist";
 import { projectList, skillList } from "./Skills/skillslist";
 
 import { useState, useRef, useEffect } from "react";
+import { RedHatDisp, RedHatText, DMSans } from "@/app/fonts";
 
 import up from "/public/up.svg";
 
@@ -38,11 +39,15 @@ export default function Home() {
       </div>
       <div
         id="intro"
-        className=" h-screen flex flex-col items-center justify-center">
-        <h1 ref={scope} className="title font-bold text-center">
+        className="h-screen flex flex-col items-center justify-center">
+        <h1
+          ref={scope}
+          className={
+            RedHatDisp.className + " title font-extrabold text-center"
+          }>
           Hello
         </h1>
-        <h2 translate="no" className="subtitle font-normal text-center">
+        <h2 translate="no" className="subtitle font-normal text-center ">
           I&apos;m Rafli Malik
         </h2>
         <Link href="#content">
@@ -62,10 +67,12 @@ export default function Home() {
             opacity: titleInView ? 1 : 0,
             transition: "all 0.7s cubic-bezier(0.2, 0, 0, 1) 0.1s",
           }}
-          className="contentTitle font-bold w-full text-center">
+          className={
+            RedHatDisp.className + " contentTitle font-black w-full text-center"
+          }>
           what i do
         </h1>
-        <p className="contentText font-medium max-w-prose w-full ">
+        <p className="contentText font-normal max-w-prose w-full ">
           Front-End Development, UI/UX Design and sometimes graphic design. I
           can do little bit photo editing and little more in video editing.
           Maybe not much, but more than enough to cover all my related work. I
@@ -92,12 +99,14 @@ export default function Home() {
       <div
         id="skills"
         className=" h-full flex flex-col items-start justify-center gap-2 mb-24 md:mb-32 scroll-mt-24">
-        <h2 className="title font-bold text-left">Skills</h2>
+        <h2 className={RedHatDisp.className + " title font-black text-left"}>
+          Skills
+        </h2>
         <div>{skillList}</div>
       </div>
 
       <div className="h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-        <h2 className="header md:col-span-2 self-center py-4 font-bold">
+        <h2 className="header md:col-span-2 self-center py-4 font-black">
           Projects
         </h2>
         {projectList}
@@ -105,11 +114,21 @@ export default function Home() {
 
       <div id="about" className="h-auto mb-32 scroll-mt-24">
         <div className="mb-32">
-          <h2 className="header self-end py-1 font-bold">Education</h2>
+          <h2
+            className={
+              RedHatDisp.className + " header self-end py-1 font-black"
+            }>
+            Education
+          </h2>
           {eduList}
         </div>
         <div className="h-auto">
-          <h2 className="header self-end py-4 font-bold">Experience</h2>
+          <h2
+            className={
+              RedHatDisp.className + " header self-end py-4 font-black"
+            }>
+            Experience
+          </h2>
           <div
             id="experience"
             className="h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 md:gap-y-12">
@@ -121,14 +140,22 @@ export default function Home() {
       <div
         id="contact"
         className="h-full mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 scroll-mt-24">
-        <h2 className="header md:col-span-2 self-center py-4 font-bold">
+        <h2
+          className={
+            RedHatDisp.className +
+            " header md:col-span-2 self-center py-4 font-black"
+          }>
           Contact Me
         </h2>
         {contactList}
       </div>
 
       <div id="CV" className="h-full mb-32 scroll-mt-24">
-        <h2 className="header md:col-span-2 self-center py-4 font-bold">
+        <h2
+          className={
+            RedHatDisp.className +
+            " header md:col-span-2 self-center py-4 font-black"
+          }>
           Curriculum Vitae
         </h2>
         {cvlist}

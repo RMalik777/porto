@@ -46,7 +46,7 @@ function getbuttontype(target) {
 
 export const skillList = skills.map((target) => (
   <div className="mb-4" key={target.category}>
-    <h5 className="font-bold">{target.category}</h5>
+    <h5 className="font-semibold">{target.category}</h5>
     <div className="flex flex-wrap gap-4 justify-start items-start">
       {target.skills.map((skill) => (
         <p

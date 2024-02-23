@@ -3,9 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
-import { DM_Sans } from "next/font/google";
-
-const DMS = DM_Sans({ subsets: ["latin"] });
+import { RedHatDisp, RedHatText, DMSans } from "@/app/fonts";
 
 export const metadata = {
   title: {
@@ -21,12 +19,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="m-0 p-0 max-w-full scroll-smooth box-border">
-      <body
-        className={
-          "max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out " +
-          DMS.className
-        }>
+    <html
+      lang="en"
+      className={
+        "m-0 p-0 max-w-full scroll-smooth box-border " + RedHatText.className
+      }>
+      <body className="max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out ">
         <Navbar />
         {children}
         <Analytics />

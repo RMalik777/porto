@@ -10,6 +10,8 @@ import dark from "/public/darkMode.svg";
 import light from "/public/lightMode.svg";
 import { waitUntilSymbol } from "next/dist/server/web/spec-extension/fetch-event";
 
+import { RedHatDisp } from "../fonts";
+
 export default function Navbar() {
   const category = [
     {
@@ -58,7 +60,7 @@ export default function Navbar() {
   const catMenuVertical = category.map((target) => (
     <li key={target.id} className="list-none text-center">
       <Link
-        className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 font-normal inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black"
+        className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 font-medium inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black"
         href={target.address}
         onClick={showNav}>
         {target.title}
@@ -68,7 +70,7 @@ export default function Navbar() {
   const catMenuHorizontal = category.map((target) => (
     <li key={target.id} className="list-none text-center w-1/6 hidden md:block">
       <Link
-        className="navitem font-normal duration-200 ease-linear hover:underline hover:font-black"
+        className="navitem font-medium duration-200 ease-linear hover:underline hover:font-black"
         href={target.address}>
         {target.title}
       </Link>
@@ -79,7 +81,8 @@ export default function Navbar() {
     <header
       className={
         "scroll-smooth fixed h-auto z-50 w-full top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out backdrop-blur-md " +
-        (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ")
+        (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ") +
+        RedHatDisp.className
       }>
       <style jsx global>
         {`
