@@ -27,7 +27,7 @@ export default function Footer() {
       name: "Instagram",
       showas: "play.playy",
       logo: "/instagram.png",
-      link: "https://www.instagram.com/play.playy/",
+      link: "https://www.instagram.com/raflimalik__/",
       alt: "Instagram Logo",
     },
     {
