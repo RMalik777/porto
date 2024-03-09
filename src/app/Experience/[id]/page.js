@@ -94,7 +94,7 @@ export default async function page({ params }) {
           src={thumbnail.source}
           width={960}
           height={720}
-          quality={100}
+          quality={80}
           alt={thumbnail.alt}
           priority={true}
         />
@@ -123,7 +123,7 @@ export default async function page({ params }) {
             src={img1.source}
             width={720}
             height={540}
-            quality={100}
+            quality={80}
             alt={img1.alt}
           />
           <figcaption className="w-fit font-medium">{img1.capt}</figcaption>
@@ -139,7 +139,7 @@ export default async function page({ params }) {
             src={img2.source}
             width={960}
             height={720}
-            quality={100}
+            quality={80}
             alt={img2.alt}
           />
           <figcaption className="w-fit font-medium">{img2.capt}</figcaption>
@@ -153,7 +153,7 @@ export default async function page({ params }) {
               src={img3.source}
               width={720}
               height={540}
-              quality={100}
+              quality={80}
               alt={img3.alt}
             />
             <figcaption className="w-fit font-medium">{img3.capt}</figcaption>
@@ -164,7 +164,7 @@ export default async function page({ params }) {
               src={img4.source}
               width={720}
               height={540}
-              quality={100}
+              quality={80}
               alt={img4.alt}
             />
             <figcaption className="w-fit font-medium">{img4.capt}</figcaption>
