@@ -11,12 +11,14 @@ export const metadata = {
     default: "Rafli Malik",
   },
   description: "Personal Portoflio Website",
+};
+
+export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#FFF5F6" },
     { media: "(prefers-color-scheme: dark)", color: "#121212" },
   ],
 };
-
 export default function RootLayout({ children }) {
   return (
     <html
