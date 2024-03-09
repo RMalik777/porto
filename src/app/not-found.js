@@ -33,7 +33,7 @@ export default function notFound() {
           Did you know what is the meaning of Error 404 or 404 not found?
           According to{" "}
           <Link
-            className="text-blue-500 underline"
+            className="text-blue-500 underline hover:text-blue-700 duration-300 ease-out"
             href="https://www.geeksforgeeks.org/history-of-the-404-error/">
             GeeksforGeeks
           </Link>
