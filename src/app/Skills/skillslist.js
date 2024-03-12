@@ -3,7 +3,7 @@ import Image from "next/image";
 import { project, skills } from "./skillsdata";
 
 import githubblack from "/public/project/logo/githubmarkblack.png";
-import githubwhite from "/public/project/logo/githubmarkwhite.png";
+// import githubwhite from "/public/project/logo/githubmarkwhite.png";
 import figmacolor from "/public/project/logo/figmacolor.svg";
 
 function imageLogo(source) {

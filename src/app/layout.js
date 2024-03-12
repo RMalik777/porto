@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
-import { RedHatDisp, RedHatText, DMSans } from "@/app/fonts";
+import { RedHatText } from "@/app/fonts";
 
 export const metadata = {
   title: {

@@ -1,6 +1,5 @@
 import { about } from "@/app/About/aboutdata";
 import Image from "next/image";
-import { headers } from "../../../../next.config";
 
 export const dynamicParams = false;
 

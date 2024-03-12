@@ -3,9 +3,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 
-import nextblack from "/public/nextjs-black.svg";
+// import nextblack from "/public/nextjs-black.svg";
 import nextwhite from "/public/nextjs-white.svg";
 
 import { useInView } from "framer-motion";

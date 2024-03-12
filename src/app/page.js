@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { contactList } from "./Contact/contactlist";
 import { eduList, expList, cvlist } from "./About/aboutlist";
 import { projectList, skillList } from "./Skills/skillslist";
 
-import { useState, useRef, useEffect } from "react";
-import { RedHatDisp, RedHatText, DMSans } from "@/app/fonts";
-
-import up from "/public/up.svg";
+import { useRef } from "react";
+import { RedHatDisp } from "@/app/fonts";
 
 import {
   motion,

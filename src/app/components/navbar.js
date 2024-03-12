@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import Close from "/public/Close.svg";
 import Menu from "/public/Menu.svg";
-import dark from "/public/darkMode.svg";
-import light from "/public/lightMode.svg";
-import { waitUntilSymbol } from "next/dist/server/web/spec-extension/fetch-event";
+// import dark from "/public/darkMode.svg";
+// import light from "/public/lightMode.svg";
+// import { waitUntilSymbol } from "next/dist/server/web/spec-extension/fetch-event";
 
 import { RedHatDisp } from "../fonts";
 
