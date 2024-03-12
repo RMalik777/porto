@@ -32,9 +32,11 @@ export default function Home() {
         className="progress-bar fixed z-50"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="upbtn fixed bottom-0 right-0 z-10 p-0 md:p-1 m-4 rounded-full border-solid border-2 border-white hover:backdrop-blur-sm transition-all duration-200 ease-out shadow-md hover:shadow-lg">
-        <Link href={"#intro"}>
-          <Image src={up} alt="Up Button to go to top" />
+      <div className="group upbtn fixed bottom-0 right-0 z-10 p-0 md:p-1 m-4 rounded-full border-solid border-2 border-white hover:backdrop-blur-sm transition-all duration-200 ease-out shadow-md hover:shadow-lg">
+        <Link href={"#intro"} className="flex items-center justify-center">
+          <span className="text-6xl material-symbols-rounded group-hover:text-[#aa4465] duration-300 ease-out">
+            keyboard_double_arrow_up
+          </span>
         </Link>
       </div>
       <div
