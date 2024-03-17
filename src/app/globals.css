@@ -291,9 +291,9 @@ header,
   position: relative;
 }
 #skillitem {
-  transition: all 300ms ease-in;
-  background: linear-gradient(var(--accent), var(--accent)) border-box;
-  border: 2px solid transparent;
+  transition: all 200ms ease-out;
+  background: linear-gradient(var(--accent), var(--accent)) padding-box;
+  border: 2px solid var(--bg);
 }
 
 #killitem::before {
