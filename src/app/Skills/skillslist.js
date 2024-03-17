@@ -14,42 +14,13 @@ function imageLogo(source) {
   }
 }
 
-function buttontype(url) {
-  if (url === "") {
-    return "disabledbtn cursor-default border-slate-400";
-  } else {
-    return "secondarybtn";
-  }
-}
-
-function getbuttontype(target) {
-  if (target === "") {
-    return (
-      <button
-        className="disabledbtn cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
-        type="button">
-        Result
-      </button>
-    );
-  } else {
-    return (
-      <Link href={target} target="_blank" rel="noopener noreferrer">
-        <button
-          className="secondarybtninvert min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
-          type="button">
-          Result
-        </button>
-      </Link>
-    );
-  }
-}
-
 export const skillList = skills.map((target) => (
-  <div className="mb-4" key={target.category}>
+  <div className="mb-5" key={target.id}>
     <h5 className="font-semibold">{target.category}</h5>
-    <div className="flex flex-wrap gap-4 justify-start items-start">
+    <div className="flex flex-wrap gap-5 justify-start items-start">
       {target.skills.map((skill) => (
         <p
+          id="skillitem"
           key={skill.id}
           translate="no"
           className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full">
@@ -81,7 +52,26 @@ export const projectList = project.reverse().map((target) => (
         className="text-left"
         dangerouslySetInnerHTML={{ __html: target.desc }}></p>
       <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
-        {getbuttontype(target.url)}
+        {target.url === "" ? (
+          <button
+            className="disabledbtn cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
+            type="button">
+            Result
+          </button>
+        ) : (
+          <Link
+            href={target}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-disabled="true">
+            <button
+              className="secondarybtninvert min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
+              type="button"
+              aria-disabled="true">
+              Result
+            </button>
+          </Link>
+        )}
         <Link href={target.sourceurl} target="_blank" rel="noopener noreferrer">
           <button
             className="min-w-fit w-44 secondarybtn rounded-full px-4 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4"

@@ -78,10 +78,12 @@ export const project = [
 
 export const skills = [
   {
+    id: 0,
     category: "Design",
     skills: [{ id: 1, name: "UI/UX" }],
   },
   {
+    id: 1,
     category: "Front-End",
     skills: [
       { id: 2, name: "HTML" },
@@ -92,17 +94,24 @@ export const skills = [
       { id: 7, name: "Tailwind" },
       { id: 8, name: "React.js" },
       { id: 9, name: "Next.js" },
+      { id: 21, name: "Remix" },
     ],
   },
   {
+    id: 2,
     category: "Back-End",
-    skills: [{ id: 10, name: "ASP.NET" }],
+    skills: [
+      { id: 10, name: "ASP.NET" },
+      { id: 19, name: "Laravel" },
+    ],
   },
   {
+    id: 3,
     category: "Database",
     skills: [{ id: 11, name: "MySQL" }],
   },
   {
+    id: 4,
     category: "Programming",
     skills: [
       { id: 12, name: "Python" },
@@ -111,6 +120,7 @@ export const skills = [
     ],
   },
   {
+    id: 5,
     category: "Tools",
     skills: [
       { id: 14, name: "Adobe Premiere Pro" },
