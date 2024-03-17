@@ -124,7 +124,6 @@ export default async function page({ params }) {
             height={540}
             quality={75}
             alt={img1.alt}
-            priority
           />
           <figcaption className="w-fit font-medium">{img1.capt}</figcaption>
         </figure>
@@ -141,7 +140,6 @@ export default async function page({ params }) {
             height={720}
             quality={75}
             alt={img2.alt}
-            priority
           />
           <figcaption className="w-fit font-medium">{img2.capt}</figcaption>
         </figure>
@@ -156,7 +154,6 @@ export default async function page({ params }) {
               height={540}
               quality={75}
               alt={img3.alt}
-              priority
             />
             <figcaption className="w-fit font-medium">{img3.capt}</figcaption>
           </figure>
@@ -168,7 +165,6 @@ export default async function page({ params }) {
               height={540}
               quality={75}
               alt={img4.alt}
-              priority
             />
             <figcaption className="w-fit font-medium">{img4.capt}</figcaption>
           </figure>
