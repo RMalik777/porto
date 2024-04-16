@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import "material-symbols"; */
-
+@layer utilities {
+}
 :root {
   --overlay: #f6eced;
   --bg: #fff5f6;
@@ -36,16 +36,6 @@
     --accent: #aa4465;
     --navColor: rgba(255, 245, 246, 0.85);
   }
-}
-
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--accent);
-  transform-origin: 0%;
 }
 
 body {
@@ -110,146 +100,6 @@ small {
     0.6857142857142858rem + 0.28571428571428553vw,
     0.96rem
   );
-}
-
-.navText {
-  color: var(--text);
-}
-
-.sidebar {
-  background-color: var(--bg);
-}
-header,
-.upbtn {
-  background-color: rgba(255, 245, 246, 0.5);
-}
-
-.upbtn:hover {
-  background-color: white;
-  color: var(--textinvert);
-}
-
-.sidebar a {
-  font-size: 1.953rem;
-  font-size: clamp(
-    1.953rem,
-    1.6740000000000002rem + 0.6974999999999997vw,
-    2.3436rem
-  );
-  color: var(--text);
-}
-
-.navitem {
-  font-size: 1.25rem;
-  font-size: clamp(
-    1.25rem,
-    1.0714285714285714rem + 0.4464285714285714vw,
-    1.5rem
-  );
-}
-
-.navitem:hover,
-.sidebar a:hover {
-  color: var(--accent);
-}
-
-.closebtn:hover,
-.navBtn:hover {
-  filter: invert(34%) sepia(81%) saturate(556%) hue-rotate(291deg)
-    brightness(84%) contrast(83%);
-}
-
-.title,
-.subtitle {
-  color: var(--text);
-}
-
-.defaultbtn {
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
-  color: var(--text);
-  font-weight: 600;
-  border: 6px solid var(--accent);
-}
-
-.defaultbtn:hover {
-  background-color: var(--accent);
-  box-shadow: 10px 10px var(--text);
-  color: var(--textinvert);
-}
-
-.secondarybtn {
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
-  color: var(--text);
-  font-weight: 600;
-  border: 3px solid var(--accent);
-}
-
-.secondarybtn:hover {
-  background-color: var(--accent);
-  box-shadow: 6px 6px var(--text);
-  color: var(--textinvert);
-}
-
-.secondarybtninvert {
-  font-size: 1rem;
-  background-color: var(--accent);
-  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
-  color: var(--textinvert);
-  font-weight: 600;
-  border: 3px solid var(--accent);
-}
-
-.secondarybtninvert:hover {
-  background-color: var(--bg);
-  border-color: var(--text);
-  box-shadow: 6px 6px var(--text);
-  color: var(--text);
-}
-
-.disabledbtn {
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
-  font-weight: 600;
-  border: 3px solid;
-}
-
-.invertbtn {
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.8571428571428572rem + 0.35714285714285704vw, 1.2rem);
-  color: var(--accent);
-  font-weight: 600;
-  border: 4px solid var(--text);
-}
-.invertbtn:hover {
-  background-color: var(--text);
-  box-shadow: 10px 10px var(--accent);
-  color: var(--textinvert);
-}
-
-.card:hover {
-  background-color: var(--accent);
-  box-shadow: 10px 10px var(--text);
-  color: var(--textinvert);
-}
-
-.skillslist {
-  background-color: var(--accent);
-}
-
-.contentTitle {
-  font-size: clamp(3rem, 2.2857rem + 1.7857vw, 4rem);
-  color: var(--text);
-}
-
-.contentText {
-  font-size: clamp(1rem, 0.7143rem + 0.7143vw, 2.5rem);
-  color: var(--text);
-}
-
-.social p:hover {
-  color: var(--accent);
 }
 
 @property --angle {
