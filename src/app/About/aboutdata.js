@@ -190,6 +190,19 @@ export const education = [
   },
 ];
 
+export const work = [
+  {
+    id: 1,
+    company: "CIMB Niaga",
+    location: "Tangerang Selatan, Indonesia",
+    start: "February 2023",
+    end: "Present",
+    status: "Internship",
+    position: "IT Developer",
+    desc: "",
+  },
+];
+
 export const CV = [
   {
     id: 0,

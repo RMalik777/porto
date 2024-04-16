@@ -54,7 +54,7 @@ export default function Footer() {
         href={target.link}
         target="_blank"
         rel="noopener noreferrer">
-        <p className="font-medium duration-500 ease-out hover:underline hover:font-semibold">
+        <p className="font-medium duration-500 ease-out hover:font-semibold">
           <small>{target.showas}</small>
         </p>
         <Image
@@ -81,7 +81,7 @@ export default function Footer() {
           />
           <h6 className="font-bold">Rafli Malik</h6>
         </div>
-        <div className="social w-auto flex flex-col items-end gap-4 self-end">
+        <div className="social w-auto flex flex-col items-end gap-4 self-end hover:*:text-accent hover:*:underline *:duration-200 *:ease-out">
           {socialList}
         </div>
       </div>

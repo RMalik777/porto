@@ -5,7 +5,7 @@ export const contactList = contactInfo.map((target) => (
   <Link key={target.id} href={target.url}>
     <div
       className={
-        "card flex flex-col sm:flex-row gap-4 px-6 py-4 rounded-2xl transition-all duration-300 ease-out border-2 border-white border-solid"
+        "card flex flex-col sm:flex-row gap-4 px-6 py-4 rounded-2xl transition-all duration-300 ease-out border-2 border-white border-solid hover:bg-accent hover:shadow-primarybtn hover:shadow-text hover:text-textinvert"
       }>
       <div className="projectinfo inline-block">
         <h5 translate="no" className="font-semibold">

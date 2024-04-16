@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | Rafli Malik",
     default: "Rafli Malik",
   },
-  description: "Personal Portoflio Website",
+  description: "Rafli Malik's Personal Portoflio Website",
 };
 
 export const viewport = {
@@ -24,7 +24,8 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={
-        "m-0 p-0 max-w-full scroll-smooth box-border " + RedHatText.className
+        "m-0 p-0 max-w-full scroll-smooth box-border antialiased " +
+        RedHatText.className
       }>
       <body className="max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out ">
         <Navbar />

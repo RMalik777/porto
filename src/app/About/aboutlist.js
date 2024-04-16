@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { about } from "./aboutdata";
-import { education } from "./aboutdata";
-import { CV } from "./aboutdata";
+import { Suspense } from "react";
+import { about, education, CV, work } from "./aboutdata";
+import { ImageSkeleton } from "../components/Skeletons";
 
 export const expList = about.map((target) => (
   <Link key={target.id} href={"/Experience/" + target.htmlid}>
     <div
       id={target.htmlid}
       className={
-        " card h-full flex flex-col gap-2 p-8 sm:p-6 md:p-12 rounded-xl transition-all duration-300 ease-out border-2 border-white border-solid"
+        " card h-full flex flex-col gap-2 p-8 sm:p-6 md:p-12 rounded-xl transition-all duration-300 ease-out border-2 border-white border-solid hover:bg-accent hover:shadow-primarybtn hover:shadow-text hover:text-textinvert"
       }>
       <Image
         src={target.picture.thumbnail.source}
@@ -38,6 +38,20 @@ export const eduList = education.map((target) => (
   </div>
 ));
 
+export const worklist = work.map((target) => (
+  <div key={target.id} className=" rounded-2xl py-3 mb-4">
+    <h4 className="font-bold">{target.position}</h4>
+    <h5 className="font-bold">
+      {target.company} | <span className="font-medium">{target.status}</span>
+    </h5>
+    <p className="font-medium">
+      {target.start} &ndash; <span className="">{target.end}</span>
+    </p>
+    <p className="font-medium">{target.location}</p>
+    <p>{target.desc}</p>
+  </div>
+));
+
 export const cvlist = CV.map((target) => (
   <div
     key={target.id}
@@ -46,7 +60,7 @@ export const cvlist = CV.map((target) => (
     <div className="flex flex-col sm:flex-row gap-4">
       <Link
         href={target.source}
-        className="w-fit secondarybtninvert px-4 py-1 rounded-full transition-all duration-300 ease-out">
+        className="w-fit secondarybtninvert text-p font-semibold border-3 border-accent bg-accent text-textinvert px-4 py-1 rounded-full transition-all duration-300 ease-out hover:bg-bg hover:border-text hover:shadow-secondarybtn hover:text-text">
         <button>
           <p>View</p>
         </button>
@@ -54,7 +68,7 @@ export const cvlist = CV.map((target) => (
       <Link
         href={target.source}
         download={true}
-        className="w-fit secondarybtn px-4 py-1 rounded-full transition-all duration-300 ease-out">
+        className="w-fit secondarybtn text-p font-semibold border-3 border-accent text-text px-4 py-1 rounded-full transition-all duration-300 ease-out hover:bg-accent hover:shadow-secondarybtn hover:shadow-text hover:text-textinvert">
         <button>
           <p>Download</p>
         </button>

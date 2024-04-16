@@ -60,7 +60,7 @@ export default function Navbar() {
   const catMenuVertical = category.map((target) => (
     <li key={target.id} className="list-none text-center">
       <Link
-        className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 font-medium inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black"
+        className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 text-h4 font-medium text-text dark:text-textDark inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black hover:text-accent dark:hover:text-accentDark"
         href={target.address}
         onClick={showNav}>
         {target.title}
@@ -70,7 +70,7 @@ export default function Navbar() {
   const catMenuHorizontal = category.map((target) => (
     <li key={target.id} className="list-none text-center w-1/6 hidden md:block">
       <Link
-        className="navitem font-medium duration-200 ease-linear hover:underline hover:font-black"
+        className="navitem text-h6 font-medium duration-200 ease-linear hover:underline hover:font-black hover:text-accent dark:hover:text-accentDark"
         href={target.address}>
         {target.title}
       </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
   return (
     <header
       className={
-        "scroll-smooth fixed h-auto z-50 w-full top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out backdrop-blur-md " +
+        "scroll-smooth fixed h-auto z-50 w-full bg-bg top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out backdrop-blur-md backdrop-saturate-150 bg-headerbg" +
         (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ") +
         RedHatDisp.className
       }>
@@ -94,7 +94,7 @@ export default function Navbar() {
       <div className="w-full flex flex-row justify-between items-center">
         <h6
           className={
-            "navText opacity-0 font-bold transition-all duration-300 ease-out"
+            "text-text navText text-h6 opacity-0 font-bold transition-all duration-300 ease-out"
           }
           style={scrollY > 200 ? { opacity: 1 } : { opacity: 0 }}>
           Rafli
@@ -116,7 +116,7 @@ export default function Navbar() {
       <nav id="navmenu" className="block md:hidden">
         <ul
           className={
-            "sidebar h-screen fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " +
+            "bg-bg sidebar h-screen fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " +
             (nav ? "w-full sm:w-1/3 shadow-md" : "w-0 shadow-none")
           }>
           <Image

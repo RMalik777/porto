@@ -23,7 +23,7 @@ export const skillList = skills.map((target) => (
           id="skillitem"
           key={skill.id}
           translate="no"
-          className="skillslist px-6 py-1 border-2 border-white text-white font-semibold rounded-full">
+          className="skillslist bg-accent px-6 py-1 border-2 border-white text-white font-semibold rounded-full">
           {skill.name}
         </p>
       ))}
@@ -35,7 +35,7 @@ export const projectList = project.reverse().map((target) => (
   <div
     key={target.id}
     className={
-      "cardnohover flex flex-col sm:flex-row items-start gap-4 px-3 py-1 md:px-6 md:py-4 border-2 border-white border-solid rounded-2xl transition-all duration-300 ease-out"
+      "flex flex-col sm:flex-row items-start gap-4 px-3 py-1 md:px-6 md:py-4 border-2 border-white border-solid rounded-2xl transition-all duration-300 ease-out"
     }>
     <Image
       src={target.thumbnail}
@@ -52,29 +52,21 @@ export const projectList = project.reverse().map((target) => (
         className="text-left"
         dangerouslySetInnerHTML={{ __html: target.desc }}></p>
       <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
-        {target.url === "" ? (
+        {target.url === "" ?
           <button
-            className="disabledbtn cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
+            className="disabledbtn text-p font-semibold border-3 border-gray-300 cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent  transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
             type="button">
             Result
           </button>
-        ) : (
-          <Link
-            href={target}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-disabled="true">
-            <button
-              className="secondarybtninvert min-w-fit w-44 rounded-full px-3 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
-              type="button"
-              aria-disabled="true">
+        : <Link href={target} target="_blank" rel="noopener noreferrer">
+            <button className="secondarybtninvert text-p font-semibold border-3 border-accent bg-accent text-textinvert min-w-fit w-44 rounded-full px-3 py-1 transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4 hover:bg-bg hover:border-text hover:shadow-secondarybtn hover:text-text">
               Result
             </button>
           </Link>
-        )}
+        }
         <Link href={target.sourceurl} target="_blank" rel="noopener noreferrer">
           <button
-            className="min-w-fit w-44 secondarybtn rounded-full px-4 py-1 bg-transparent font-semibold transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4"
+            className="min-w-fit w-44 secondarybtn text-p font-semibold border-3 border-accent text-text rounded-full px-4 py-1 bg-transparent transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4 hover:bg-accent hover:shadow-secondarybtn hover:shadow-text hover:text-textinvert"
             type="button">
             <Image
               className="h-6 w-auto inline-block"

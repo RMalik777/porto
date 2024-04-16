@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import notfound from "/public/confused.svg";
 
 export const metadata = {
   title: {
@@ -12,13 +14,14 @@ export default function notFound() {
     <main>
       <div className=" h-screen flex flex-col items-center justify-center gap-8">
         <div className="flex flex-col md:flex-row items-center gap-4">
+          <Image src={notfound} alt="Icon of a very confused person face" />
           <h1 className="title text-center font-black">404</h1>
           <div className="verticalLine w-1/2 md:w-0 md:h-full rounded-sm border-solid border-l-0 border-b-4 md:border-l-4 md:border-b-0 border-black"></div>
           <h2 className="subtitle text-center font-medium">
             It&apos;s look like you are lost
           </h2>
         </div>
-        <button className="defaultbtn rounded-full px-8 py-3 transition-all duration-300 ease-out">
+        <button className="defaultbtn text-p text-text dark:text-textdark border-6 border-accent rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text">
           <Link href="/">Back to Home</Link>
         </button>
       </div>
@@ -33,7 +36,7 @@ export default function notFound() {
           Did you know what is the meaning of Error 404 or 404 not found?
           According to{" "}
           <Link
-            className="text-blue-500 underline hover:text-blue-700 duration-300 ease-out"
+            className="text-blue-500 underline hover:text-blue-700 duration-300 ease-out after:content-['_↗']"
             href="https://www.geeksforgeeks.org/history-of-the-404-error/">
             GeeksforGeeks
           </Link>
