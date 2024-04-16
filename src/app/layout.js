@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | Rafli Malik",
     default: "Rafli Malik",
   },
-  description: "Rafli Malik's Personal Portoflio Website",
+  description: "Rafli Malik's Personal Portfolio Website",
 };
 
 export const viewport = {
