@@ -4,7 +4,6 @@ import Image from "next/image";
 import { contactList } from "./Contact/contactlist";
 import { eduList, expList, cvlist, worklist } from "./About/aboutlist";
 import { projectList, skillList } from "./Skills/skillslist";
-import { ImageSkeleton } from "@/app/components/Skeletons";
 
 import { useRef } from "react";
 import { RedHatDisp } from "@/app/fonts";

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 import { about, education, CV, work } from "./aboutdata";
-import { ImageSkeleton } from "../components/Skeletons";
 
 export const expList = about.map((target) => (
   <Link key={target.id} href={"/Experience/" + target.htmlid}>
