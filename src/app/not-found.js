@@ -12,7 +12,7 @@ export const metadata = {
 export default function notFound() {
   return (
     <main>
-      <div className=" h-screen flex flex-col items-center justify-center gap-8">
+      <div className=" h-dvh flex flex-col items-center justify-center gap-8">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <Image src={notfound} alt="Icon of a very confused person face" />
           <h1 className="title text-center font-black">404</h1>
@@ -28,7 +28,7 @@ export default function notFound() {
 
       <div
         id="content"
-        className="h-auto md:h-screen flex flex-col md:flex-row justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
+        className="h-auto md:h-dvh flex flex-col md:flex-row justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
         <h1 className="contentTitle w-full md:w-1/2 text-center font-bold">
           404
         </h1>

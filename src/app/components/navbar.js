@@ -115,7 +115,7 @@ export default function Navbar() {
       <nav id="navmenu" className="block md:hidden">
         <ul
           className={
-            "bg-bg sidebar h-screen fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " +
+            "bg-bg sidebar h-dvh fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " +
             (nav ? "w-full sm:w-1/3 shadow-md" : "w-0 shadow-none")
           }>
           <Image
