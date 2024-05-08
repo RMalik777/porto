@@ -10,7 +10,8 @@ export const metadata = {
     template: "%s | Rafli Malik",
     default: "Rafli Malik",
   },
-  description: "Rafli Malik's Personal Portfolio Website",
+  description:
+    "Hi! I'm Rafli Malik, a student from Bina Nusantara University, majoring in Computer Science. I'm a Front-End Developer, UI/UX Designer, and a Tech Enthusiast.",
 };
 
 export const viewport = {
