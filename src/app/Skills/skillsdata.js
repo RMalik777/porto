@@ -95,6 +95,10 @@ export const skills = [
       { id: 8, name: "React.js" },
       { id: 9, name: "Next.js" },
       { id: 21, name: "Remix" },
+      { id: 22, name: "Svelte" },
+      { id: 23, name: "SvelteKit" },
+      { id: 24, name: "Vue.js" },
+      { id: 25, name: "Nuxt.js" },
     ],
   },
   {
@@ -108,8 +112,12 @@ export const skills = [
   {
     id: 3,
     category: "Database",
-    skills: [{ id: 11, name: "MySQL" }],
+    skills: [
+      { id: 11, name: "MySQL" },
+      { id: 20, name: "SQLite" },
+    ],
   },
+
   {
     id: 4,
     category: "Programming",
@@ -117,6 +125,7 @@ export const skills = [
       { id: 12, name: "Python" },
       { id: 13, name: "Java" },
       { id: 16, name: "C#" },
+      { id: 29, name: "Rust" },
     ],
   },
   {
@@ -127,6 +136,7 @@ export const skills = [
       { id: 15, name: "Adobe Photoshop" },
       { id: 17, name: "Figma" },
       { id: 18, name: "Microsoft Office" },
+      { id: 28, name: "git" },
     ],
   },
 ];
