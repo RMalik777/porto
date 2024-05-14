@@ -12,6 +12,21 @@ export const metadata = {
   },
   description:
     "Hi! I'm Rafli Malik, a student from Bina Nusantara University, majoring in Computer Science. I'm a Front-End Developer, UI/UX Designer, and a Tech Enthusiast.",
+  openGraph: {
+    title: "Rafli Malik",
+    description: "Front End Developer and Tech Enthusiast",
+    url: "https://www.raflimalik.com/",
+    siteName: "Rafli Malik",
+    images: [
+      {
+        url: "/photosquarezoom.jpg", // Must be an absolute URL
+        width: 800,
+        height: 800,
+        alt: "Portrait of Rafli Malik",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export const viewport = {
