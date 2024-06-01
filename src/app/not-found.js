@@ -12,31 +12,31 @@ export const metadata = {
 export default function notFound() {
   return (
     <main>
-      <div className=" h-dvh flex flex-col items-center justify-center gap-8">
-        <div className="flex flex-col md:flex-row items-center gap-4">
+      <div className="flex h-dvh flex-col items-center justify-center gap-8">
+        <div className="flex flex-col items-center gap-4 md:flex-row">
           <Image src={notfound} alt="Icon of a very confused person face" />
           <h1 className="title text-center font-black">404</h1>
-          <div className="verticalLine w-1/2 md:w-0 md:h-full rounded-sm border-solid border-l-0 border-b-4 md:border-l-4 md:border-b-0 border-black"></div>
+          <div className="verticalLine w-1/2 rounded-sm border-b-4 border-l-0 border-solid border-black md:h-full md:w-0 md:border-b-0 md:border-l-4"></div>
           <h2 className="subtitle text-center font-medium">
             It&apos;s look like you are lost
           </h2>
         </div>
-        <button className="defaultbtn text-p text-text dark:text-textdark border-6 border-accent rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text">
+        <button className="defaultbtn dark:text-textdark rounded-full border-6 border-accent bg-transparent px-8 py-3 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text">
           <Link href="/">Back to Home</Link>
         </button>
       </div>
 
       <div
         id="content"
-        className="h-auto md:h-dvh flex flex-col md:flex-row justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
-        <h1 className="contentTitle w-full md:w-1/2 text-center font-bold">
+        className="mb-12 flex h-auto flex-col items-center justify-center gap-4 py-4 md:mb-6 md:h-dvh md:flex-row md:justify-evenly md:gap-12">
+        <h1 className="contentTitle w-full text-center font-bold md:w-1/2">
           404
         </h1>
-        <p className="max-w-prose contentText w-full md:w-1/2 font-medium">
+        <p className="contentText w-full max-w-prose font-medium md:w-1/2">
           Did you know what is the meaning of Error 404 or 404 not found?
           According to{" "}
           <Link
-            className="text-blue-500 underline hover:text-blue-700 duration-300 ease-out after:content-['_↗']"
+            className="text-blue-500 underline duration-300 ease-out after:content-['_↗'] hover:text-blue-700"
             href="https://www.geeksforgeeks.org/history-of-the-404-error/">
             GeeksforGeeks
           </Link>

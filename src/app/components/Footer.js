@@ -69,10 +69,10 @@ export default function Footer() {
 
   return (
     <footer id="endcredit" className="h-auto">
-      <div className="w-auto flex flex-col md:flex-row justify-between items-center py-6 pb-12 mt-16">
-        <div className="profile w-auto flex items-center self-start">
+      <div className="mt-16 flex w-auto flex-col items-center justify-between py-6 pb-12 md:flex-row">
+        <div className="profile flex w-auto items-center self-start">
           <Image
-            className="w-24 h-auto float-left mr-2 rounded-full"
+            className="float-left mr-2 h-auto w-24 rounded-full"
             src="/photosquarezoom.jpg"
             width={512}
             height={512}
@@ -80,19 +80,19 @@ export default function Footer() {
           />
           <h6 className="font-bold">Rafli Malik</h6>
         </div>
-        <div className="social w-auto flex flex-col items-end gap-4 self-end hover:*:text-accent hover:*:underline *:duration-200 *:ease-out">
+        <div className="social flex w-auto flex-col items-end gap-4 self-end *:duration-200 *:ease-out hover:*:text-accent hover:*:underline">
           {socialList}
         </div>
       </div>
       <div
         ref={nextlogo}
-        className="h-auto w-full absolute left-0 right-0 p-2 px-6 md:px-8 lg:px-12 xl:px-14 bg-black bg-fixed flex flex-row gap-4 items-center justify-center"
+        className="absolute left-0 right-0 flex h-auto w-full flex-row items-center justify-center gap-4 bg-black bg-fixed p-2 px-6 md:px-8 lg:px-12 xl:px-14"
         style={{
           opacity: nextInView ? 1 : 0,
           transition: "all 1s cubic-bezier(0.2, 0, 0, 1) 0.2s",
         }}>
-        <h6 className="text-white font-semibold">Made With</h6>
-        <Image className="w-auto h-5" src={nextwhite} alt="NextJS Logo" />
+        <h6 className="font-semibold text-white">Made With</h6>
+        <Image className="h-5 w-auto" src={nextwhite} alt="NextJS Logo" />
       </div>
     </footer>
   );

@@ -7,14 +7,14 @@ export const expList = about.map((target) => (
     <div
       id={target.htmlid}
       className={
-        " card h-full flex flex-col gap-2 p-8 sm:p-6 md:p-12 rounded-xl transition-all duration-300 ease-out border-2 border-white border-solid hover:bg-accent hover:shadow-primarybtn hover:shadow-text hover:text-textinvert"
+        "card flex h-full flex-col gap-2 rounded-xl border-2 border-solid border-white p-8 transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text sm:p-6 md:p-12"
       }>
       <Image
         src={target.picture.thumbnail.source}
         alt="Project Thumbnail"
         width={720}
         height={540}
-        className="w-auto h-auto rounded-lg"
+        className="h-auto w-auto rounded-lg"
       />
       <div className="expinfo">
         <h5 translate="no" className="font-semibold">
@@ -27,7 +27,7 @@ export const expList = about.map((target) => (
 ));
 
 export const eduList = education.map((target) => (
-  <div key={target.id} className={" w-full mb-6 font-bold"}>
+  <div key={target.id} className={"mb-6 w-full font-bold"}>
     <h5 translate="no" className="w-full">
       {target.name}
     </h5>
@@ -37,7 +37,7 @@ export const eduList = education.map((target) => (
 ));
 
 export const worklist = work.map((target) => (
-  <div key={target.id} className=" rounded-2xl py-3 mb-4">
+  <div key={target.id} className="mb-4 rounded-2xl py-3">
     <h4 className="font-bold">{target.position}</h4>
     <h5 className="font-bold">
       {target.company} | <span className="font-medium">{target.status}</span>
@@ -53,20 +53,20 @@ export const worklist = work.map((target) => (
 export const cvlist = CV.map((target) => (
   <div
     key={target.id}
-    className="border-2 border-white rounded-2xl px-6 py-3 mb-4">
-    <h6 className="font-bold mb-2">{target.name}</h6>
-    <div className="flex flex-col sm:flex-row gap-4">
+    className="mb-4 rounded-2xl border-2 border-white px-6 py-3">
+    <h6 className="mb-2 font-bold">{target.name}</h6>
+    <div className="flex flex-col gap-4 sm:flex-row">
       <Link
         href={target.source}
-        className="w-fit secondarybtninvert text-p font-semibold border-3 border-accent bg-accent text-textinvert px-4 py-1 rounded-full transition-all duration-300 ease-out hover:bg-bg hover:border-text hover:shadow-secondarybtn hover:text-text">
+        className="secondarybtninvert w-fit rounded-full border-3 border-accent bg-accent px-4 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
         <button>
           <p>View</p>
         </button>
       </Link>
       <Link
         href={target.source}
-        download={true}
-        className="w-fit secondarybtn text-p font-semibold border-3 border-accent text-text px-4 py-1 rounded-full transition-all duration-300 ease-out hover:bg-accent hover:shadow-secondarybtn hover:shadow-text hover:text-textinvert">
+        download
+        className="secondarybtn w-fit rounded-full border-3 border-accent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text">
         <button>
           <p>Download</p>
         </button>

@@ -41,10 +41,10 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={
-        "m-0 p-0 max-w-full scroll-smooth box-border antialiased " +
+        "m-0 box-border max-w-full scroll-smooth p-0 antialiased " +
         RedHatText.className
       }>
-      <body className="max-w-full mx-6 md:mx-8 lg:mx-12 xl:mx-14 transition-all duration-300 ease-out ">
+      <body className="mx-6 max-w-full transition-all duration-300 ease-out md:mx-8 lg:mx-12 xl:mx-14">
         <Navbar />
         {children}
         <Analytics />

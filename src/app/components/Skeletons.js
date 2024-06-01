@@ -1,3 +1,3 @@
 export function ImageSkeleton() {
-  return <div className="w-36 h-28 bg-gray-200 rounded-md animate-pulse"></div>;
+  return <div className="h-28 w-36 animate-pulse rounded-md bg-gray-200"></div>;
 }

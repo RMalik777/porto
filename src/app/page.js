@@ -29,10 +29,10 @@ export default function Home() {
   return (
     <main>
       <motion.div
-        className="progress-bar fixed z-50 top-0 left-0 right-0 h-1 bg-accent dark:bg-accentDark origin-top-left "
+        className="progress-bar fixed left-0 right-0 top-0 z-50 h-1 origin-top-left bg-accent dark:bg-accentDark"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="group bg-headerbg fixed bottom-0 right-0 z-10 p-0 md:p-1 m-4 rounded-full border-solid border-2 border-white hover:backdrop-blur-sm transition-all duration-200 ease-out shadow-md hover:shadow-lg hover:bg-white text-textinvert">
+      <div className="group fixed bottom-0 right-0 z-10 m-4 rounded-full border-2 border-solid border-white bg-headerbg p-0 text-textinvert shadow-md transition-all duration-200 ease-out hover:bg-white hover:shadow-lg hover:backdrop-blur-sm md:p-1">
         <Link href={"#intro"} className="flex items-center justify-center">
           {/* <span className="text-6xl material-symbols-rounded group-hover:text-[#aa4465] duration-300 ease-out">
             keyboard_double_arrow_up
@@ -42,24 +42,22 @@ export default function Home() {
       </div>
       <div
         id="intro"
-        className="h-dvh flex flex-col items-center justify-center">
+        className="flex h-dvh flex-col items-center justify-center">
         <h1
           ref={scope}
           className={
             RedHatDisp.className +
-            " title text-text dark:text-textDark text-h1 font-extrabold text-center"
+            " title text-center text-h1 font-extrabold text-text dark:text-textDark"
           }>
           Hello
         </h1>
         <h2
           translate="no"
-          className="title text-text dark:text-textDark text-h2 font-normal text-center ">
+          className="title text-center text-h2 font-normal text-text dark:text-textDark">
           I&apos;m Rafli Malik
         </h2>
         <Link href="#content">
-          <button
-            className="defaultbtn text-p text-text dark:text-textDark border-6 border-accent rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text
-          ">
+          <button className="defaultbtn rounded-full border-6 border-accent bg-transparent px-8 py-3 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text dark:text-textDark">
             Let&apos;s Get Started
           </button>
         </Link>
@@ -67,7 +65,7 @@ export default function Home() {
 
       <div
         id="content"
-        className="scroll-mt-16 h-auto grid auto-rows-min grid-cols-1 md:grid-cols-2 justify-center md:justify-evenly items-center py-4 mb-12 md:mb-6 gap-4 md:gap-12">
+        className="mb-12 grid h-auto scroll-mt-16 auto-rows-min grid-cols-1 items-center justify-center gap-4 py-4 md:mb-6 md:grid-cols-2 md:justify-evenly md:gap-12">
         <h1
           ref={titleTitle}
           style={{
@@ -77,11 +75,11 @@ export default function Home() {
           }}
           className={
             RedHatDisp.className +
-            " w-full text-h1 font-black text-text text-center"
+            " w-full text-center text-h1 font-black text-text"
           }>
           what i do
         </h1>
-        <p className="contentText text-text tracking-p leading-p font-normal max-w-prose w-full ">
+        <p className="contentText w-full max-w-prose font-normal leading-p tracking-p text-text">
           Front-End Development, UI/UX Design and sometimes graphic design. I
           can do little bit photo editing and little more in video editing.
           Maybe not much, but more than enough to cover all my related work. I
@@ -91,18 +89,14 @@ export default function Home() {
           If you look below this page, I&apos;ve listed all the previous work I
           did in the past. You can contact me through the link below.
         </p>
-        <div className="w-full flex flex-col md:flex-row flex-wrap justify-evenly items-start md:items-center gap-6 md:gap-10 md:col-start-2 self-start justify-self-center">
+        <div className="flex w-full flex-col flex-wrap items-start justify-evenly gap-6 self-start justify-self-center md:col-start-2 md:flex-row md:items-center md:gap-10">
           <Link href="/#contact">
-            <button
-              className="defaultbtn text-p text-text dark:text-textDark border-6 border-accent rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text
-            ">
+            <button className="defaultbtn rounded-full border-6 border-accent bg-transparent px-8 py-3 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text dark:text-textDark">
               Contact Me
             </button>
           </Link>
           <Link href="/#CV">
-            <button
-              className="defaultbtn text-p text-text dark:text-textDark border-6 border-accent rounded-full px-8 py-3 bg-transparent font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text
-            ">
+            <button className="defaultbtn rounded-full border-6 border-accent bg-transparent px-8 py-3 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-primarybtn hover:shadow-text dark:text-textDark">
               Download CV
             </button>
           </Link>
@@ -111,29 +105,29 @@ export default function Home() {
 
       <div
         id="skills"
-        className=" h-full flex flex-col items-start justify-center gap-2 mb-24 md:mb-32 scroll-mt-24">
+        className="mb-24 flex h-full scroll-mt-24 flex-col items-start justify-center gap-2 md:mb-32">
         <h2
           className={
             RedHatDisp.className +
-            " title text-text dark:text-textDark text-h2 font-black text-left"
+            " title text-left text-h2 font-black text-text dark:text-textDark"
           }>
           Skills
         </h2>
         <div>{skillList}</div>
       </div>
 
-      <div className="h-auto mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+      <div className="mb-32 grid h-auto grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
         <h2
           className={
             RedHatDisp.className +
-            " header md:col-span-2 self-center py-4 text-h2 font-black"
+            " header self-center py-4 text-h2 font-black md:col-span-2"
           }>
           Projects
         </h2>
         {projectList}
       </div>
 
-      <div id="about" className="h-auto mb-32 scroll-mt-24">
+      <div id="about" className="mb-32 h-auto scroll-mt-24">
         <div className="mb-32">
           <h2
             className={
@@ -161,7 +155,7 @@ export default function Home() {
           </h2>
           <div
             id="experience"
-            className="h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 md:gap-y-12">
+            className="grid h-auto grid-cols-1 gap-2 sm:gap-4 md:grid-cols-2 md:gap-6 md:gap-y-12 lg:grid-cols-3">
             {expList}
           </div>
         </div>
@@ -169,22 +163,22 @@ export default function Home() {
 
       <div
         id="contact"
-        className="h-full mb-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 scroll-mt-24">
+        className="mb-32 grid h-full scroll-mt-24 grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
         <h2
           className={
             RedHatDisp.className +
-            " header md:col-span-2 self-center py-4 text-h2 font-black"
+            " header self-center py-4 text-h2 font-black md:col-span-2"
           }>
           Contact Me
         </h2>
         {contactList}
       </div>
 
-      <div id="CV" className="h-full mb-32 scroll-mt-24">
+      <div id="CV" className="mb-32 h-full scroll-mt-24">
         <h2
           className={
             RedHatDisp.className +
-            " header md:col-span-2 self-center py-4 text-h2 font-black"
+            " header self-center py-4 text-h2 font-black md:col-span-2"
           }>
           Curriculum Vitae
         </h2>

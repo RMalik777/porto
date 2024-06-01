@@ -17,13 +17,13 @@ function imageLogo(source) {
 export const skillList = skills.map((target) => (
   <div className="mb-5" key={target.id}>
     <h5 className="font-semibold">{target.category}</h5>
-    <div className="flex flex-wrap gap-5 justify-start items-start">
+    <div className="flex flex-wrap items-start justify-start gap-5">
       {target.skills.map((skill) => (
         <p
           id="skillitem"
           key={skill.id}
           translate="no"
-          className="skillslist bg-accent px-6 py-1 border-2 border-white text-white font-semibold rounded-full">
+          className="skillslist rounded-full border-2 border-white bg-accent px-6 py-1 font-semibold text-white">
           {skill.name}
         </p>
       ))}
@@ -35,14 +35,14 @@ export const projectList = project.reverse().map((target) => (
   <div
     key={target.id}
     className={
-      "flex flex-col sm:flex-row items-start gap-4 px-3 py-1 md:px-6 md:py-4 border-2 border-white border-solid rounded-2xl transition-all duration-300 ease-out"
+      "flex flex-col items-start gap-4 rounded-2xl border-2 border-solid border-white px-3 py-1 transition-all duration-300 ease-out sm:flex-row md:px-6 md:py-4"
     }>
     <Image
       src={target.thumbnail}
       alt="Project Thumbnail"
       width={500}
       height={500}
-      className="w-28 h-auto mt-2 object-contain object-center inline-block rounded-md"
+      className="mt-2 inline-block h-auto w-28 rounded-md object-contain object-center"
     />
     <div className="projectinfo inline-block">
       <h5 translate="no" className="font-semibold">
@@ -51,25 +51,25 @@ export const projectList = project.reverse().map((target) => (
       <p
         className="text-left"
         dangerouslySetInnerHTML={{ __html: target.desc }}></p>
-      <div className="mt-2 lg:mt-4 flex flex-col lg:flex-row gap-2 lg:gap-6">
+      <div className="mt-2 flex flex-col gap-2 lg:mt-4 lg:flex-row lg:gap-6">
         {target.url === "" ?
           <button
-            className="disabledbtn text-p font-semibold border-3 border-gray-300 cursor-default text-gray-300 min-w-fit w-44 rounded-full px-3 py-1 bg-transparent  transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4"
+            className="disabledbtn flex w-44 min-w-fit cursor-default flex-row items-center justify-center gap-4 rounded-full border-3 border-gray-300 bg-transparent px-3 py-1 text-p font-semibold text-gray-300 transition-all duration-300 ease-out"
             type="button">
             Result
           </button>
         : <Link href={target} target="_blank" rel="noopener noreferrer">
-            <button className="secondarybtninvert text-p font-semibold border-3 border-accent bg-accent text-textinvert min-w-fit w-44 rounded-full px-3 py-1 transition-all duration-300 ease-out flex flex-row justify-center items-center gap-4 hover:bg-bg hover:border-text hover:shadow-secondarybtn hover:text-text">
+            <button className="secondarybtninvert flex w-44 min-w-fit flex-row items-center justify-center gap-4 rounded-full border-3 border-accent bg-accent px-3 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
               Result
             </button>
           </Link>
         }
         <Link href={target.sourceurl} target="_blank" rel="noopener noreferrer">
           <button
-            className="min-w-fit w-44 secondarybtn text-p font-semibold border-3 border-accent text-text rounded-full px-4 py-1 bg-transparent transition-all duration-300 ease-out flex flex-row justify-evenly items-center gap-4 hover:bg-accent hover:shadow-secondarybtn hover:shadow-text hover:text-textinvert"
+            className="secondarybtn flex w-44 min-w-fit flex-row items-center justify-evenly gap-4 rounded-full border-3 border-accent bg-transparent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text"
             type="button">
             <Image
-              className="h-6 w-auto inline-block"
+              className="inline-block h-6 w-auto"
               src={imageLogo(target.source)}
               alt="Github Logo"
             />

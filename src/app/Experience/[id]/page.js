@@ -19,17 +19,17 @@ export default async function page({ params }) {
   const item = about.find((target) => target.htmlid === params.id);
   const description = item.longdesc;
   const introList = description[0].intro.map((target, i) => (
-    <p key={i} className="max-w-prose mb-4 text-left break-words">
+    <p key={i} className="mb-4 max-w-prose break-words text-left">
       {target}
     </p>
   ));
   const mainList = description[1].main.map((target, i) => (
-    <p key={i} className="max-w-prose mb-4 text-left break-words">
+    <p key={i} className="mb-4 max-w-prose break-words text-left">
       {target}
     </p>
   ));
   const closingList = description[2].closing.map((target, i) => (
-    <p key={i} className="max-w-prose mb-4 text-left break-words">
+    <p key={i} className="mb-4 max-w-prose break-words text-left">
       {target}
     </p>
   ));
@@ -78,7 +78,7 @@ export default async function page({ params }) {
   const quotes = getquotes[0];
   // !Fix image slow (change size)
   return (
-    <main className="h-auto flex flex-col items-center pt-24 md:pt-32 lg:pt-48 px-2 lg:px-8">
+    <main className="flex h-auto flex-col items-center px-2 pt-24 md:pt-32 lg:px-8 lg:pt-48">
       <div id="thumbnail" className="mb-4 lg:mb-16">
         <h1 translate="no" className="text-center font-bold tracking-wide">
           {item.title}
@@ -87,9 +87,9 @@ export default async function page({ params }) {
           {item.location}
         </h5>
       </div>
-      <figure className="w-full py-8 mb-2 lg:mb-8">
+      <figure className="mb-2 w-full py-8 lg:mb-8">
         <Image
-          className="w-full h-auto"
+          className="h-auto w-full"
           src={thumbnail.source}
           width={960}
           height={720}
@@ -100,8 +100,8 @@ export default async function page({ params }) {
         <figcaption className="w-fit font-medium">{thumbnail.capt}</figcaption>
       </figure>
 
-      <blockquote className="max-w-prose max-md:px-4 mb-4 lg:mb-16 py-4">
-        <h6 className="max-w-prose w-full font-bold">
+      <blockquote className="mb-4 max-w-prose py-4 max-md:px-4 lg:mb-16">
+        <h6 className="w-full max-w-prose font-bold">
           &quot;{quotes.quote}&quot;
         </h6>
         <cite translate="no" className="font-medium">
@@ -109,16 +109,16 @@ export default async function page({ params }) {
         </cite>
       </blockquote>
 
-      <div id="intro" className="mb-4 flex flex-col items-center ">
+      <div id="intro" className="mb-4 flex flex-col items-center">
         {introList}
       </div>
 
       <div
         id="main"
-        className="mb-4 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-center">
-        <figure className="w-11/12 lg:w-1/2 pt-4">
+        className="mb-4 flex flex-col items-center gap-4 lg:flex-row lg:items-center lg:gap-8">
+        <figure className="w-11/12 pt-4 lg:w-1/2">
           <Image
-            className="w-full h-auto"
+            className="h-auto w-full"
             src={img1.source}
             width={720}
             height={540}
@@ -130,11 +130,11 @@ export default async function page({ params }) {
         <div>{mainList}</div>
       </div>
 
-      <div id="closing" className="mb-4 flex flex-col gap-8 items-center ">
+      <div id="closing" className="mb-4 flex flex-col items-center gap-8">
         <div>{closingList}</div>
         <figure className="w-full lg:w-11/12">
           <Image
-            className="w-full h-auto"
+            className="h-auto w-full"
             src={img2.source}
             width={960}
             height={720}
@@ -145,10 +145,10 @@ export default async function page({ params }) {
         </figure>
         <div
           id="imgarea"
-          className="w-full flex flex-col lg:flex-row gap-4 items-center justify-evenly">
+          className="flex w-full flex-col items-center justify-evenly gap-4 lg:flex-row">
           <figure className="w-full lg:w-2/5">
             <Image
-              className="w-auto h-auto"
+              className="h-auto w-auto"
               src={img3.source}
               width={720}
               height={540}
@@ -159,7 +159,7 @@ export default async function page({ params }) {
           </figure>
           <figure className="w-full lg:w-2/5">
             <Image
-              className="w-auto h-auto"
+              className="h-auto w-auto"
               src={img4.source}
               width={720}
               height={540}

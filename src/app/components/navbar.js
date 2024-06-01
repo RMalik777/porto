@@ -59,7 +59,7 @@ export default function Navbar() {
   const catMenuVertical = category.map((target) => (
     <li key={target.id} className="list-none text-center">
       <Link
-        className="navitem w-full text-right sm:text-left p-4 pr-6 sm:pl-11 text-h4 font-medium text-text dark:text-textDark inline-block md:block duration-200 ease-linear max-md:hover:tracking-wider hover:underline max-md:hover:font-black hover:text-accent dark:hover:text-accentDark"
+        className="navitem inline-block w-full p-4 pr-6 text-right text-h4 font-medium text-text duration-200 ease-linear hover:text-accent hover:underline max-md:hover:font-black max-md:hover:tracking-wider sm:pl-11 sm:text-left md:block dark:text-textDark dark:hover:text-accentDark"
         href={target.address}
         onClick={showNav}>
         {target.title}
@@ -67,9 +67,9 @@ export default function Navbar() {
     </li>
   ));
   const catMenuHorizontal = category.map((target) => (
-    <li key={target.id} className="list-none text-center w-1/6 hidden md:block">
+    <li key={target.id} className="hidden w-1/6 list-none text-center md:block">
       <Link
-        className="navitem text-h6 font-medium duration-200 ease-linear hover:underline hover:font-black hover:text-accent dark:hover:text-accentDark"
+        className="navitem text-h6 font-medium duration-200 ease-linear hover:font-black hover:text-accent hover:underline dark:hover:text-accentDark"
         href={target.address}>
         {target.title}
       </Link>
@@ -79,8 +79,8 @@ export default function Navbar() {
   return (
     <header
       className={
-        "scroll-smooth fixed h-auto z-50 w-full bg-bg top-0 right-0 left-0 py-4 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out backdrop-blur-md backdrop-saturate-150 bg-headerbg" +
-        (scrollY > 200 ? " shadow-sm " : " bg-white/0 shadow-none ") +
+        "pd:px-6 fixed left-0 right-0 top-0 z-50 h-auto w-full scroll-smooth bg-bg bg-headerbg px-3 py-4 backdrop-blur-md backdrop-saturate-150 duration-300 ease-out lg:px-12 xl:px-14" +
+        (scrollY > 200 ? "shadow-sm" : "bg-white/0 shadow-none") +
         RedHatDisp.className
       }>
       <style jsx global>
@@ -90,10 +90,10 @@ export default function Navbar() {
           }
         `}
       </style>
-      <div className="w-full flex flex-row justify-between items-center">
+      <div className="flex w-full flex-row items-center justify-between">
         <h6
           className={
-            "text-text navText text-h6 opacity-0 font-bold transition-all duration-300 ease-out"
+            "navText text-h6 font-bold text-text opacity-0 transition-all duration-300 ease-out"
           }
           style={scrollY > 200 ? { opacity: 1 } : { opacity: 0 }}>
           Rafli
@@ -103,7 +103,7 @@ export default function Navbar() {
 
         <div className="w-auto">
           <Image
-            className="navBtn cursor-pointer inline-block md:hidden duration-300 ease-out z-50"
+            className="navBtn z-50 inline-block cursor-pointer duration-300 ease-out md:hidden"
             onClick={showNav}
             src={Menu}
             alt="Menu Button"
@@ -115,11 +115,11 @@ export default function Navbar() {
       <nav id="navmenu" className="block md:hidden">
         <ul
           className={
-            "bg-bg sidebar h-dvh fixed z-10 top-0 right-0 overflow-x-hidden pt-28 md:pt-22 duration-300 ease-out " +
-            (nav ? "w-full sm:w-1/3 shadow-md" : "w-0 shadow-none")
+            "sidebar md:pt-22 fixed right-0 top-0 z-10 h-dvh overflow-x-hidden bg-bg pt-28 duration-300 ease-out " +
+            (nav ? "w-full shadow-md sm:w-1/3" : "w-0 shadow-none")
           }>
           <Image
-            className="closebtn w-auto p-4 absolute top-0 right-0 px-3 pd:px-6 lg:px-12 xl:px-14 duration-300 ease-out"
+            className="closebtn pd:px-6 absolute right-0 top-0 w-auto p-4 px-3 duration-300 ease-out lg:px-12 xl:px-14"
             onClick={showNav}
             src={Close}
             alt="Close Button"
