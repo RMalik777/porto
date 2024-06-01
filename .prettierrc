@@ -2,5 +2,6 @@
   "trailingComma": "es5",
   "tabWidth": 2,
   "bracketSameLine": true,
-  "experimentalTernaries": true
+  "experimentalTernaries": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
