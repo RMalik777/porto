@@ -25,7 +25,6 @@ export default function notFound() {
           <Link href="/">Back to Home</Link>
         </button>
       </div>
-
       <div
         id="content"
         className="mb-12 flex h-auto flex-col items-center justify-center gap-4 py-4 md:mb-6 md:h-dvh md:flex-row md:justify-evenly md:gap-12">

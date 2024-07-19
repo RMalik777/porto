@@ -207,11 +207,13 @@ export const CV = [
   {
     id: 0,
     name: "CV (English)",
-    source: "/CV/CV_Rafli Malik (EN).pdf",
+    source:
+      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)-Td63BCsFDK3UcTWVk5yaRVbtRdebgX.pdf",
   },
   {
     id: 1,
     name: "CV (Indonesia)",
-    source: "/CV/CV_Rafli Malik (ID).pdf",
+    source:
+      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-c1vmBvmDCP8Sgbe7aJ6P8EhdO2KPkY.pdf",
   },
 ];

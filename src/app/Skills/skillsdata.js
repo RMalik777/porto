@@ -99,6 +99,7 @@ export const skills = [
       { id: 23, name: "SvelteKit" },
       { id: 24, name: "Vue.js" },
       { id: 25, name: "Nuxt.js" },
+      { id: 26, name: "Astro" },
     ],
   },
   {
@@ -117,9 +118,13 @@ export const skills = [
       { id: 20, name: "SQLite" },
     ],
   },
-
   {
     id: 4,
+    category: "Content Management System",
+    skills: [{ id: 27, name: "Sanity" }],
+  },
+  {
+    id: 5,
     category: "Programming",
     skills: [
       { id: 12, name: "Python" },
@@ -129,7 +134,7 @@ export const skills = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     category: "Tools",
     skills: [
       { id: 14, name: "Adobe Premiere Pro" },
