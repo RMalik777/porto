@@ -98,18 +98,18 @@ export default function Navbar() {
           style={scrollY > 200 ? { opacity: 1 } : { opacity: 0 }}>
           Rafli
         </h6>
+        <ul className="flex h-fit w-full flex-row items-center justify-between">
+          {catMenuHorizontal}
+        </ul>
 
-        {catMenuHorizontal}
-
-        <div className="w-auto">
+        <button className="w-auto" onClick={showNav}>
           <Image
             className="navBtn z-50 inline-block cursor-pointer duration-300 ease-out md:hidden"
-            onClick={showNav}
             src={Menu}
             alt="Menu Button"
             priority={true}
           />
-        </div>
+        </button>
       </div>
 
       <nav id="navmenu" className="block md:hidden">
@@ -118,13 +118,16 @@ export default function Navbar() {
             "sidebar md:pt-22 fixed right-0 top-0 z-10 h-dvh overflow-x-hidden bg-bg pt-28 duration-300 ease-out " +
             (nav ? "w-full shadow-md sm:w-1/3" : "w-0 shadow-none")
           }>
-          <Image
-            className="closebtn pd:px-6 absolute right-0 top-0 w-auto p-4 px-3 duration-300 ease-out lg:px-12 xl:px-14"
-            onClick={showNav}
-            src={Close}
-            alt="Close Button"
-            priority
-          />
+          <li>
+            <button onClick={showNav}>
+              <Image
+                className="closebtn pd:px-6 absolute right-0 top-0 w-auto p-4 px-3 duration-300 ease-out lg:px-12 xl:px-14"
+                src={Close}
+                alt="Close Button"
+                priority
+              />
+            </button>
+          </li>
           {catMenuVertical}
         </ul>
       </nav>
