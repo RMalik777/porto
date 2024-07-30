@@ -102,7 +102,7 @@ export default function Navbar() {
           {catMenuHorizontal}
         </ul>
 
-        <button className="w-auto" onClick={showNav}>
+        <button className="w-auto" onClick={showNav} aria-label="Open Menu">
           <Image
             className="navBtn z-50 inline-block cursor-pointer duration-300 ease-out md:hidden"
             src={Menu}
@@ -119,7 +119,7 @@ export default function Navbar() {
             (nav ? "w-full shadow-md sm:w-1/3" : "w-0 shadow-none")
           }>
           <li>
-            <button onClick={showNav}>
+            <button onClick={showNav} aria-label="Close Menu">
               <Image
                 className="closebtn pd:px-6 absolute right-0 top-0 w-auto p-4 px-3 duration-300 ease-out lg:px-12 xl:px-14"
                 src={Close}

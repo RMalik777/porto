@@ -19,7 +19,6 @@ export default function Footer() {
       showas: "RMalik777",
       logo: "/project/logo/githubmarkblack.png",
       link: "https://github.com/RMalik777",
-      alt: "GitHub Logo",
     },
     {
       id: 1,
@@ -27,7 +26,6 @@ export default function Footer() {
       showas: "play.playy",
       logo: "/instagram.png",
       link: "https://www.instagram.com/raflimalik__/",
-      alt: "Instagram Logo",
     },
     {
       id: 2,
@@ -35,7 +33,6 @@ export default function Footer() {
       showas: "Rafli Malik",
       logo: "/linkedin.png",
       link: "https://www.linkedin.com/in/rafli-malik/",
-      alt: "LinkedIn Logo",
     },
     {
       id: 3,
@@ -43,7 +40,6 @@ export default function Footer() {
       showas: "Rafli.Malik@gmail.com",
       logo: "/gmail.png",
       link: "mailto:Rafli.Malik@gmail.com",
-      alt: "Gmail Logo",
     },
   ];
   const socialList = social.map((target) => (
@@ -61,7 +57,7 @@ export default function Footer() {
           src={target.logo}
           width={256}
           height={256}
-          alt={target.alt}
+          alt=""
         />
       </Link>
     </div>
