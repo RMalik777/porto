@@ -55,26 +55,29 @@ export const projectList = project.reverse().map((target) => (
         {target.url === "" ?
           <button
             className="disabledbtn flex w-44 min-w-fit cursor-default flex-row items-center justify-center gap-4 rounded-full border-3 border-gray-300 bg-transparent px-3 py-1 text-p font-semibold text-gray-300 transition-all duration-300 ease-out"
-            type="button">
+            type="button"
+            disabled>
             Result
           </button>
-        : <Link href={target} target="_blank" rel="noopener noreferrer">
-            <button className="secondarybtninvert flex w-44 min-w-fit flex-row items-center justify-center gap-4 rounded-full border-3 border-accent bg-accent px-3 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
-              Result
-            </button>
+        : <Link
+            href={target}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondarybtninvert flex w-44 min-w-fit flex-row items-center justify-center gap-4 rounded-full border-3 border-accent bg-accent px-3 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
+            Result
           </Link>
         }
-        <Link href={target.sourceurl} target="_blank" rel="noopener noreferrer">
-          <button
-            className="secondarybtn flex w-44 min-w-fit flex-row items-center justify-evenly gap-4 rounded-full border-3 border-accent bg-transparent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text"
-            type="button">
-            <Image
-              className="inline-block h-6 w-auto"
-              src={imageLogo(target.source)}
-              alt="Github Logo"
-            />
-            Source
-          </button>
+        <Link
+          href={target.sourceurl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="secondarybtn flex w-44 min-w-fit flex-row items-center justify-evenly rounded-full border-3 border-accent bg-transparent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text">
+          <Image
+            className="inline-block h-6 w-auto"
+            src={imageLogo(target.source)}
+            alt="Github Logo"
+          />
+          Source
         </Link>
       </div>
     </div>

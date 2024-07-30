@@ -58,19 +58,19 @@ export const cvlist = CV.map((target) => (
     <div className="flex flex-col gap-4 sm:flex-row">
       <Link
         href={target.source}
-        className="secondarybtninvert w-fit rounded-full border-3 border-accent bg-accent px-4 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
-        <button>
-          <p>View</p>
-        </button>
+        className="secondarybtninvert flex w-fit items-center rounded-full border-3 border-accent bg-accent px-4 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
+        View
       </Link>
       <Link
         href={target.source}
         download
-        className="secondarybtn w-fit rounded-full border-3 border-accent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text">
-        <button>
-          <p>Download</p>
-        </button>
+        className="secondarybtn flex w-fit items-center rounded-full border-3 border-accent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text">
+        Download
       </Link>
+      <div
+        className="cf-turnstile"
+        data-sitekey="0x4AAAAAAAfj06N699zTzILh"
+        data-callback="javascriptCallback"></div>
     </div>
   </div>
 ));
