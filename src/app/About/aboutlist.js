@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { about, education, CV, work } from "./aboutdata";
+import { getDownloadUrl } from "@vercel/blob";
 
 export const expList = about.map((target) => (
   <Link key={target.id} href={"/Experience/" + target.htmlid}>
@@ -62,7 +63,7 @@ export const cvlist = CV.map((target) => (
         View
       </Link>
       <Link
-        href={target.source}
+        href={getDownloadUrl(target.source)}
         download
         className="secondarybtn flex w-fit items-center rounded-full border-3 border-accent px-4 py-1 text-p font-semibold text-text transition-all duration-300 ease-out hover:bg-accent hover:text-textinvert hover:shadow-secondarybtn hover:shadow-text">
         Download
