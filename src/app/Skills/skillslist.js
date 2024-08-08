@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { project, skills } from "./skillsdata";
+import DOMPurify from "dompurify";
 
 import githubblack from "/public/project/logo/githubmarkblack.png";
 // import githubwhite from "/public/project/logo/githubmarkwhite.png";
@@ -50,7 +51,9 @@ export const projectList = project.reverse().map((target) => (
       </h5>
       <p
         className="text-left"
-        dangerouslySetInnerHTML={{ __html: target.desc }}></p>
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(target.desc),
+        }}></p>
       <div className="mt-2 flex flex-col gap-2 lg:mt-4 lg:flex-row lg:gap-6">
         {target.url === "" ?
           <button

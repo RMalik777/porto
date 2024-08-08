@@ -32,7 +32,7 @@ export const project = [
   {
     id: 3,
     title: "NOKA",
-    desc: "Part of university project. Created a website for a game launch event. Contain information about the launch date, future plan and esports. Build with <b>HTML</b> and <b>CSS.</b>",
+    desc: "Part of university project. Created a website for a game launch event. Contain information about the launch date, future plan and esports. built with <b>HTML</b> and <b>CSS.</b>",
     thumbnail: "/project/thumbnail/NOKA.webp",
     url: "https://noka.raflimalik.com",
     source: "Github",
@@ -41,7 +41,7 @@ export const project = [
   {
     id: 4,
     title: "Astronom",
-    desc: "Part of university project. Created a space themed website. Containing information and images from Hubble Space Telescope. Build with <b>HTML</b> and <b>CSS.</b>",
+    desc: "Part of university project. Created a space themed website. Containing information and images from Hubble Space Telescope. Built with <b>HTML</b> and <b>CSS.</b>",
     thumbnail: "/project/thumbnail/astronom.webp",
     url: "https://astronom.raflimalik.com",
     source: "Github",
@@ -50,7 +50,7 @@ export const project = [
   {
     id: 5,
     title: "KpopZtation",
-    desc: "Part of university final project. Created a website for a music album shopping. Build using <b>ASP.NET</b> and <b>SQL Server.</b>",
+    desc: "Part of university final project. Created a website for a music album shopping. Built with <b>ASP.NET</b> and <b>SQL Server.</b>",
     thumbnail: "/project/thumbnail/kpopztation.webp",
     url: "",
     source: "Github",
@@ -59,7 +59,7 @@ export const project = [
   {
     id: 6,
     title: "Mini Portfolio",
-    desc: "Part of Bina Nusantara Computer Club mid project. Created a website for a personal portfolio. Build using <b>HTML, CSS</b>, and <b>JavaScript.</b>",
+    desc: "Part of Bina Nusantara Computer Club mid project. Created a website for a personal portfolio. Built with <b>HTML, CSS</b>, and <b>JavaScript.</b>",
     thumbnail: "/project/thumbnail/miniporto.webp",
     url: "https://miniporto.raflimalik.com",
     source: "Github",
@@ -73,6 +73,15 @@ export const project = [
     url: "https://puddingfest.raflimalik.com",
     source: "Github",
     sourceurl: "https://github.com/RMalik777/BNCC-Final-Project.git",
+  },
+  {
+    id: 8,
+    title: "Link Book",
+    desc: "Self created linktree alternative to host my social media links. Built with <b>SvelteKit</b> and <b>Tailwind CSS.</b>",
+    thumbnail: "/project/thumbnail/linkbook.webp",
+    url: "https://link.raflimalik.com",
+    source: "Github",
+    sourceurl: "https://github.com/RMalik777/LinkBook",
   },
 ];
 
