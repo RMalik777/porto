@@ -60,7 +60,7 @@ export const projectList = project.reverse().map((target) => (
             Result
           </button>
         : <Link
-            href={target}
+            href={target.url}
             target="_blank"
             rel="noopener noreferrer"
             className="secondarybtninvert flex w-44 min-w-fit flex-row items-center justify-center gap-4 rounded-full border-3 border-accent bg-accent px-3 py-1 text-p font-semibold text-textinvert transition-all duration-300 ease-out hover:border-text hover:bg-bg hover:text-text hover:shadow-secondarybtn">
