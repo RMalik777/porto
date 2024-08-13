@@ -76,7 +76,6 @@ export default async function page({ params }) {
   };
   const getquotes = await getQuote();
   const quotes = getquotes[0];
-  // !Fix image slow (change size)
   return (
     <main className="flex h-auto flex-col items-center px-2 pt-24 md:pt-32 lg:px-8 lg:pt-48">
       <div id="thumbnail" className="mb-4 lg:mb-16">
