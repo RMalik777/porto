@@ -208,12 +208,12 @@ export const CV = [
     id: 0,
     name: "CV (English)",
     source:
-      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)-Td63BCsFDK3UcTWVk5yaRVbtRdebgX.pdf",
+      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf",
   },
   {
     id: 1,
     name: "CV (Indonesia)",
     source:
-      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-c1vmBvmDCP8Sgbe7aJ6P8EhdO2KPkY.pdf",
+      "https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf",
   },
 ];
