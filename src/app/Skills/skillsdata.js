@@ -127,6 +127,7 @@ export const skills = [
     skills: [
       { id: 10, name: "ASP.NET" },
       { id: 19, name: "Laravel" },
+      { id: 32, name: "Tauri" },
     ],
   },
   {
