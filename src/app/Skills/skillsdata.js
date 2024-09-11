@@ -83,6 +83,15 @@ export const project = [
     source: "Github",
     sourceurl: "https://github.com/RMalik777/LinkBook",
   },
+  {
+    id: 9,
+    title: "Blog Website",
+    desc: "A blog website created with <b>Astro</b> and <b>Sanity</b> CMS.",
+    thumbnail: "/project/thumbnail/blog.webp",
+    url: "https://blog.raflimalik.com",
+    source: "Github",
+    sourceurl: "https://github.com/RMalik777/blog",
+  },
 ];
 
 export const skills = [
@@ -109,6 +118,7 @@ export const skills = [
       { id: 24, name: "Vue.js" },
       { id: 25, name: "Nuxt.js" },
       { id: 26, name: "Astro" },
+      { id: 31, name: "Framer Motion" },
     ],
   },
   {
@@ -149,6 +159,7 @@ export const skills = [
       { id: 14, name: "Adobe Premiere Pro" },
       { id: 15, name: "Adobe Photoshop" },
       { id: 17, name: "Figma" },
+      { id: 30, name: "Framer" },
       { id: 18, name: "Microsoft Office" },
       { id: 28, name: "git" },
     ],
