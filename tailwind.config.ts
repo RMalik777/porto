@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
@@ -24,6 +25,12 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [tailwindcssAnimate],
+	plugins: [
+		tailwindcssAnimate, // workaround for @starting-style, should be remove when tailwind v4 (stable) is released. (tailwind v4-alpha already provided this functionality)
+		// source: https://github.com/tailwindlabs/tailwindcss/discussions/12039#discussioncomment-10063510
+		({ addVariant }: PluginAPI) => {
+			addVariant("starting", "@starting-style");
+		},
+	],
 };
 export default config;
