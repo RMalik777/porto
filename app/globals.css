@@ -1,9 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* https://github.com/tailwindlabs/tailwindcss/discussions/13211#discussion-6360347 */
 @layer base {
 	:root {
 		--radius: 0.5rem;
 	}
+
+	.dark {
+		--radius: 0.5rem;
+	}
+}
+@theme {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+
+	--font-family-sans: Geist Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-mono: Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
+
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
+
+	@keyframes accordion-down {
+		from {
+			height: 0;
+		}
+
+		to {
+			height: var(--radix-accordion-content-height);
+		}
+	}
+
+	@keyframes accordion-up {
+		from {
+			height: var(--radix-accordion-content-height);
+		}
+
+		to {
+			height: "0";
+		}
+	}
+}
+
+.border {
+	border-color: #e4e5e9;
+}
+
+button {
+	cursor: pointer;
 }
