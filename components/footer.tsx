@@ -2,14 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { type SimpleIcon, siInstagram, siGmail, siLinkedin, siGithub } from "simple-icons";
-import { type LucideIcon } from "lucide-react";
 
 import portrait from "@/public/photosquarezoom.jpg";
 
 interface LinkItem {
 	name: string;
 	href: string;
-	logo?: SimpleIcon | LucideIcon;
+	logo?: SimpleIcon;
 }
 const backLink: LinkItem[] = [
 	{
@@ -64,10 +63,6 @@ const linkParent = [
 	{ title: "Social", child: socialList },
 	{ title: "Other Works", child: otherWorks },
 ];
-// type guard
-function isSimpleIcon(logo: SimpleIcon | LucideIcon): logo is SimpleIcon {
-	return (logo as SimpleIcon).svg !== undefined;
-}
 
 export function Footer() {
 	return (
@@ -79,26 +74,18 @@ export function Footer() {
 							<h2 className="text-xl font-medium">{linkList.title}</h2>
 							<ul>
 								{linkList.child.map((link) => {
-									let logo = null;
-									if (link.logo) {
-										if (isSimpleIcon(link.logo)) {
-											logo = (
-												<span
-													dangerouslySetInnerHTML={{ __html: link.logo.svg }}
-													className="h-4 w-4"
-												></span>
-											);
-										} else {
-											logo = <link.logo className="h-4 w-4" />;
-										}
-									}
 									return (
 										<li key={link.href}>
 											<Link
 												href={link.href}
 												className="flex items-center gap-1 duration-200 ease-out hover:text-pink-500 hover:underline"
 											>
-												{logo}
+												{link.logo ? (
+													<span
+														dangerouslySetInnerHTML={{ __html: link.logo.svg }}
+														className="h-4 w-4"
+													></span>
+												) : null}
 												{link.name}
 											</Link>
 										</li>
