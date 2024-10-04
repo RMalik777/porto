@@ -6,6 +6,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
 	title: {
@@ -38,9 +40,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={clsx(GeistSans.className, GeistMono.variable, "antialiased")}>
-			<body className="min-w-dvw min-h-dvh scroll-smooth px-8">
+		<html
+			lang="en"
+			className={clsx(GeistSans.className, GeistMono.variable, "scroll-smooth antialiased")}
+		>
+			<body className="min-w-dvw h-fit min-h-dvh px-8 lg:px-16 xl:px-20">
+				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
