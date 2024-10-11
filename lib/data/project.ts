@@ -66,7 +66,7 @@ export const projectsList: Project[] = [
 	},
 	{
 		name: "Tourism App",
-		desc: "Tourism app to promote tourism in Komodo Island, East Nusa Tenggara. The app contains features like emergency notification, place recommendation, guidelines, and general information.",
+		desc: "Mobile app to promote tourism in Komodo Island. Contains features like emergency notification, place recommendation, and guidelines.",
 		image: "/Project/thumbnail/Tourism.webp",
 		live: "https://www.figma.com/proto/yvdpsRxRriroCLBme1aMEq/HCI---Final-Exam-2?page-id=2%3A2&type=design&node-id=4-24&viewport=589%2C294%2C0.09&t=A3L94ZgtCx0jDe3n-1&scaling=scale-down&starting-point-node-id=4%3A24&mode=design",
 		source:
