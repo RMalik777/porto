@@ -113,6 +113,8 @@ export const skillsList: Skill[] = [
 			{
 				name: "GSAP",
 				link: "https://gsap.com/",
+				logo: "/Logo/[GSAP]_light+Proprietary.svg",
+				logoAlt: "/Logo/[GSAP]_dark+Proprietary.svg",
 			},
 		],
 	},
@@ -122,14 +124,18 @@ export const skillsList: Skill[] = [
 			{
 				name: "Laravel",
 				link: "https://laravel.com/",
+				logo: "/Logo/[LARAVEL]+Proprietary.svg",
 			},
 			{
 				name: "Tauri",
 				link: "https://tauri.app/",
+				logo: "/Logo/[TAURI]_light+Proprietary.svg",
+				logoAlt: "/Logo/[TAURI]_dark+Proprietary.svg",
 			},
 			{
 				name: "ASP.NET",
 				link: "https://dotnet.microsoft.com/apps/aspnet",
+				logo: "/Logo/[DOTNET]+CC0.svg",
 			},
 		],
 	},
@@ -143,6 +149,7 @@ export const skillsList: Skill[] = [
 			{
 				name: "SQLite",
 				link: "https://www.sqlite.org/index.html",
+				logo: "/Logo/[SQLITE]+Public.svg",
 			},
 		],
 	},
@@ -152,6 +159,7 @@ export const skillsList: Skill[] = [
 			{
 				name: "Sanity",
 				link: "https://www.sanity.io/",
+				logo: "/Logo/[SANITY]+Proprietary.svg",
 			},
 		],
 	},
