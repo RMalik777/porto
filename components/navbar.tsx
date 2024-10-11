@@ -24,7 +24,7 @@ const navLink: NavLink[] = [
 ];
 export function Navbar() {
 	return (
-		<nav className="fixed top-0 left-0 flex h-fit w-full flex-row items-center gap-8 bg-white/80 py-2 px-8 backdrop-blur-md lg:px-16 xl:px-20 backdrop-saturate-150">
+		<nav className="fixed top-0 left-0 flex h-fit w-full flex-row items-center gap-8 bg-white/80 py-2 px-6 px-8 backdrop-blur-md backdrop-saturate-150 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 			<ul className="flex flex-row items-center justify-start gap-16 font-medium lg:text-xl">
 				{navLink.map((link) => {
 					return (

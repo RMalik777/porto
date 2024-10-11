@@ -44,7 +44,7 @@ export default function RootLayout({
 			lang="en"
 			className={clsx(GeistSans.className, GeistMono.variable, "scroll-smooth antialiased")}
 		>
-			<body className="min-w-dvw h-fit min-h-dvh px-8 lg:px-16 xl:px-20">
+			<body className="min-w-dvw h-fit min-h-dvh px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 				<Navbar />
 				{children}
 				<Footer />
