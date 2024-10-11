@@ -19,13 +19,13 @@ export const skillsList: Skill[] = [
 				name: "HTML",
 				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
 				color: siHtml5.hex,
-				logo: "/Logo/[HTML5]+CC by 3.0.svg",
+				logo: "/Logo/[HTML5]+CC-by-3.0.svg",
 			},
 			{
 				name: "CSS",
 				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
 				color: siCss3.hex,
-				logo: "/Logo/[CSS]+CC by 3.0.svg",
+				logo: "/Logo/[CSS]+CC-by-3.0.svg",
 			},
 			{
 				name: "JavaScript",
@@ -41,13 +41,13 @@ export const skillsList: Skill[] = [
 			{
 				name: "Tailwind CSS",
 				link: "https://tailwindcss.com/",
-				logo: "/Logo/[TAILWIND CSS]+Proprietary.svg",
+				logo: "/Logo/[TAILWINDCSS]+Proprietary.svg",
 			},
 			{
 				name: "Bootstrap",
 				link: "https://getbootstrap.com/",
-				logo: "/Logo/[BOOTSTRAP]_light+CC by 3.0.svg",
-				logoAlt: "/Logo/[BOOTSTRAP]_dark+CC by 3.0.svg",
+				logo: "/Logo/[BOOTSTRAP]_light+CC-by-3.0.svg",
+				logoAlt: "/Logo/[BOOTSTRAP]_dark+CC-by-3.0.svg",
 			},
 		],
 	},
@@ -57,14 +57,14 @@ export const skillsList: Skill[] = [
 			{
 				name: "React",
 				link: "https://reactjs.org/",
-				logo: "/Logo/[REACT]_light+CC by 4.0.svg",
-				logoAlt: "/Logo/[REACT]_dark+CC by 4.0.svg",
+				logo: "/Logo/[REACT]_light+CC-by-4.0.svg",
+				logoAlt: "/Logo/[REACT]_dark+CC-by-4.0.svg",
 			},
 			{
 				name: "Next.js",
 				link: "https://nextjs.org/",
-				logo: "/Logo/[NEXT JS]_light+Proprietary.svg",
-				logoAlt: "/Logo/[NEXT JS]_dark+Proprietary.svg",
+				logo: "/Logo/[NEXTJS]_light+Proprietary.svg",
+				logoAlt: "/Logo/[NEXTJS]_dark+Proprietary.svg",
 			},
 			{
 				name: "Remix",
@@ -85,8 +85,8 @@ export const skillsList: Skill[] = [
 			{
 				name: "Vue",
 				link: "https://vuejs.org/",
-				logo: "/Logo/[VUE]_light+CC by-nc-sa 4.0.svg",
-				logoAlt: "/Logo/[VUE]_dark+CC by-nc-sa 4.0.svg",
+				logo: "/Logo/[VUE]_light+CC-by-nc-sa-4.0.svg",
+				logoAlt: "/Logo/[VUE]_dark+CC-by-nc-sa-4.0.svg",
 			},
 			{
 				name: "Nuxt",
