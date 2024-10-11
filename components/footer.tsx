@@ -66,8 +66,8 @@ const linkParent = [
 
 export function Footer() {
 	return (
-		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-2">
-			<div className="flex w-full flex-row items-start justify-between tracking-tight">
+		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+			<div className="flex w-full flex-col items-start justify-between gap-4 tracking-tight sm:flex-row sm:gap-0">
 				{linkParent.map((linkList) => {
 					return (
 						<div key={linkList.title}>
@@ -95,7 +95,7 @@ export function Footer() {
 						</div>
 					);
 				})}
-				<div className="flex flex-row items-center gap-2 self-center">
+				<div className="flex flex-row items-center gap-2 sm:self-center">
 					<p className="text-lg font-medium">Rafli Malik</p>
 					<div className="group relative h-12 w-12 rounded-full">
 						<Image
