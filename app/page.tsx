@@ -26,7 +26,7 @@ export default function Home() {
 				</p>
 			</section>
 
-			<section id="about">
+			<section id="about" className="scroll-m-14">
 				<h2 className="text-4xl font-semibold tracking-tighter">Who am i</h2>
 				<p className="max-w-prose">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum libero omnis assumenda
@@ -35,7 +35,7 @@ export default function Home() {
 				</p>
 			</section>
 
-			<section id="skills">
+			<section id="skills" className="scroll-m-14">
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
 				<p className="max-w-prose">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat reiciendis aliquam
@@ -93,7 +93,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id="projects" className="relative">
+			<section id="projects" className="relative scroll-m-14">
 				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
 				<p className="max-w-prose">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, deleniti aliquid. Iure
@@ -131,7 +131,7 @@ export default function Home() {
 				</ul>
 			</section>
 
-			<section id="experience" className="space-y-4">
+			<section id="experience" className="scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
 				<section>
 					<h3 className="text-xl font-medium tracking-tight">Work Experience</h3>
