@@ -1,4 +1,6 @@
-import { skillsList } from "./skill";
+import { educationList } from "./education";
+import { experienceList, otherExperienceList } from "./experience";
 import { projectsList } from "./project";
+import { skillsList } from "./skill";
 
-export { skillsList, projectsList };
+export { educationList, experienceList, otherExperienceList, projectsList, skillsList };
