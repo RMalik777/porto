@@ -83,12 +83,6 @@ export const skillsList: Skill[] = [
 				logo: "/Logo/[SVELTE]+Proprietary.svg",
 			},
 			{
-				name: "Astro",
-				link: "https://astro.build/",
-				logo: "/Logo/[ASTRO]_light+MIT.svg",
-				logoAlt: "/Logo/[ASTRO]_dark+MIT.svg",
-			},
-			{
 				name: "Vue",
 				link: "https://vuejs.org/",
 				logo: "/Logo/[VUE]_light+CC by-nc-sa 4.0.svg",
@@ -98,6 +92,12 @@ export const skillsList: Skill[] = [
 				name: "Nuxt",
 				link: "https://nuxtjs.org/",
 				logo: "/Logo/[NUXT]+MIT.svg",
+			},
+			{
+				name: "Astro",
+				link: "https://astro.build/",
+				logo: "/Logo/[ASTRO]_light+MIT.svg",
+				logoAlt: "/Logo/[ASTRO]_dark+MIT.svg",
 			},
 		],
 	},
