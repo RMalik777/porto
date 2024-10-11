@@ -96,7 +96,9 @@ export function Footer() {
 					);
 				})}
 				<div className="flex flex-row items-center gap-2 sm:self-center">
-					<p className="text-lg font-medium">Rafli Malik</p>
+					<p className="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent">
+						Rafli Malik
+					</p>
 					<div className="group relative h-12 w-12 rounded-full">
 						<Image
 							src={portrait}
