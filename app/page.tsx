@@ -35,13 +35,8 @@ export default function Home() {
 				</p>
 			</section>
 
-			<section id="skills" className="scroll-m-14">
+			<section id="skills" className="scroll-m-14 mb-4 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
-				<p className="max-w-prose">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat reiciendis aliquam
-					neque ab eius, autem cumque inventore fuga suscipit error eligendi amet similique
-					consequuntur nihil pariatur delectus alias laudantium!
-				</p>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
 						{skillsList?.map((skill) => (
@@ -93,14 +88,8 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id="projects" className="relative scroll-m-14">
-				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
-				<p className="max-w-prose">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, deleniti aliquid. Iure
-					maxime commodi sunt architecto quaerat, dignissimos cumque repudiandae nesciunt at.
-					Dolores itaque iusto harum, neque iste placeat reprehenderit?
-				</p>
-
+			<section id="projects" className="mb-4 scroll-m-14 space-y-4">
+				<h2 className="tracking-tighte text-4xl font-semibold">Projects</h2>
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{projectsList?.map((project, index) => (
 						<li key={project.name} className="items-stretch">
@@ -131,15 +120,15 @@ export default function Home() {
 				</ul>
 			</section>
 
-			<section id="experience" className="scroll-m-14 space-y-4">
+			<section id="experience" className="mb-4 scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
 				<section>
-					<h3 className="text-xl font-medium tracking-tight">Work Experience</h3>
+					<h3 className="text-2xl font-medium tracking-tight">Work Experience</h3>
 					<hr className="mb-1 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
 					<ul className="flex flex-col gap-4">
 						{experienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
-								<h4 className="group relative text-lg font-semibold">{experience.company}</h4>
+								<h4 className="text-lg font-semibold">{experience.company}</h4>
 								<p className="text-neutral-500">{experience.position}</p>
 								<p className="text-neutral-500">
 									{experience.from} &ndash; {experience.to}
@@ -149,7 +138,7 @@ export default function Home() {
 					</ul>
 				</section>
 				<section>
-					<h3 className="text-xl font-medium tracking-tight">Other Experience</h3>
+					<h3 className="text-2xl font-medium tracking-tight">Other Experience</h3>
 					<hr className="mb-1 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
 					<ul className="flex flex-col gap-4">
 						{otherExperienceList?.map((experience) => (
@@ -172,7 +161,7 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section>
+			<section id="education"className="space-y-4 mb-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="ml-2 flex flex-col gap-4 border-l border-pink-500">
 					{educationList?.map((education) => (
@@ -186,7 +175,7 @@ export default function Home() {
 							<p>
 								{education.from} &ndash; {education.to}
 							</p>
-							<p>{education.grade}</p>
+							{education.grade ? <p>GPA {education.grade}</p> : null}
 						</li>
 					))}
 				</ul>
