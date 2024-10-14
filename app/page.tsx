@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-	skillsList,
-	projectsList,
 	educationList,
 	experienceList,
 	otherExperienceList,
+	projectsList,
+	skillsList,
 } from "@/lib/data";
 
 import { SquareArrowRight } from "lucide-react";
@@ -17,16 +17,12 @@ export default function Home() {
 	return (
 		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="text-4xl font-light leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+				<h1 className="grad text-4xl font-light leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
 					Rafli Malik
 				</h1>
-
-				<p className="text-lg tracking-tight sm:text-xl md:text-2xl">
-					&quot;Lorem Ipsum Tagline&quot;
-				</p>
 			</section>
 
-			<section id="about" className="scroll-m-14">
+			<section id="about" className="mb-4 scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Who am i</h2>
 				<p className="max-w-prose">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum libero omnis assumenda
@@ -35,7 +31,7 @@ export default function Home() {
 				</p>
 			</section>
 
-			<section id="skills" className="scroll-m-14 mb-4 space-y-4">
+			<section id="skills" className="mb-4 scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
@@ -105,7 +101,7 @@ export default function Home() {
 									<ul className="flex flex-wrap gap-2">
 										{project?.tech.map((tech, childIndex) => (
 											<li
-												className="w-fit py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:bg-pink-100"
+												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-pink-100 group-hover:bg-pink-100"
 												style={{ transitionDelay: `${childIndex * 3}0ms` }}
 												key={tech}
 											>
@@ -161,7 +157,7 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section id="education"className="space-y-4 mb-4">
+			<section id="education" className="mb-4 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="ml-2 flex flex-col gap-4 border-l border-pink-500">
 					{educationList?.map((education) => (
