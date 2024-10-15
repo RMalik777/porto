@@ -22,15 +22,6 @@ export default function Home() {
 				</h1>
 			</section>
 
-			<section id="about" className="mb-4 scroll-m-14 space-y-4">
-				<h2 className="text-4xl font-semibold tracking-tighter">Who am i</h2>
-				<p className="max-w-prose">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum libero omnis assumenda
-					dolor! Perspiciatis illum ducimus, minima reprehenderit tenetur consectetur alias quaerat,
-					doloremque voluptates, similique mollitia. Esse in molestias eligendi?
-				</p>
-			</section>
-
 			<section id="skills" className="mb-4 scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
@@ -41,9 +32,15 @@ export default function Home() {
 								<hr className="mb-4 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
 								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 									{skill?.children.map((child) => (
-										<Link href={child.link} key={child.name} className="">
-											<Card className="w-full" style={{ color: `#${child.color ?? "000000"}` }}>
-												<CardHeader className="p-4">
+										<Link
+											href={child.link}
+											key={child.name}
+											className=""
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<Card className="group relative w-full">
+												<CardHeader className="group relative p-4">
 													<CardTitle className="flex items-center gap-2 text-xl font-normal">
 														{child.logo && child.logoAlt ? (
 															<>
@@ -52,14 +49,14 @@ export default function Home() {
 																	width={20}
 																	height={20}
 																	alt=""
-																	className="block h-auto dark:hidden"
+																	className="block h-auto duration-200 ease-out group-hover:scale-125 dark:hidden"
 																/>
 																<Image
 																	src={child.logoAlt ?? ""}
 																	width={20}
 																	height={20}
 																	alt=""
-																	className="hidden h-auto dark:block"
+																	className="hidden h-auto duration-200 ease-out group-hover:scale-125 dark:block"
 																/>
 															</>
 														) : child.logo ? (
@@ -68,7 +65,7 @@ export default function Home() {
 																width={20}
 																height={20}
 																alt=""
-																className="h-auto"
+																className="h-auto duration-200 ease-out group-hover:scale-125"
 															/>
 														) : null}
 														{child.name}
@@ -90,7 +87,7 @@ export default function Home() {
 					{projectsList?.map((project, index) => (
 						<li key={project.name} className="items-stretch">
 							<Card
-								className="group flex h-full w-full flex-col justify-between duration-200 starting:opacity-0"
+								className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
 								style={{ transitionDelay: `${index * 3}0ms` }}
 							>
 								<CardHeader>

@@ -31,7 +31,7 @@ export function Navbar() {
 						<li key={link.href} className="group">
 							<Link href={link.href} className="group relative py-1 px-3 duration-200 ease-out">
 								{link.title}
-								<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-pink-100 transition-transform duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:origin-left group-hover:scale-x-100 motion-reduce:duration-0 group-focus:origin-left group-focus:scale-x-100"></div>
+								<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-pink-100 transition-transform duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:origin-left group-hover:scale-x-100 group-focus:origin-left group-focus:scale-x-100 motion-reduce:duration-0"></div>
 							</Link>
 						</li>
 					);
