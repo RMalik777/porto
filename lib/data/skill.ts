@@ -1,5 +1,3 @@
-import { siHtml5, siCss3, siJavascript } from "simple-icons";
-
 interface Skill {
 	category: string;
 	children: {
@@ -18,19 +16,16 @@ export const skillsList: Skill[] = [
 			{
 				name: "HTML",
 				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-				color: siHtml5.hex,
 				logo: "/Logo/[HTML5]+CC-by-3.0.svg",
 			},
 			{
 				name: "CSS",
 				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-				color: siCss3.hex,
 				logo: "/Logo/[CSS]+CC-by-3.0.svg",
 			},
 			{
 				name: "JavaScript",
 				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-				color: siJavascript.hex,
 				logo: "/Logo/[JS]+MIT.svg",
 			},
 		],

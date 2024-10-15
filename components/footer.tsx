@@ -78,7 +78,12 @@ export function Footer() {
 										<li key={link.href}>
 											<Link
 												href={link.href}
-												className="flex items-center gap-1 duration-200 ease-out hover:text-pink-500 hover:underline"
+												className={
+													(link.logo
+														? "after:left-5 after:w-[calc(100%-1.25rem)]"
+														: "after:left-0 after:w-full") +
+													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] ease-out after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-pink-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-pink-600 hover:after:origin-left hover:after:scale-x-100 focus:text-pink-600 focus:after:origin-left focus:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0"
+												}
 											>
 												{link.logo ? (
 													<span
