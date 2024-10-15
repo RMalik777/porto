@@ -167,11 +167,11 @@ export default function Home() {
 						>
 							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-pink-500"></div>
 							<h4 className="text-lg font-semibold">{education.school}</h4>
-							<p>{education.major}</p>
-							<p>
+							<p className="text-neutral-500">{education.major}</p>
+							<p className="text-neutral-500">
 								{education.from} &ndash; {education.to}
 							</p>
-							{education.grade ? <p>GPA {education.grade}</p> : null}
+							{education.grade ? <p className="text-neutral-500">GPA {education.grade}</p> : null}
 						</li>
 					))}
 				</ul>
