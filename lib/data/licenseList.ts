@@ -3,9 +3,9 @@ interface LicenseItem {
 	author: string;
 	source: string;
 	license:
-		| "MIT"
-		| "CC0"
 		| "Public Domain"
+		| "CC0"
+		| "MIT"
 		| "CC BY 3.0"
 		| "CC BY 4.0"
 		| "CC BY-NC-SA 4.0"
