@@ -1,12 +1,6 @@
 interface Skill {
 	category: string;
-	children: {
-		name: string;
-		link: string;
-		logo?: string;
-		logoAlt?: string;
-		color?: string;
-	}[];
+	children: { name: string; link: string; logo?: string; logoAlt?: string }[];
 }
 
 export const skillsList: Skill[] = [
@@ -155,6 +149,36 @@ export const skillsList: Skill[] = [
 				name: "Sanity",
 				link: "https://www.sanity.io/",
 				logo: "/Logo/[SANITY]+Proprietary.svg",
+			},
+		],
+	},
+	{
+		category: "Programming Language",
+		children: [
+			{
+				name: "Python",
+				link: "https://www.python.org/",
+			},
+			{
+				name: "Java",
+				link: "https://www.java.com/en/",
+			},
+			{
+				name: "C#",
+				link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+			},
+		],
+	},
+	{
+		category: "Tools",
+		children: [
+			{
+				name: "Git",
+				link: "https://git-scm.com/",
+			},
+			{
+				name: "Figma",
+				link: "https://www.figma.com/",
 			},
 		],
 	},
