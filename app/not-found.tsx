@@ -11,15 +11,16 @@ export const metadata = {
 
 export default function notFound() {
 	return (
-		<main className="flex h-dvh min-h-dvh flex-col items-center justify-center gap-8 tracking-tight">
-			<div className="placeholder h-10 w-full bg-red-100"></div>
+		<main className="mt-2 flex h-dvh min-h-dvh flex-col items-center justify-center gap-8 tracking-tight sm:mt-4">
 			<section className="flex flex-col items-center justify-center gap-4 text-center leading-none">
-				<h1 className="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-3xl font-semibold tracking-tighter text-transparent sm:text-4xl md:text-5xl">
+				<h1 className="bg-linear-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-center text-5xl font-bold tracking-tighter text-transparent duration-200 ease-out sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
 					404
 				</h1>
-				<p>It&apos;s looks like you are lost</p>
+				<p className="text-center text-lg font-medium sm:text-xl md:text-2xl">
+					It&apos;s looks like you are lost
+				</p>
 				<Button asChild variant="outline" size="sm">
-					<Link href="/">Home</Link>
+					<Link href="/">Go Back Home</Link>
 				</Button>
 			</section>
 		</main>
