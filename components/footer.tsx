@@ -88,7 +88,7 @@ export function Footer() {
 												{link.logo ? (
 													<span
 														dangerouslySetInnerHTML={{ __html: link.logo.svg }}
-														className="h-4 w-4"
+														className="h-4 w-4 fill-black dark:fill-white"
 													></span>
 												) : null}
 												{link.name}
@@ -101,7 +101,7 @@ export function Footer() {
 					);
 				})}
 				<div className="flex flex-row items-center gap-2 sm:self-center">
-					<p className="bg-linear-to-r from-fuchsia-500 to-purple-500 dark:from-fuchsia-400 dark:to-purple-400 bg-clip-text text-lg font-medium text-transparent">
+					<p className="bg-linear-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-lg font-medium text-transparent dark:from-fuchsia-400 dark:to-purple-400">
 						Rafli Malik
 					</p>
 					<div className="group relative h-12 w-12 rounded-full">
