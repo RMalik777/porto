@@ -82,13 +82,13 @@ export function Footer() {
 													(link.logo
 														? "after:left-5 after:w-[calc(100%-1.25rem)]"
 														: "after:left-0 after:w-full") +
-													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] ease-out after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-fuchsia-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-fuchsia-600 hover:after:origin-left hover:after:scale-x-100 focus-visible:text-fuchsia-600 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-fuchsia-500"
+													" after:bg-theme-purple hover:text-theme-purple focus-visible:text-theme-purple relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] ease-out after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
 												}
 											>
 												{link.logo ? (
 													<span
 														dangerouslySetInnerHTML={{ __html: link.logo.svg }}
-														className="h-4 w-4 fill-black dark:fill-white"
+														className="h-4 w-4 fill-black duration-200 dark:fill-white"
 													></span>
 												) : null}
 												{link.name}
@@ -101,7 +101,7 @@ export function Footer() {
 					);
 				})}
 				<div className="flex flex-row items-center gap-2 sm:self-center">
-					<p className="bg-linear-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-lg font-medium text-transparent dark:from-fuchsia-400 dark:to-purple-400">
+					<p className="from-theme-purple bg-linear-to-r to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent dark:from-violet-500">
 						Rafli Malik
 					</p>
 					<div className="group relative h-12 w-12 rounded-full">
@@ -111,7 +111,7 @@ export function Footer() {
 							alt="Portrait of Rafli Malik, the owner of this website"
 						/>
 						<div
-							className="absolute inset-0 -z-10 h-full w-full rounded-full bg-cover bg-no-repeat blur-[1px] brightness-125 saturate-150 duration-200 ease-out group-hover:blur-sm"
+							className="absolute inset-0 -z-10 h-full w-full rounded-full bg-cover bg-no-repeat blur-[1px] blur-sm brightness-125 saturate-150 duration-200 ease-out"
 							// use inline style so the background image can be dynamic and follow the <Image/> src
 							style={{ background: `url(${portrait.src})` }}
 						></div>

@@ -25,35 +25,35 @@ export default function Home() {
 					Rafli{" "}
 					<span className="relative px-1">
 						<motion.span
-							initial={{ color: "#d946ef" }}
+							initial={{ color: "#8E0DFF" }}
 							animate={{ color: "#ffffff" }}
 							transition={{ duration: 0.2, ease: "circOut", delay: 0.2 }}
 						>
 							M
 						</motion.span>
 						<motion.span
-							initial={{ color: "#d946ef" }}
+							initial={{ color: "#8E0DFF" }}
 							animate={{ color: "#ffffff" }}
 							transition={{ duration: 0.2, ease: "circOut", delay: 0.4 }}
 						>
 							a
 						</motion.span>
 						<motion.span
-							initial={{ color: "#d946ef" }}
+							initial={{ color: "#8E0DFF" }}
 							animate={{ color: "#ffffff" }}
 							transition={{ duration: 0.3, ease: "circOut", delay: 0.6 }}
 						>
 							l
 						</motion.span>
 						<motion.span
-							initial={{ color: "#d946ef" }}
+							initial={{ color: "#8E0DFF" }}
 							animate={{ color: "#ffffff" }}
 							transition={{ duration: 0.3, ease: "circOut", delay: 0.8 }}
 						>
 							i
 						</motion.span>
 						<motion.span
-							initial={{ color: "#d946ef" }}
+							initial={{ color: "#8E0DFF" }}
 							animate={{ color: "#ffffff" }}
 							transition={{ duration: 0.3, ease: "circOut", delay: 1 }}
 						>
@@ -63,7 +63,7 @@ export default function Home() {
 							initial={{ width: 0 }}
 							animate={{ width: "100%" }}
 							transition={{ duration: 1.25, ease: "circOut", delay: 0.2 }}
-							className="absolute top-0 left-0 z-[-1] h-full bg-fuchsia-500"
+							className="bg-theme-purple absolute top-0 left-0 z-[-1] h-full"
 						></motion.span>
 					</span>
 				</h1>
@@ -76,50 +76,51 @@ export default function Home() {
 						{skillsList?.map((skill) => (
 							<li key={skill.category}>
 								<h3 className="text-2xl font-semibold tracking-tight">{skill.category}</h3>
-								<hr className="mb-4 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
+								<div className="mb-4 h-px shrink-0 bg-neutral-200 ease-out dark:bg-neutral-800" />
 								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 									{skill?.children.map((child) => (
-										<Link
-											href={child.link}
-											key={child.name}
-											className=""
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											<Card className="group relative w-full">
-												<CardHeader className="group relative p-4">
-													<CardTitle className="flex items-center gap-2 text-xl font-medium">
-														{child.logo && child.logoAlt ? (
-															<>
+										<li key={child.name}>
+											<Link
+												href={child.link}
+												className=""
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Card className="group relative w-full">
+													<CardHeader className="group relative p-4">
+														<CardTitle className="flex items-center gap-2 text-xl font-medium">
+															{child.logo && child.logoAlt ? (
+																<>
+																	<Image
+																		src={child.logo ?? ""}
+																		width={20}
+																		height={20}
+																		alt=""
+																		className="block h-auto duration-200 ease-out group-hover:scale-125 dark:hidden"
+																	/>
+																	<Image
+																		src={child.logoAlt ?? ""}
+																		width={20}
+																		height={20}
+																		alt=""
+																		className="hidden h-auto duration-200 ease-out group-hover:scale-125 dark:block"
+																	/>
+																</>
+															) : child.logo ? (
 																<Image
 																	src={child.logo ?? ""}
 																	width={20}
 																	height={20}
 																	alt=""
-																	className="block h-auto duration-200 ease-out group-hover:scale-125 dark:hidden"
+																	className="h-auto duration-200 ease-out group-hover:scale-125"
 																/>
-																<Image
-																	src={child.logoAlt ?? ""}
-																	width={20}
-																	height={20}
-																	alt=""
-																	className="hidden h-auto duration-200 ease-out group-hover:scale-125 dark:block"
-																/>
-															</>
-														) : child.logo ? (
-															<Image
-																src={child.logo ?? ""}
-																width={20}
-																height={20}
-																alt=""
-																className="h-auto duration-200 ease-out group-hover:scale-125"
-															/>
-														) : null}
-														{child.name}
-													</CardTitle>
-												</CardHeader>
-											</Card>
-										</Link>
+															) : null}
+															{child.name}
+														</CardTitle>
+													</CardHeader>
+												</Card>
+											</Link>
+										</li>
 									))}
 								</ul>
 							</li>
@@ -145,7 +146,7 @@ export default function Home() {
 									<ul className="flex flex-wrap gap-2">
 										{project?.tech.map((tech, childIndex) => (
 											<li
-												className="w-fit border border-neutral-100 dark:border-neutral-900 py-1 px-2 text-xs font-medium duration-200 ease-out dark:group-hover:border-fuchsia-700 dark:group-hover:bg-fuchsia-700  group-hover:border-fuchsia-100 group-hover:bg-fuchsia-100"
+												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
 												style={{ transitionDelay: `${childIndex * 3}0ms` }}
 												key={tech}
 											>
@@ -184,10 +185,10 @@ export default function Home() {
 						{otherExperienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
 								<Link href={experience.externalLink ?? ""} className="group duration-200">
-									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 group-hover:text-fuchsia-500 group-focus:text-fuchsia-500">
+									<h4 className="group-hover:text-theme-purple group-focus-visible:text-theme-purple flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
-											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-fuchsia-500 opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100" />
+											<SquareArrowRight className="text-theme-purple ml-2 h-full w-auto -translate-x-full opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
 										</span>
 									</h4>
 									<p className="text-neutral-500">{experience.position}</p>
@@ -203,19 +204,21 @@ export default function Home() {
 
 			<section id="about" className="mb-4 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
-				<ul className="ml-2 flex flex-col gap-4 border-l border-fuchsia-500">
+				<ul className="border-theme-purple ml-2 flex flex-col gap-4 border-l">
 					{educationList?.map((education) => (
 						<li
 							key={education.school}
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
 						>
-							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-fuchsia-500"></div>
+							<div className="bg-theme-purple absolute -left-1.5 mt-2 h-3 w-3"></div>
 							<h4 className="text-lg font-semibold">{education.school}</h4>
-							<p className="text-neutral-500">{education.major}</p>
-							<p className="text-neutral-500">
+							<p className="text-neutral-500 dark:text-neutral-400">{education.major}</p>
+							<p className="text-neutral-500 dark:text-neutral-400">
 								{education.from} &ndash; {education.to}
 							</p>
-							{education.grade ? <p className="text-neutral-500">GPA {education.grade}</p> : null}
+							{education.grade ? (
+								<p className="text-neutral-500 dark:text-neutral-400">GPA {education.grade}</p>
+							) : null}
 						</li>
 					))}
 				</ul>
