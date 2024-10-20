@@ -35,5 +35,6 @@ export const otherExperienceList: Experience[] = [
 		position: "Freshmen Partner",
 		from: "September 2022",
 		to: "June 2023",
+    externalLink:"https://blog.raflimalik.com/post/freshmen-partner/",
 	},
 ];
