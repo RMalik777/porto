@@ -66,7 +66,7 @@ const linkParent = [
 
 export function Footer() {
 	return (
-		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-4 text-black sm:gap-6 md:gap-8 lg:gap-10 dark:text-white">
 			<div className="flex w-full flex-col items-start justify-between gap-4 tracking-tight sm:flex-row sm:gap-0">
 				{linkParent.map((linkList) => {
 					return (
@@ -82,7 +82,7 @@ export function Footer() {
 													(link.logo
 														? "after:left-5 after:w-[calc(100%-1.25rem)]"
 														: "after:left-0 after:w-full") +
-													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] ease-out after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-fuchsia-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-fuchsia-600 hover:after:origin-left hover:after:scale-x-100 focus-visible:text-fuchsia-600 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0"
+													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] ease-out after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-fuchsia-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-fuchsia-600 hover:after:origin-left hover:after:scale-x-100 focus-visible:text-fuchsia-600 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-fuchsia-500"
 												}
 											>
 												{link.logo ? (
@@ -101,7 +101,7 @@ export function Footer() {
 					);
 				})}
 				<div className="flex flex-row items-center gap-2 sm:self-center">
-					<p className="bg-linear-to-r from-fuchsia-500 to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent">
+					<p className="bg-linear-to-r from-fuchsia-500 to-purple-500 dark:from-fuchsia-400 dark:to-purple-400 bg-clip-text text-lg font-medium text-transparent">
 						Rafli Malik
 					</p>
 					<div className="group relative h-12 w-12 rounded-full">

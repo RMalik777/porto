@@ -19,7 +19,7 @@ import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8">
+		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8 text-black dark:text-white">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
 				<h1 className="py-px text-4xl font-normal leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
 					Rafli{" "}
@@ -145,7 +145,7 @@ export default function Home() {
 									<ul className="flex flex-wrap gap-2">
 										{project?.tech.map((tech, childIndex) => (
 											<li
-												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-fuchsia-100 group-hover:bg-fuchsia-100"
+												className="w-fit border border-neutral-100 dark:border-neutral-900 py-1 px-2 text-xs font-medium duration-200 ease-out dark:group-hover:border-fuchsia-700 dark:group-hover:bg-fuchsia-700  group-hover:border-fuchsia-100 group-hover:bg-fuchsia-100"
 												style={{ transitionDelay: `${childIndex * 3}0ms` }}
 												key={tech}
 											>

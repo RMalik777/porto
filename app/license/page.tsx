@@ -19,7 +19,7 @@ export default function License() {
 						<li key={license.name} className="flex flex-col gap-0">
 							<Link
 								href={license.source}
-								className="relative w-fit font-medium leading-snug duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:bg-fuchsia-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-fuchsia-600 hover:after:origin-left hover:after:scale-x-100 focus-visible:text-fuchsia-600 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0"
+								className="relative w-fit font-medium leading-snug duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:bg-fuchsia-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-fuchsia-600 hover:after:origin-left hover:after:scale-x-100 focus-visible:text-fuchsia-600 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-fuchsia-500"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -48,7 +48,7 @@ export default function License() {
 					className="group relative py-px px-1 font-medium delay-200 duration-150 ease-out hover:text-white hover:underline"
 				>
 					info@raflimalik.com{""}
-					<span className="absolute bottom-0 left-0 z-[-1] h-0 w-full bg-fuchsia-500 transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full"></span>
+					<span className="absolute bottom-0 left-0 z-[-1] h-0 w-full bg-fuchsia-500 transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full dark:bg-fuchsia-700"></span>
 				</Link>
 			</p>
 		</main>
