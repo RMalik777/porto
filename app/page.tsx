@@ -161,7 +161,7 @@ export default function Home() {
 				</ul>
 			</section>
 
-			<section id="experience" className="mb-4 scroll-m-14 space-y-4">
+			<section id="about" className="mb-4 scroll-m-14 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
 				<section>
 					<h3 className="text-2xl font-medium tracking-tight">Work Experience</h3>
@@ -202,7 +202,7 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section id="about" className="mb-4 space-y-4">
+			<section className="mb-4 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="border-theme-purple ml-2 flex flex-col gap-4 border-l">
 					{educationList?.map((education) => (

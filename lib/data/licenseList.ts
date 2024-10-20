@@ -166,7 +166,7 @@ export const logoLicense: LicenseItem[] = [
 	{
 		name: "git",
 		author: "Jason Long",
-		source: "https://www.python.org/community/logos/",
+		source: "https://git-scm.com/downloads/logos",
 		license: "CC BY 3.0",
 		licenseLink: "https://creativecommons.org/licenses/by/3.0/",
 	},
