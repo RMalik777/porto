@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/react';
 
 import { clsx } from "clsx";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				<Footer />
+        <Analytics />
 			</body>
 		</html>
 	);
