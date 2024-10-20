@@ -154,4 +154,20 @@ export const logoLicense: LicenseItem[] = [
 		license: "Proprietary",
 		licenseLink: "https://www.sanity.io/legal/tos",
 	},
+	// LANGUANGE
+	{
+		name: "Python",
+		author: "Python Software Foundation",
+		source: "https://www.python.org/community/logos/",
+		license: "Proprietary",
+		licenseLink: "https://www.python.org/psf/trademarks/",
+	},
+	// TOOLS
+	{
+		name: "git",
+		author: "Jason Long",
+		source: "https://www.python.org/community/logos/",
+		license: "CC BY 3.0",
+		licenseLink: "https://creativecommons.org/licenses/by/3.0/",
+	},
 ];

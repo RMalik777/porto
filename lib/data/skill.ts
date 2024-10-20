@@ -158,6 +158,7 @@ export const skillsList: Skill[] = [
 			{
 				name: "Python",
 				link: "https://www.python.org/",
+        logo: "/Logo/[PYTHON]+Proprietary.svg",
 			},
 			{
 				name: "Java",
@@ -175,10 +176,12 @@ export const skillsList: Skill[] = [
 			{
 				name: "Git",
 				link: "https://git-scm.com/",
+        logo: "/Logo/[GIT]+CC-by-3.0.svg",
 			},
 			{
 				name: "Figma",
 				link: "https://www.figma.com/",
+        logo: "/Logo/[FIGMA]+Proprietary.svg",
 			},
 		],
 	},
