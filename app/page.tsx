@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,14 +13,59 @@ import {
 	skillsList,
 } from "@/lib/data";
 
+import { motion } from "framer-motion";
+
 import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
 		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="grad text-4xl font-light leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-					Rafli Malik
+				<h1 className="py-px text-4xl font-normal leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+					Rafli{" "}
+					<span className="relative px-1">
+						<motion.span
+							initial={{ color: "#d946ef" }}
+							animate={{ color: "#ffffff" }}
+							transition={{ duration: 0.2, ease: "circOut", delay: 0.2 }}
+						>
+							M
+						</motion.span>
+						<motion.span
+							initial={{ color: "#d946ef" }}
+							animate={{ color: "#ffffff" }}
+							transition={{ duration: 0.2, ease: "circOut", delay: 0.4 }}
+						>
+							a
+						</motion.span>
+						<motion.span
+							initial={{ color: "#d946ef" }}
+							animate={{ color: "#ffffff" }}
+							transition={{ duration: 0.3, ease: "circOut", delay: 0.6 }}
+						>
+							l
+						</motion.span>
+						<motion.span
+							initial={{ color: "#d946ef" }}
+							animate={{ color: "#ffffff" }}
+							transition={{ duration: 0.3, ease: "circOut", delay: 0.8 }}
+						>
+							i
+						</motion.span>
+						<motion.span
+							initial={{ color: "#d946ef" }}
+							animate={{ color: "#ffffff" }}
+							transition={{ duration: 0.3, ease: "circOut", delay: 1 }}
+						>
+							k
+						</motion.span>
+						<motion.span
+							initial={{ width: 0 }}
+							animate={{ width: "100%" }}
+							transition={{ duration: 1.25, ease: "circOut", delay: 0.2 }}
+							className="absolute top-0 left-0 z-[-1] h-full bg-fuchsia-500"
+						></motion.span>
+					</span>
 				</h1>
 			</section>
 
@@ -41,7 +88,7 @@ export default function Home() {
 										>
 											<Card className="group relative w-full">
 												<CardHeader className="group relative p-4">
-													<CardTitle className="flex items-center gap-2 text-xl font-normal">
+													<CardTitle className="flex items-center gap-2 text-xl font-medium">
 														{child.logo && child.logoAlt ? (
 															<>
 																<Image
@@ -98,7 +145,7 @@ export default function Home() {
 									<ul className="flex flex-wrap gap-2">
 										{project?.tech.map((tech, childIndex) => (
 											<li
-												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-pink-100 group-hover:bg-pink-100"
+												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-fuchsia-100 group-hover:bg-fuchsia-100"
 												style={{ transitionDelay: `${childIndex * 3}0ms` }}
 												key={tech}
 											>
@@ -137,10 +184,10 @@ export default function Home() {
 						{otherExperienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
 								<Link href={experience.externalLink ?? ""} className="group duration-200">
-									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 group-hover:text-pink-500 group-focus:text-pink-500">
+									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 group-hover:text-fuchsia-500 group-focus:text-fuchsia-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
-											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-pink-500 opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100" />
+											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-fuchsia-500 opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100" />
 										</span>
 									</h4>
 									<p className="text-neutral-500">{experience.position}</p>
@@ -154,15 +201,15 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section id="education" className="mb-4 space-y-4">
+			<section id="about" className="mb-4 space-y-4">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
-				<ul className="ml-2 flex flex-col gap-4 border-l border-pink-500">
+				<ul className="ml-2 flex flex-col gap-4 border-l border-fuchsia-500">
 					{educationList?.map((education) => (
 						<li
 							key={education.school}
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
 						>
-							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-pink-500"></div>
+							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-fuchsia-500"></div>
 							<h4 className="text-lg font-semibold">{education.school}</h4>
 							<p className="text-neutral-500">{education.major}</p>
 							<p className="text-neutral-500">
