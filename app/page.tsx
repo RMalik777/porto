@@ -20,9 +20,9 @@ import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8 text-black dark:text-white">
+		<main className="mb-20 sm:mb-24 md:mb-32 lg:mb-36 xl:mb-48 flex w-full flex-col items-stretch justify-start gap-8 text-black dark:text-white">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="py-px text-5xl font-normal leading-none tracking-tighter md:text-6xl lg:text-7xl xl:text-8xl">
+				<h1 className="py-px text-6xl font-normal leading-none tracking-tighter md:text-7xl lg:text-8xl xl:text-9xl">
 					Rafli{" "}
 					<span className="relative px-1">
 						<motion.span
