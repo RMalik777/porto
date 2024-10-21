@@ -102,7 +102,7 @@ export function Footer() {
 					);
 				})}
 				<div className="hidden flex-row items-center gap-2 sm:flex sm:self-center">
-					<p className="from-theme-purple bg-linear-to-r to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent dark:from-violet-500">
+					<p className="from-theme-purple bg-linear-to-r to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent duration-200 dark:from-violet-500">
 						Rafli Malik
 					</p>
 					<div className="group relative h-12 w-12 rounded-full">
