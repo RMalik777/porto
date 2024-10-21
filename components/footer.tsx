@@ -101,7 +101,7 @@ export function Footer() {
 						</div>
 					);
 				})}
-				<div className="flex flex-row items-center gap-2 sm:self-center">
+				<div className="hidden flex-row items-center gap-2 sm:flex sm:self-center">
 					<p className="from-theme-purple bg-linear-to-r to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent dark:from-violet-500">
 						Rafli Malik
 					</p>
@@ -120,8 +120,8 @@ export function Footer() {
 				</div>
 			</div>
 			<div className="flex flex-col items-center justify-center gap-1 self-center sm:flex-row sm:items-end sm:gap-4">
-				<Image src={symbol} alt="" className="sm:mb-px h-4 w-auto"></Image>
-				<p className="font-light leading-none tracking-tight">&copy; 2024 Rafli Malik </p>
+				<Image src={symbol} alt="" className="h-4 w-auto sm:mb-px"></Image>
+				<p className="leading-none tracking-tight">&copy; 2024 Rafli Malik </p>
 			</div>
 		</footer>
 	);
