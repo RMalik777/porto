@@ -1,6 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
 import { logoLicense } from "@/lib/data/licenseList";
 import { Separator } from "@/components/ui/separator";
+
+export const metadata: Metadata = {
+	title: "License",
+	description: "Information about logo and trademark used in this site.",
+};
 
 export default function License() {
 	return (
