@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 import {
 	educationList,
@@ -221,6 +222,58 @@ export default function Home() {
 							) : null}
 						</li>
 					))}
+				</ul>
+			</section>
+
+			<section id="cv" className="mb-4 scroll-m-14 space-y-4">
+				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae</h2>
+				<ul className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
+					<li className="group min-w-fit grow basis-0">
+						<Card className="hover:shadow-none">
+							<CardHeader>
+								<CardTitle>English</CardTitle>
+								<CardDescription>Bahasa Inggris</CardDescription>
+							</CardHeader>
+							<CardFooter className="flex flex-row flex-wrap gap-2">
+								<Button variant="outline" size="sm" asChild>
+									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf">
+										Open
+									</Link>
+								</Button>
+								<Button variant="outline" size="sm" asChild>
+									<Link
+										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf"
+										download
+									>
+										Download
+									</Link>
+								</Button>
+							</CardFooter>
+						</Card>
+					</li>
+					<li className="group min-w-fit grow basis-0">
+						<Card className="hover:shadow-none">
+							<CardHeader>
+								<CardTitle>Indonesian</CardTitle>
+								<CardDescription>Bahasa Indonesia</CardDescription>
+							</CardHeader>
+							<CardFooter className="flex flex-row flex-wrap gap-2">
+								<Button variant="outline" size="sm" asChild>
+									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf">
+										Buka
+									</Link>
+								</Button>
+								<Button variant="outline" size="sm" asChild>
+									<Link
+										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf"
+										download
+									>
+										Unduh
+									</Link>
+								</Button>
+							</CardFooter>
+						</Card>
+					</li>
 				</ul>
 			</section>
 		</main>
