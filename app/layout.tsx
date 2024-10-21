@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
-
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { clsx } from "clsx";
 
@@ -37,6 +36,13 @@ export const metadata: Metadata = {
 	},
 };
 
+export const viewport: Viewport = {
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "#8E0DFF" },
+		{ media: "(prefers-color-scheme: dark)", color: "#8E0DFF" },
+	],
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -51,7 +57,7 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				<Footer />
-        <SpeedInsights />
+				<SpeedInsights />
 				<Analytics />
 			</body>
 		</html>
