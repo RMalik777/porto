@@ -22,7 +22,7 @@ export default function Home() {
 	return (
 		<main className="mb-48 flex w-full flex-col items-stretch justify-start gap-8 text-black dark:text-white">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="py-px text-4xl font-normal leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+				<h1 className="py-px text-5xl font-normal leading-none tracking-tighter md:text-6xl lg:text-7xl xl:text-8xl">
 					Rafli{" "}
 					<span className="relative px-1">
 						<motion.span
