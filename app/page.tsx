@@ -131,32 +131,34 @@ export default function Home() {
 			</section>
 
 			<section id="projects" className="mb-8 scroll-m-14 space-y-4">
-				<h2 className="tracking-tighte text-4xl font-semibold">Projects</h2>
+				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{projectsList?.map((project, index) => (
 						<li key={project.name} className="items-stretch">
-							<Card
-								className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
-								style={{ transitionDelay: `${index * 3}0ms` }}
-							>
-								<CardHeader>
-									<CardTitle>{project.name}</CardTitle>
-									<CardDescription className="">{project.desc}</CardDescription>
-								</CardHeader>
-								<CardFooter>
-									<ul className="flex flex-wrap gap-2">
-										{project?.tech.map((tech, childIndex) => (
-											<li
-												className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
-												style={{ transitionDelay: `${childIndex * 3}0ms` }}
-												key={tech}
-											>
-												{tech}
-											</li>
-										))}
-									</ul>
-								</CardFooter>
-							</Card>
+							<Link href={project.source}>
+								<Card
+									className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
+									style={{ transitionDelay: `${index * 3}0ms` }}
+								>
+									<CardHeader>
+										<CardTitle>{project.name}</CardTitle>
+										<CardDescription>{project.desc}</CardDescription>
+									</CardHeader>
+									<CardFooter>
+										<ul className="flex flex-wrap gap-2">
+											{project?.tech.map((tech, childIndex) => (
+												<li
+													className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
+													style={{ transitionDelay: `${childIndex * 3}0ms` }}
+													key={tech}
+												>
+													{tech}
+												</li>
+											))}
+										</ul>
+									</CardFooter>
+								</Card>
+							</Link>
 						</li>
 					))}
 				</ul>
