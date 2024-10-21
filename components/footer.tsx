@@ -4,6 +4,7 @@ import Image from "next/image";
 import { type SimpleIcon, siInstagram, siGmail, siLinkedin, siGithub } from "simple-icons";
 
 import portrait from "@/public/photosquarezoom.jpg";
+import symbol from "@/public/symbol.svg";
 
 interface LinkItem {
 	name: string;
@@ -66,7 +67,7 @@ const linkParent = [
 
 export function Footer() {
 	return (
-		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-4 text-black sm:gap-6 md:gap-8 lg:gap-10 dark:text-white">
+		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-6 text-black sm:gap-6 md:gap-8 lg:gap-10 dark:text-white">
 			<div className="flex w-full flex-col items-start justify-between gap-4 tracking-tight sm:flex-row sm:gap-0">
 				{linkParent.map((linkList) => {
 					return (
@@ -118,7 +119,10 @@ export function Footer() {
 					</div>
 				</div>
 			</div>
-			<p className="self-center font-light tracking-tight">&copy; 2024 Rafli Malik </p>
+			<div className="flex flex-col items-center justify-center gap-1 self-center sm:flex-row sm:items-end sm:gap-4">
+				<Image src={symbol} alt="" className="sm:mb-px h-4 w-auto"></Image>
+				<p className="font-light leading-none tracking-tight">&copy; 2024 Rafli Malik </p>
+			</div>
 		</footer>
 	);
 }
