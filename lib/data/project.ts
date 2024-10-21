@@ -3,7 +3,7 @@ interface Project {
 	desc?: string;
 	image: string;
 	live?: string;
-	source?: string;
+	source: string;
 	tech: string[];
 }
 
@@ -29,7 +29,7 @@ export const projectsList: Project[] = [
 		desc: "Website for a imaginary tech event called “Pudding Fest” by PT Musang.",
 		image: "/Project/thumbnail/puddingfest.webp",
 		live: "https://puddingfest.raflimalik.com",
-		source: "https://github.com/RMalik777/BNCC-Final-Project.git",
+		source: "https://github.com/RMalik777/BNCC-Final-Project",
 		tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Firebase Firestore"],
 	},
 	{
@@ -37,7 +37,7 @@ export const projectsList: Project[] = [
 		desc: "Website to show personal information.",
 		image: "/Project/thumbnail/miniporto.webp",
 		live: "https://miniporto.raflimalik.com",
-		source: "https://github.com/RMalik777/BNCC-Mid-Project.git",
+		source: "https://github.com/RMalik777/BNCC-Mid-Project",
 		tech: ["HTML", "CSS", "JavaScript"],
 	},
 	{
@@ -45,7 +45,7 @@ export const projectsList: Project[] = [
 		desc: "Website for a music album shopping.",
 		image: "/Project/thumbnail/kpopztation.webp",
 		live: "",
-		source: "https://github.com/RMalik777/PSD_Lab.git",
+		source: "https://github.com/RMalik777/PSD_Lab",
 		tech: ["ASP.NET", "SQL Server"],
 	},
 	{
@@ -53,7 +53,7 @@ export const projectsList: Project[] = [
 		desc: "A space themed website. Containing information and images from Hubble Space Telescope.",
 		image: "/Project/thumbnail/astronom.webp",
 		live: "https://astronom.raflimalik.com",
-		source: "https://github.com/RMalik777/Astronom.git",
+		source: "https://github.com/RMalik777/Astronom",
 		tech: ["HTML", "CSS"],
 	},
 	{
@@ -61,7 +61,7 @@ export const projectsList: Project[] = [
 		desc: "Website for a game launch event. Contain information about the launch date, future plan and esports.",
 		image: "/Project/thumbnail/NOKA.webp",
 		live: "https://noka.raflimalik.com",
-		source: "https://github.com/RMalik777/HCI_Project.git",
+		source: "https://github.com/RMalik777/HCI_Project",
 		tech: ["HTML", "CSS"],
 	},
 	{
