@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { clsx } from "clsx";
 
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 		siteName: "Rafli Malik",
 		images: [
 			{
-				url: "/photosquarezoom.jpg", // Must be an absolute URL
+				url: "/photosquarezoom.jpg",
 				width: 800,
 				height: 800,
 				alt: "Portrait of Rafli Malik",
@@ -49,6 +51,7 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				<Footer />
+        <SpeedInsights />
 				<Analytics />
 			</body>
 		</html>
