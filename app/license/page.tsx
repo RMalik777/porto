@@ -52,10 +52,10 @@ export default function License() {
 				Information and Removal Request:
 				<Link
 					href="mailto:info@raflimalik.com"
-					className="group relative py-px px-1 font-medium delay-200 duration-150 ease-out hover:text-white hover:underline"
+					className="group relative py-px px-1 font-medium delay-200 duration-150 ease-out focus-visible:text-white hover:text-white hover:underline"
 				>
 					info@raflimalik.com{""}
-					<span className="bg-theme-purple absolute bottom-0 left-0 z-[-1] h-0 w-full transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full dark:bg-violet-700"></span>
+					<span className="bg-theme-purple absolute bottom-0 left-0 z-[-1] h-0 w-full transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full group-focus-visible:h-full  dark:bg-violet-700"></span>
 				</Link>
 			</p>
 		</main>
