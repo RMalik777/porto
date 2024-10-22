@@ -20,7 +20,7 @@ import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main className="mb-20 sm:mb-24 md:mb-32 lg:mb-36 xl:mb-48 flex w-full flex-col items-stretch justify-start gap-8 text-black dark:text-white">
+		<main className="mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
 				<h1 className="py-px text-6xl font-normal leading-none tracking-tighter md:text-7xl lg:text-8xl xl:text-9xl">
 					Rafli{" "}
@@ -135,7 +135,7 @@ export default function Home() {
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{projectsList?.map((project, index) => (
 						<li key={project.name} className="items-stretch">
-							<Link href={project.source}>
+							<Link href={project.source} target="_blank" rel="noopener noreferrer">
 								<Card
 									className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
 									style={{ transitionDelay: `${index * 3}0ms` }}
