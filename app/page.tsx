@@ -70,7 +70,10 @@ export default function Home() {
 				</h1>
 			</section>
 
-			<section id="skills" className="mb-8 scroll-m-14 space-y-4">
+			<section
+				id="skills"
+				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
@@ -130,7 +133,10 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id="projects" className="mb-8 scroll-m-14 space-y-4">
+			<section
+				id="projects"
+				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{projectsList?.map((project, index) => (
@@ -164,7 +170,10 @@ export default function Home() {
 				</ul>
 			</section>
 
-			<section id="about" className="mb-8 scroll-m-14 space-y-4">
+			<section
+				id="about"
+				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
 				<section>
 					<h3 className="text-2xl font-medium tracking-tight">Work Experience</h3>
@@ -205,7 +214,7 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section className="mb-8 space-y-4">
+			<section className="mb-8 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="border-theme-purple ml-2 flex flex-col gap-4 border-l">
 					{educationList?.map((education) => (
@@ -214,7 +223,7 @@ export default function Home() {
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
 						>
 							<div className="bg-theme-purple absolute -left-1.5 mt-2 h-3 w-3"></div>
-							<h4 className="text-lg font-semibold">{education.school}</h4>
+							<h3 className="text-lg font-semibold">{education.school}</h3>
 							<p className="text-neutral-500 dark:text-neutral-400">{education.major}</p>
 							<p className="text-neutral-500 dark:text-neutral-400">
 								{education.from} &ndash; {education.to}
@@ -227,7 +236,10 @@ export default function Home() {
 				</ul>
 			</section>
 
-			<section id="cv" className="mb-4 scroll-m-14 space-y-4">
+			<section
+				id="cv"
+				className="mb-4 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae</h2>
 				<ul className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
 					<li className="group min-w-fit grow basis-0">
