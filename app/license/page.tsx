@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function License() {
 	return (
-		<main className="mt-32 mb-32 flex h-fit min-h-dvh flex-col items-start gap-16 sm:mt-40 sm:gap-20 md:mt-48 md:gap-24 lg:mt-56 lg:gap-28">
+		<main className="mt-32 mb-32 flex h-fit min-h-dvh flex-col items-start gap-16 px-6 sm:mt-40 sm:gap-20 sm:px-10 md:mt-48 md:gap-24 md:px-14 lg:mt-56 lg:gap-28 lg:px-20 xl:px-24">
 			<h1 className="w-full text-4xl font-bold tracking-tight lg:text-5xl">
 				License and Trademark Information
 			</h1>
@@ -26,7 +26,7 @@ export default function License() {
 						<li key={license.name} className="flex flex-col gap-0">
 							<Link
 								href={license.source}
-								className="after:bg-theme-purple hover:text-theme-purple focus-visible:text-theme-purple relative w-fit font-medium leading-snug duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
+								className="after:bg-theme-purple hover:text-theme-purple focus-visible:text-theme-purple relative w-fit leading-snug font-medium duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -52,7 +52,7 @@ export default function License() {
 				Information and Removal Request:
 				<Link
 					href="mailto:info@raflimalik.com"
-					className="group relative py-px px-1 font-medium delay-200 duration-150 ease-out hover:text-white hover:underline focus-visible:text-white"
+					className="group relative px-1 py-px font-medium delay-200 duration-150 ease-out hover:text-white hover:underline focus-visible:text-white"
 				>
 					info@raflimalik.com{""}
 					<span className="bg-theme-purple absolute bottom-0 left-0 z-[-1] h-0 w-full transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full group-focus-visible:h-full dark:bg-violet-700"></span>

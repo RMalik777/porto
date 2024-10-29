@@ -112,7 +112,7 @@ export function Footer() {
 							alt="Portrait of Rafli Malik, the owner of this website"
 						/>
 						<div
-							className="absolute inset-0 -z-10 h-full w-full rounded-full bg-cover bg-no-repeat blur-[1px] blur-sm brightness-125 saturate-150 duration-200 ease-out"
+							className="absolute inset-0 -z-10 h-full w-full rounded-full bg-cover bg-no-repeat blur-sm brightness-125 saturate-150 duration-200 ease-out"
 							// use inline style so the background image can be dynamic and follow the <Image/> src
 							style={{ background: `url(${portrait.src})` }}
 						></div>
