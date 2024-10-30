@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -49,17 +50,24 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
-			lang="en"
-			className={clsx(GeistSans.className, GeistMono.variable, "scroll-smooth antialiased")}
-		>
-			<body className="min-w-dvw h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
-				<Navbar />
-				{children}
-				<Footer />
-				<SpeedInsights />
-				<Analytics />
-			</body>
-		</html>
+		<>
+			<Script
+				defer
+				data-domain="raflimalik.com"
+				src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"
+			></Script>
+			<html
+				lang="en"
+				className={clsx(GeistSans.className, GeistMono.variable, "scroll-smooth antialiased")}
+			>
+				<body className="min-w-dvw h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
+					<Navbar />
+					{children}
+					<Footer />
+					<SpeedInsights />
+					<Analytics />
+				</body>
+			</html>
+		</>
 	);
 }
