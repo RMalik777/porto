@@ -141,7 +141,7 @@ export default function Home() {
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{projectsList?.map((project, index) => (
 						<li key={project.name} className="items-stretch">
-							<Link href={project.source} target="_blank" rel="noopener noreferrer">
+							<Link href={project.live ?? project.source} target="_blank" rel="noopener noreferrer">
 								<Card
 									className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
 									style={{ transitionDelay: `${index * 3}0ms` }}
