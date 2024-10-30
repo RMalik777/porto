@@ -20,9 +20,9 @@ import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main className="mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
+		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
 			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="py-px text-6xl font-normal leading-none tracking-tighter md:text-7xl lg:text-8xl xl:text-9xl">
+				<h1 className="px-6 py-px text-6xl leading-none font-normal tracking-tighter sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
 					Rafli{" "}
 					<span className="relative px-1">
 						<motion.span
@@ -154,7 +154,7 @@ export default function Home() {
 										<ul className="flex flex-wrap gap-2">
 											{project?.tech.map((tech, childIndex) => (
 												<li
-													className="w-fit border border-neutral-100 py-1 px-2 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
+													className="w-fit border border-neutral-100 px-2 py-1 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
 													style={{ transitionDelay: `${childIndex * 3}0ms` }}
 													key={tech}
 												>
