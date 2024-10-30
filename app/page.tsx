@@ -240,7 +240,7 @@ export default function Home() {
 				id="cv"
 				className="mb-4 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae</h2>
+				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae (CV)</h2>
 				<ul className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
 					<li className="group min-w-fit grow basis-0">
 						<Card className="hover:shadow-none">
