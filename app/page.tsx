@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useEffect, useState, useLayoutEffect } from "react";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,10 +20,136 @@ import { motion } from "framer-motion";
 import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
+	const ref = useRef<HTMLElement>(null);
+	const [width, setWidth] = useState(0);
+	const [rows, setRows] = useState(0);
+	const [cols, setCols] = useState(0);
+	const [grid, setGrid] = useState<boolean[][]>();
+	const [random2, setRandom2] = useState(0);
+	const [random, setRandom] = useState(0);
+
+	function calcGrid() {
+		setWidth(ref.current?.clientWidth ?? 0);
+
+		const base = Math.ceil((ref.current?.clientWidth ?? 0) / 75);
+		const cell = (ref.current?.clientWidth ?? 0) / base;
+
+		setRows(Math.ceil((ref.current?.clientHeight ?? 0) / cell));
+		setCols(Math.ceil((ref.current?.clientWidth ?? 0) / cell));
+	}
+
+	useLayoutEffect(() => {
+		calcGrid();
+		window.addEventListener("resize", () => calcGrid());
+		return () => window.removeEventListener("resize", () => calcGrid());
+	}, []);
+
+	function createGrid(rows: number, cols: number) {
+		const gridPrep = [];
+		for (let i = 0; i < rows; i++) {
+			gridPrep.push(new Array(cols).fill(false));
+		}
+		setGrid(gridPrep);
+	}
+
+	useEffect(() => {
+		function randomFill() {
+			return Math.round(Math.random() * (cols * rows));
+		}
+		createGrid(rows, cols);
+		const interval = setInterval(() => {
+			setRandom(randomFill());
+			setRandom2(randomFill());
+		}, 2000);
+		return () => clearInterval(interval);
+	}, [rows, cols]);
+
 	return (
 		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
-			<section id="intro" className="flex h-dvh w-full flex-col items-start justify-center gap-4">
-				<h1 className="px-6 py-px text-6xl leading-none font-normal tracking-tighter sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
+			<section
+				ref={ref}
+				id="intro"
+				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4"
+				style={{ "--cell": `${width / cols}px`, "--rows": rows - 1 } as React.CSSProperties}
+			>
+				<div className="absolute inset-0 z-0 grid h-full w-full auto-rows-[var(--cell)] justify-center -space-y-px">
+					{grid?.map((child, parentIndex) => (
+						<div
+							key={parentIndex}
+							className="grid h-full w-full flex-1 auto-cols-[var(--cell)] grid-flow-col -space-x-px"
+						>
+							{child?.map((value, childIndex) => {
+								const index = parentIndex * cols + childIndex + 1;
+								return (
+									<div
+										key={index}
+										className={
+											(value ||
+											random === index ||
+											random2 === index ||
+											random % random2 === index ||
+											random2 % random === index ||
+											random + random2 === index ||
+											random / random2 === index ||
+											random2 / random === index ||
+											random - random2 === index ||
+											random2 - random === index ||
+											random * random2 == -index
+												? "bg-violet-100 dark:bg-violet-950"
+												: "") +
+											" border-collapse border border-violet-100 duration-500 ease-out dark:border-violet-950"
+										}
+										onClick={() => {
+											setGrid((prevGrid) => {
+												const newGrid = prevGrid?.map((row, rowIndex) =>
+													rowIndex === parentIndex
+														? row.map((cell, cellIndex) =>
+																cellIndex === childIndex ? !cell : cell,
+															)
+														: row,
+												);
+												return newGrid;
+											});
+											setTimeout(() => {
+												setGrid((prevGrid) => {
+													const newGrid = prevGrid?.map((row, rowIndex) =>
+														rowIndex === parentIndex ? row.map(() => false) : row,
+													);
+													return newGrid;
+												});
+											}, 5000);
+										}}
+										onMouseEnter={() => {
+											setGrid((prevGrid) => {
+												const newGrid = prevGrid?.map((row, rowIndex) =>
+													rowIndex === parentIndex
+														? row.map((cell, cellIndex) =>
+																cellIndex === childIndex ? !cell : cell,
+															)
+														: row,
+												);
+												return newGrid;
+											});
+											setTimeout(() => {
+												setGrid((prevGrid) => {
+													const newGrid = prevGrid?.map((row, rowIndex) =>
+														rowIndex === parentIndex
+															? row.map((cell, cellIndex) =>
+																	cellIndex === childIndex ? !cell : cell,
+																)
+															: row,
+													);
+													return newGrid;
+												});
+											}, 550);
+										}}
+									></div>
+								);
+							})}
+						</div>
+					))}
+				</div>
+				<h1 className="z-10 px-6 py-px text-6xl leading-none font-normal tracking-tighter sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
 					Rafli{" "}
 					<span className="relative px-1">
 						<motion.span
