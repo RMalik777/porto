@@ -67,7 +67,7 @@ const linkParent = [
 
 export function Footer() {
 	return (
-		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-6 px-6 text-black sm:gap-6 sm:px-10 md:gap-8 md:px-14 lg:gap-10 lg:px-20 xl:px-24 dark:text-white">
+		<footer className="mt-10 flex w-full flex-col items-start justify-center gap-6 px-6 pt-4 pb-2 text-black sm:gap-6 sm:px-10 md:gap-8 md:px-14 lg:gap-10 lg:px-20 xl:px-24 dark:text-white">
 			<div className="flex w-full flex-col items-start justify-between gap-4 tracking-tight sm:flex-row sm:gap-0">
 				{linkParent.map((linkList) => {
 					return (
