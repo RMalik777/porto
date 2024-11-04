@@ -25,8 +25,6 @@ export default function Home() {
 	const [rows, setRows] = useState(0);
 	const [cols, setCols] = useState(0);
 	const [grid, setGrid] = useState<boolean[][]>();
-	const [random2, setRandom2] = useState(0);
-	const [random, setRandom] = useState(0);
 
 	function calcGrid() {
 		setWidth(ref.current?.clientWidth ?? 0);
@@ -53,15 +51,7 @@ export default function Home() {
 	}
 
 	useEffect(() => {
-		function randomFill() {
-			return Math.round(Math.random() * (cols * rows));
-		}
 		createGrid(rows, cols);
-		const interval = setInterval(() => {
-			setRandom(randomFill());
-			setRandom2(randomFill());
-		}, 2000);
-		return () => clearInterval(interval);
 	}, [rows, cols]);
 
 	return (
@@ -78,71 +68,14 @@ export default function Home() {
 							key={parentIndex}
 							className="grid h-full w-full flex-1 auto-cols-[var(--cell)] grid-flow-col -space-x-px"
 						>
-							{child?.map((value, childIndex) => {
+							{child?.map((_, childIndex) => {
 								const index = parentIndex * cols + childIndex + 1;
 								return (
 									<div
 										key={index}
 										className={
-											(value ||
-											random === index ||
-											random2 === index ||
-											random % random2 === index ||
-											random2 % random === index ||
-											random + random2 === index ||
-											random / random2 === index ||
-											random2 / random === index ||
-											random - random2 === index ||
-											random2 - random === index ||
-											random * random2 == -index
-												? "bg-violet-100 dark:bg-violet-950"
-												: "") +
-											" border-collapse border border-violet-100 duration-500 ease-out dark:border-violet-950"
+											"border-collapse border border-violet-100 duration-200 ease-out dark:border-violet-950"
 										}
-										onClick={() => {
-											setGrid((prevGrid) => {
-												const newGrid = prevGrid?.map((row, rowIndex) =>
-													rowIndex === parentIndex
-														? row.map((cell, cellIndex) =>
-																cellIndex === childIndex ? !cell : cell,
-															)
-														: row,
-												);
-												return newGrid;
-											});
-											setTimeout(() => {
-												setGrid((prevGrid) => {
-													const newGrid = prevGrid?.map((row, rowIndex) =>
-														rowIndex === parentIndex ? row.map(() => false) : row,
-													);
-													return newGrid;
-												});
-											}, 5000);
-										}}
-										onMouseEnter={() => {
-											setGrid((prevGrid) => {
-												const newGrid = prevGrid?.map((row, rowIndex) =>
-													rowIndex === parentIndex
-														? row.map((cell, cellIndex) =>
-																cellIndex === childIndex ? !cell : cell,
-															)
-														: row,
-												);
-												return newGrid;
-											});
-											setTimeout(() => {
-												setGrid((prevGrid) => {
-													const newGrid = prevGrid?.map((row, rowIndex) =>
-														rowIndex === parentIndex
-															? row.map((cell, cellIndex) =>
-																	cellIndex === childIndex ? !cell : cell,
-																)
-															: row,
-													);
-													return newGrid;
-												});
-											}, 550);
-										}}
 									></div>
 								);
 							})}
