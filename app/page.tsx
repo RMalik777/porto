@@ -29,7 +29,7 @@ export default function Home() {
 	function calcGrid() {
 		setWidth(ref.current?.clientWidth ?? 0);
 
-		const base = Math.ceil((ref.current?.clientWidth ?? 0) / 75);
+		const base = Math.ceil((ref.current?.clientWidth ?? 0) / 55);
 		const cell = (ref.current?.clientWidth ?? 0) / base;
 
 		setRows(Math.ceil((ref.current?.clientHeight ?? 0) / cell));
@@ -74,7 +74,7 @@ export default function Home() {
 									<div
 										key={index}
 										className={
-											"border-collapse border border-violet-100 duration-200 ease-out dark:border-violet-950"
+											"m-6 rounded-full bg-purple-100 duration-200 ease-out dark:bg-violet-950"
 										}
 									></div>
 								);
