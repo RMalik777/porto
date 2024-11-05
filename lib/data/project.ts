@@ -1,6 +1,7 @@
 interface Project {
 	name: string;
-	desc?: string;
+	desc: string;
+  longdesc?: string;
 	image: string;
 	live?: string;
 	source: string;
