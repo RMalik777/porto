@@ -96,6 +96,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 												alt={post.name}
 												width={1920}
 												height={1080}
+												loading="eager"
 												className="h-auto w-full"
 											/>
 										</CarouselItem>
