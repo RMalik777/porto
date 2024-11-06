@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.2,
 		},
 		...projectsList.map((project) => ({
-			url: `${ROOT_URL}/${project.name.replace(/\s+/g, "-").toLowerCase()}`,
+			url: `${ROOT_URL}/project/${project.name.replace(/\s+/g, "-").toLowerCase()}`,
 			lastModified: new Date(),
 			changeFrequency: "yearly" as const,
 			priority: 0.5,
