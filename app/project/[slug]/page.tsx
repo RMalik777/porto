@@ -39,7 +39,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 	metadata.description = post?.desc;
 
 	return (
-		<main className="mt-20 mb-20 flex items-center justify-center px-6 text-black sm:mb-24 md:mt-36 md:mb-32 md:px-10 lg:mb-36 xl:mb-48 dark:text-white">
+		<main className="flex scroll-pt-20 items-center justify-center px-6 pt-20 text-black sm:mb-24 md:mb-32 md:scroll-pt-20 md:px-10 md:pt-36 lg:mb-36 xl:mb-48 dark:text-white">
 			<section className="flex w-full max-w-prose flex-col items-center justify-start gap-1 tracking-tight">
 				{post ? (
 					<>
