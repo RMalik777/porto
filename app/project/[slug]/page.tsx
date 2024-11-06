@@ -65,10 +65,18 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 								disabled={!post.live}
 								asChild={!!post.live}
 							>
-								{post.live ? <Link href={post.live}>Live</Link> : "Preview"}
+								{post.live ? (
+									<Link href={post.live} target="_blank">
+										Live
+									</Link>
+								) : (
+									"Preview"
+								)}
 							</Button>
 							<Button variant="outline" className="w-full" asChild>
-								<Link href={post.source}>Source</Link>
+								<Link href={post.source} target="_blank" rel="noopener noreferrer">
+									Source
+								</Link>
 							</Button>
 						</div>
 						<p className="text-left">{post?.longdesc}</p>
