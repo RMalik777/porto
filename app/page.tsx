@@ -132,7 +132,7 @@ export default function Home() {
 
 			<section
 				id="skills"
-				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
@@ -195,7 +195,7 @@ export default function Home() {
 
 			<section
 				id="projects"
-				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
 				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -232,7 +232,7 @@ export default function Home() {
 
 			<section
 				id="about"
-				className="mb-8 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
 				<section>
@@ -298,7 +298,7 @@ export default function Home() {
 
 			<section
 				id="cv"
-				className="mb-4 scroll-m-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+				className="mb-4 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae (CV)</h2>
 				<ul className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
