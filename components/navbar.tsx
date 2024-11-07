@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 interface NavLink {
 	title: string;
 	href: string;
@@ -24,8 +23,8 @@ const navLink: NavLink[] = [
 ];
 export function Navbar() {
 	return (
-		<header className="fixed top-0 left-0 z-10 flex w-full justify-between bg-white/80 py-2 px-4 text-black backdrop-blur-md backdrop-saturate-150 sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:bg-neutral-950/80 dark:text-white dark:backdrop-blur-lg dark:backdrop-saturate-100">
-			<nav className="flex h-fit w-full flex-row items-center justify-center gap-8 sm:justify-start">
+		<header className="fixed top-0 left-0 z-20 flex w-full items-center justify-between bg-white/80 px-4 py-2 text-black backdrop-blur-md backdrop-saturate-150 sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:bg-neutral-950/80 dark:text-white dark:backdrop-blur-lg dark:backdrop-saturate-100">
+			<nav className="flex h-fit w-full flex-row items-center justify-center gap-8 sm:justify-end">
 				<ul className="flex flex-row items-center justify-start gap-2 font-medium sm:gap-6 md:gap-8 lg:gap-10 lg:text-xl xl:gap-16">
 					{navLink.map((link) => {
 						return (
