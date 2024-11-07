@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,68 +19,12 @@ import { motion } from "framer-motion";
 import { SquareArrowRight } from "lucide-react";
 
 export default function Home() {
-	const ref = useRef<HTMLElement>(null);
-	const [width, setWidth] = useState(0);
-	const [rows, setRows] = useState(0);
-	const [cols, setCols] = useState(0);
-	const [grid, setGrid] = useState<boolean[][]>();
-
-	function calcGrid() {
-		setWidth(ref.current?.clientWidth ?? 0);
-
-		const base = Math.ceil((ref.current?.clientWidth ?? 0) / 54);
-		const cell = (ref.current?.clientWidth ?? 0) / base;
-
-		setRows(Math.ceil((ref.current?.clientHeight ?? 0) / cell));
-		setCols(Math.ceil((ref.current?.clientWidth ?? 0) / cell));
-	}
-
-	useLayoutEffect(() => {
-		calcGrid();
-		window.addEventListener("resize", () => calcGrid());
-		return () => window.removeEventListener("resize", () => calcGrid());
-	}, []);
-
-	function createGrid(rows: number, cols: number) {
-		const gridPrep = [];
-		for (let i = 0; i < rows; i++) {
-			gridPrep.push(new Array(cols).fill(false));
-		}
-		setGrid(gridPrep);
-	}
-
-	useEffect(() => {
-		createGrid(rows, cols);
-	}, [rows, cols]);
-
 	return (
 		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
 			<section
-				ref={ref}
 				id="intro"
-				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4"
-				style={{ "--cell": `${width / cols}px`, "--rows": rows - 1 } as React.CSSProperties}
+				className="mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-[size:50px_50px] sm:bg-[size:60px_60px] dark:from-violet-950"
 			>
-				<div className="absolute inset-0 z-0 grid h-full w-full auto-rows-[var(--cell)] justify-center -space-y-px">
-					{grid?.map((child, parentIndex) => (
-						<div
-							key={parentIndex}
-							className="grid h-full w-full flex-1 auto-cols-[var(--cell)] grid-flow-col -space-x-px"
-						>
-							{child?.map((_, childIndex) => {
-								const index = parentIndex * cols + childIndex + 1;
-								return (
-									<div
-										key={index}
-										className={
-											"m-6 rounded-full bg-purple-100 duration-200 ease-out dark:bg-violet-950"
-										}
-									></div>
-								);
-							})}
-						</div>
-					))}
-				</div>
 				<h1 className="z-10 px-6 py-px text-6xl leading-none font-normal tracking-tighter sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
 					Rafli{" "}
 					<span className="relative px-1">
