@@ -46,18 +46,18 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 						<h1 className="mt-4 text-center text-3xl font-semibold tracking-tighter sm:text-4xl">
 							{post.name}
 						</h1>
-						<p className="text-center text-lg">{post?.desc}</p>
+						<p className="text-center text-lg">{post.desc}</p>
 						<ul className="mt-1 flex flex-row flex-wrap items-center justify-center gap-2">
 							{post.tech.map((tech) => (
 								<li
-									className="bg-violet-100 px-2 py-1 text-xs font-medium text-violet-700"
+									className="bg-violet-100 px-2 py-1 text-xs font-medium text-violet-700 dark:bg-violet-900 dark:text-violet-100"
 									key={tech}
 								>
 									{tech}
 								</li>
 							))}
 						</ul>
-						<hr className="mb-px h-px w-full duration-500 starting:w-0" />
+						<hr className="mb-px h-[2px] w-full border-violet-500 duration-500 dark:border-violet-700 starting:w-0" />
 						<div className="my-2 flex w-full flex-row items-center justify-evenly gap-2">
 							<Button
 								variant="outline"
@@ -79,8 +79,8 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 								</Link>
 							</Button>
 						</div>
-						<p className="text-left">{post?.longdesc}</p>
-						<figure>
+						<p className="text-left">{post.longdesc}</p>
+						<figure className="px-4 sm:px-0">
 							<Carousel
 								opts={{
 									align: "center",
@@ -105,7 +105,9 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 								<CarouselPrevious />
 								<CarouselNext />
 							</Carousel>
-							<figcaption className="text-sm text-neutral-500">Preview</figcaption>
+							<figcaption className="text-sm text-neutral-500 dark:text-neutral-400">
+								Preview
+							</figcaption>
 						</figure>
 					</>
 				) : (
