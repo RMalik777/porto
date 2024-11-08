@@ -50,7 +50,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 						<ul className="mt-1 flex flex-row flex-wrap items-center justify-center gap-2">
 							{post.tech.map((tech) => (
 								<li
-									className="bg-violet-100 px-2 py-1 text-xs font-medium text-violet-700 dark:bg-violet-900 dark:text-violet-100"
+									className="bg-violet-100 px-2 py-1 text-xs font-medium tracking-normal text-violet-700 dark:bg-violet-900 dark:text-violet-100"
 									key={tech}
 								>
 									{tech}

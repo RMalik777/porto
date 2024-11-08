@@ -157,7 +157,7 @@ export default function Home() {
 										<ul className="flex flex-wrap gap-2">
 											{project?.tech.map((tech, childIndex) => (
 												<li
-													className="w-fit border border-neutral-100 px-2 py-1 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-200 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900"
+													className="w-fit border border-neutral-100 px-2 py-1 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-100 group-hover:text-violet-700 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900 dark:group-hover:text-purple-100"
 													style={{ transitionDelay: `${childIndex * 3}0ms` }}
 													key={tech}
 												>
