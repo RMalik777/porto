@@ -80,7 +80,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 							</Button>
 						</div>
 						<p className="text-left">{post.longdesc}</p>
-						<figure className="px-4 sm:px-0">
+						<figure className="px-10 md:px-4 lg:px-0">
 							<Carousel
 								opts={{
 									align: "center",
@@ -97,7 +97,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 												width={1920}
 												height={1080}
 												loading="eager"
-												className="h-auto w-full"
+												className="h-auto w-full border border-neutral-700 dark:border-neutral-300"
 											/>
 										</CarouselItem>
 									))}
