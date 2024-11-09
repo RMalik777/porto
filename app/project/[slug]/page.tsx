@@ -94,8 +94,8 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 											<Image
 												src={image}
 												alt={post.name}
-												width={1920}
-												height={1080}
+												width={1280}
+												height={720}
 												loading="eager"
 												className="h-auto w-full border border-neutral-700 dark:border-neutral-300"
 											/>
