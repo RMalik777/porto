@@ -98,6 +98,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 												height={720}
 												loading="eager"
 												className="h-auto w-full border border-neutral-700 dark:border-neutral-300"
+												priority
 											/>
 										</CarouselItem>
 									))}
