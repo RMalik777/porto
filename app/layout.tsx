@@ -63,7 +63,7 @@ export default function RootLayout({
 				src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"
 			></Script>
 			<html lang="en" className={clsx(GeistSans.className, GeistMono.variable, "antialiased")}>
-				<body className="min-w-dvw h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
+				<body className="min-w-screen h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
 					<Navbar />
 					{children}
 					<Footer />
