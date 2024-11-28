@@ -18,9 +18,7 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
 	const posts = projectsList;
 	return posts.map((post) => ({
-		params: {
-			slug: post.name.replace(/\s+/g, "-").toLowerCase(),
-		},
+		slug: post.name.replace(/\s+/g, "-").toLowerCase(),
 	}));
 }
 
@@ -32,7 +30,6 @@ export const metadata: Metadata = {
 export default async function Page({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
 	const slug = (await params).slug;
 	const post = projectsList.find((post) => post.name.replace(/\s+/g, "-").toLowerCase() === slug);
-
 	metadata.title = post?.name;
 	metadata.description = post?.desc;
 
