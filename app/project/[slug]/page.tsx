@@ -17,13 +17,11 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
 	const posts = projectsList;
-	return posts.map((post) => {
-		return {
-			params: {
-				slug: post.name.replace(/\s+/g, "-").toLowerCase(),
-			},
-		};
-	});
+	return posts.map((post) => ({
+		params: {
+			slug: post.name.replace(/\s+/g, "-").toLowerCase(),
+		},
+	}));
 }
 
 export const metadata: Metadata = {
