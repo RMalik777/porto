@@ -23,7 +23,7 @@
 		"next": "^15.0.3",
 		"react": "^19.0.0-rc.1",
 		"react-dom": "^19.0.0-rc.1",
-		"simple-icons": "^13.18.0"
+		"simple-icons": "^13.19.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.1",
