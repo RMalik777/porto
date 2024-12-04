@@ -25,14 +25,6 @@ export const metadata: Metadata = {
 			"I'm a Front End Developer, UI/UX Designer, and Tech Enthusiast. Currently majoring in Computer Science at Bina Nusantara University",
 		url: "https://www.raflimalik.com/",
 		siteName: "Rafli Malik",
-		images: [
-			{
-				url: "/photosquarezoom.jpg",
-				width: 800,
-				height: 800,
-				alt: "Portrait of Rafli Malik",
-			},
-		],
 		type: "website",
 	},
 };
