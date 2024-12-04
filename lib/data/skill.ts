@@ -94,8 +94,8 @@ export const skillsList: Skill[] = [
 		category: "Animation",
 		children: [
 			{
-				name: "Framer Motion",
-				link: "https://www.framer.com/motion/",
+				name: "Motion (Framer Motion)",
+				link: "https://www.motion.dev/",
 				logo: "/Logo/[FRAMER]_light+Proprietary.svg",
 				logoAlt: "/Logo/[FRAMER]_dark+Proprietary.svg",
 			},
