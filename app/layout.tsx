@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 		default: "Rafli Malik",
 	},
 	description:
-		"Hi! I'm Rafli Malik, a student from Bina Nusantara University, majoring in Computer Science. I'm a Front-End Developer, UI/UX Designer, and a Tech Enthusiast.",
+		"Rafli Malik, a student from Bina Nusantara University, majoring in Computer Science. Front-End Developer, UI/UX Designer, and a Tech Enthusiast.",
 	openGraph: {
 		title: "Rafli Malik",
 		description:
-			"I'm a Front End Developer, UI/UX Designer, and Tech Enthusiast. Currently majoring in Computer Science at Bina Nusantara University",
+			"Front End Developer, UI/UX Designer, and Tech Enthusiast. Majoring in Computer Science at Bina Nusantara University",
 		url: "https://www.raflimalik.com/",
 		siteName: "Rafli Malik",
 		type: "website",
