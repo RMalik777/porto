@@ -147,10 +147,10 @@ export default function Home() {
 						{otherExperienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
 								<Link href={experience.externalLink ?? ""} className="group duration-200">
-									<h4 className="group-hover:text-theme-purple group-focus-visible:text-theme-purple flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
+									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold duration-200 group-hover:text-theme-purple group-focus-visible:text-theme-purple dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
-											<SquareArrowRight className="text-theme-purple ml-2 h-full w-auto -translate-x-full opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
+											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-theme-purple opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
 										</span>
 									</h4>
 									<p className="text-neutral-500">{experience.position}</p>
@@ -166,13 +166,13 @@ export default function Home() {
 
 			<section className="mb-8 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
-				<ul className="border-theme-purple ml-2 flex flex-col gap-4 border-l">
+				<ul className="ml-2 flex flex-col gap-4 border-l border-theme-purple">
 					{educationList?.map((education) => (
 						<li
 							key={education.school}
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
 						>
-							<div className="bg-theme-purple absolute -left-1.5 mt-2 h-3 w-3"></div>
+							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-theme-purple"></div>
 							<h3 className="text-lg font-semibold">{education.school}</h3>
 							<p className="text-neutral-500 dark:text-neutral-400">{education.major}</p>
 							<p className="text-neutral-500 dark:text-neutral-400">

@@ -26,7 +26,7 @@ export default function License() {
 						<li key={license.name} className="flex flex-col gap-0">
 							<Link
 								href={license.source}
-								className="after:bg-theme-purple hover:text-theme-purple focus-visible:text-theme-purple relative w-fit leading-snug font-medium duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
+								className="relative w-fit leading-snug font-medium duration-200 ease-out after:absolute after:bottom-0 after:left-0 after:z-[-1] after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -55,7 +55,7 @@ export default function License() {
 					className="group relative px-1 py-px font-medium delay-200 duration-150 ease-out hover:text-white hover:underline focus-visible:text-white"
 				>
 					info@raflimalik.com{""}
-					<span className="bg-theme-purple absolute bottom-0 left-0 z-[-1] h-0 w-full transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full group-focus-visible:h-full dark:bg-violet-700"></span>
+					<span className="absolute bottom-0 left-0 z-[-1] h-0 w-full bg-theme-purple transition-all duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:h-full group-focus-visible:h-full dark:bg-violet-700"></span>
 				</Link>
 			</p>
 		</main>

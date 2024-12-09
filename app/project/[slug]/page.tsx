@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default async function Page({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
 	const slug = (await params).slug;
-	const post = projectsList.find((post) => post.name.replace(/\s+/g, "-").toLowerCase() === slug);
+	const post = projectsList?.find((post) => post.name.replace(/\s+/g, "-").toLowerCase() === slug);
 	metadata.title = post?.name;
 	metadata.description = post?.desc;
 
@@ -106,9 +106,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 						</figure>
 					</>
 				) : (
-					<>
-						<h1>404 - Not Found</h1>
-					</>
+					<h1>404 - Not Found</h1>
 				)}
 			</section>
 		</main>

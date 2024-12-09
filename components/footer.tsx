@@ -83,7 +83,7 @@ export function Footer() {
 													(link.logo
 														? "after:left-5 after:w-[calc(100%-1.25rem)]"
 														: "after:left-0 after:w-full") +
-													" after:bg-theme-purple hover:text-theme-purple focus-visible:text-theme-purple relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:after:origin-left hover:after:scale-x-100 focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
+													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
 												}
 											>
 												{link.logo ? (
@@ -102,7 +102,7 @@ export function Footer() {
 					);
 				})}
 				<div className="hidden flex-row items-center gap-2 sm:flex sm:self-center">
-					<p className="from-theme-purple bg-linear-to-r/oklch to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent duration-200 dark:from-violet-500">
+					<p className="bg-linear-to-r/oklch from-theme-purple to-fuchsia-500 bg-clip-text text-lg font-medium text-transparent duration-200 dark:from-violet-500">
 						Rafli Malik
 					</p>
 					<div className="group relative h-12 w-12 rounded-full">
