@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { type SimpleIcon, siInstagram, siGmail, siLinkedin, siGithub } from "simple-icons";
+import { clsx } from "clsx";
 
 import portrait from "@/public/photosquarezoom.jpg";
 import symbol from "@/public/symbol.svg";
@@ -79,12 +80,12 @@ export function Footer() {
 										<li key={link.href}>
 											<Link
 												href={link.href}
-												className={
-													(link.logo
+												className={clsx(
+													link.logo
 														? "after:left-5 after:w-[calc(100%-1.25rem)]"
-														: "after:left-0 after:w-full") +
-													" relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500"
-												}
+														: "after:left-0 after:w-full",
+													"relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500",
+												)}
 											>
 												{link.logo ? (
 													<span
