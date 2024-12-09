@@ -48,8 +48,8 @@ importers:
         specifier: 19.0.0-rc.1
         version: 19.0.0-rc.1(react@19.0.0-rc.1)
       simple-icons:
-        specifier: ^13.19.0
-        version: 13.19.0
+        specifier: ^13.20.0
+        version: 13.20.0
     devDependencies:
       '@types/node':
         specifier: ^22.10.1
@@ -1838,8 +1838,8 @@ packages:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
     engines: {node: '>= 0.4'}
 
-  simple-icons@13.19.0:
-    resolution: {integrity: sha512-N4mUzqRGm1/V3IRyxibGZXwPO1QdwIZmZADn7O6oam2Rz/vnf8TaysvwMy3gIobObthROroa9/oXN31E9gI3zA==}
+  simple-icons@13.20.0:
+    resolution: {integrity: sha512-8IQSSOaXhgG9fH0dJsUmlMlo0Jt0Xd1MwxsK75TlRZO0FR7P5UQ8TEaIPOwlRMHd/FzZJ0R3vFHW0kOH7PbdMw==}
     engines: {node: '>=0.12.18'}
 
   simple-swizzle@0.2.2:
@@ -2914,7 +2914,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -2936,7 +2936,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -3784,7 +3784,7 @@ snapshots:
       get-intrinsic: 1.2.4
       object-inspect: 1.13.3
 
-  simple-icons@13.19.0: {}
+  simple-icons@13.20.0: {}
 
   simple-swizzle@0.2.2:
     dependencies:
