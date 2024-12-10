@@ -50,7 +50,6 @@ export function Intro() {
 						initial={{ width: 0 }}
 						animate={{ width: "100%" }}
 						transition={{ duration: 1.25, ease: "circOut", delay: 0.2 }}
-						// @ts-expect-error - `className` prop is not recognized because motion doesn't yet support react 19.
 						className="absolute top-0 left-0 z-[-1] h-full bg-theme-purple"
 					></motion.span>
 				</span>
