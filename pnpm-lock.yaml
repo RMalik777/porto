@@ -48,8 +48,8 @@ importers:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
       simple-icons:
-        specifier: ^13.21.0
-        version: 13.21.0
+        specifier: ^14.0.1
+        version: 14.0.1
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
@@ -1846,8 +1846,8 @@ packages:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
 
-  simple-icons@13.21.0:
-    resolution: {integrity: sha512-LI5pVJPBv6oc79OMsffwb6kEqnmB8P1Cjg1crNUlhsxPETQ5UzbCKQdxU+7MW6+DD1qfPkla/vSKlLD4IfyXpQ==}
+  simple-icons@14.0.1:
+    resolution: {integrity: sha512-Pyd2vedjjYTGZCi8Y4a+BeG6ks2qoEwhtJL7t4l6C5DKFxQXRjpLzg7JLBCC44tsk96bXU1XDVEEp+sz58nYlw==}
     engines: {node: '>=0.12.18'}
 
   simple-swizzle@0.2.2:
@@ -3833,7 +3833,7 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  simple-icons@13.21.0: {}
+  simple-icons@14.0.1: {}
 
   simple-swizzle@0.2.2:
     dependencies:
