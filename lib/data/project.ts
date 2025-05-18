@@ -26,6 +26,20 @@ export const projectsList: Project[] = [
 		tech: ["SvelteKit", "Tailwind CSS"],
 	},
 	{
+		name: "Tailwind CSS Color",
+		desc: "Website to compare and check TailwindCSS default color in various format (OKLCH, HSL, RGB, HEX)",
+		image: [
+			"/Project/thumbnail/tailwind-color/1.webp",
+			"/Project/thumbnail/tailwind-color/3.webp",
+			"/Project/thumbnail/tailwind-color/5.webp",
+			"/Project/thumbnail/tailwind-color/7.webp",
+			"/Project/thumbnail/tailwind-color/compare.webp",
+		],
+		live: "https://tailwind.raflimalik.com",
+		source: "https://github.com/RMalik777/Tailwind-Color",
+		tech: ["SvelteKit", "Tailwind CSS"],
+	},
+	{
 		name: "Tech Event Website",
 		desc: "Website for a imaginary tech event called “Pudding Fest” by PT Musang.",
 		image: ["/Project/thumbnail/puddingfest.webp"],
