@@ -40,6 +40,14 @@ export const projectsList: Project[] = [
 		tech: ["SvelteKit", "Tailwind CSS"],
 	},
 	{
+		name: "Font Size Calculator",
+		desc: "A simple website to calculate font size based on the user's preference.",
+		image: ["/Project/thumbnail/fontcalc.webp"],
+		live: "https://font.raflimalik.com",
+		source: "https://github.com/RMalik777/FontCalc",
+		tech: ["SvelteKit", "Tailwind CSS"],
+	},
+	{
 		name: "Tech Event Website",
 		desc: "Website for a imaginary tech event called “Pudding Fest” by PT Musang.",
 		image: ["/Project/thumbnail/puddingfest.webp"],
