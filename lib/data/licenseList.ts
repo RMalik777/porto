@@ -9,6 +9,7 @@ interface LicenseItem {
 		| "CC BY 3.0"
 		| "CC BY 4.0"
 		| "CC BY-NC-SA 4.0"
+		| "Apache 2.0"
 		| "Proprietary"
 		| "Unknown";
 	licenseLink?: string;
@@ -24,10 +25,10 @@ export const logoLicense: LicenseItem[] = [
 	},
 	{
 		name: "CSS",
-		author: "Rudloff",
-		source: "https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg",
-		license: "CC BY 3.0",
-		licenseLink: "https://creativecommons.org/licenses/by/3.0/",
+		author: "CSS-Next Community Group",
+		source: "https://github.com/CSS-Next/logo.css/blob/main/css.svg",
+		license: "CC0",
+		licenseLink: "https://github.com/CSS-Next/logo.css/blob/main/LICENSE",
 	},
 	{
 		name: "JavaScript",
@@ -67,11 +68,11 @@ export const logoLicense: LicenseItem[] = [
 		licenseLink: "https://vercel.com/geist/brands#usage",
 	},
 	{
-		name: "Remix",
+		name: "React Router (Remix)",
 		author: "Shopify Inc.",
-		source: "https://remix.run/brand",
+		source: "https://reactrouter.com/brand",
 		license: "Proprietary",
-		licenseLink: "https://remix.run/brand",
+		licenseLink: "https://reactrouter.com/brand",
 	},
 	{
 		name: "Svelte",
@@ -146,6 +147,13 @@ export const logoLicense: LicenseItem[] = [
 		source: "https://www.sqlite.org/artwork.html",
 		license: "Public Domain",
 		licenseLink: "https://www.sqlite.org/copyright.html",
+	},
+	{
+		name: "Drizzle ORM",
+		author: "Drizzle Team",
+		source: "https://github.com/drizzle-team/drizzle-orm/tree/main/misc/readme",
+		license: "Apache 2.0",
+		licenseLink: "https://github.com/drizzle-team/drizzle-orm/blob/main/LICENSE",
 	},
 	{
 		name: "Sanity",

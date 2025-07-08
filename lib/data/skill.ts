@@ -56,10 +56,10 @@ export const skillsList: Skill[] = [
 				logoAlt: "/Logo/[NEXTJS]_dark+Proprietary.svg",
 			},
 			{
-				name: "Remix",
-				link: "https://remix.run/",
-				logo: "/Logo/[REMIX]_light+Proprietary.svg",
-				logoAlt: "/Logo/[REMIX]_dark+Proprietary.svg",
+				name: "React Router (Remix)",
+				link: "https://reactrouter.com/",
+				logo: "/Logo/[REACTROUTER]_light+Proprietary.svg",
+				logoAlt: "/Logo/[REACTROUTER]_dark+Proprietary.svg",
 			},
 			{
 				name: "Svelte",
@@ -129,7 +129,7 @@ export const skillsList: Skill[] = [
 		],
 	},
 	{
-		category: "Database",
+		category: "Database and ORM",
 		children: [
 			{
 				name: "MySQL",
@@ -139,6 +139,12 @@ export const skillsList: Skill[] = [
 				name: "SQLite",
 				link: "https://www.sqlite.org/index.html",
 				logo: "/Logo/[SQLITE]+Public.svg",
+			},
+			{
+				name: "Drizzle ORM",
+				link: "https://orm.drizzle.team/",
+				logo: "/Logo/[DRIZZLE]_light+Apache-2.0.svg",
+				logoAlt: "/Logo/[DRIZZLE]_dark+Apache-2.0.svg",
 			},
 		],
 	},
