@@ -56,7 +56,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 						<div className="my-2 flex w-full flex-row items-center justify-evenly gap-2">
 							<Button
 								variant="outline"
-								className="w-full"
+								className="grow"
 								disabled={!post.live}
 								asChild={!!post.live}
 							>
@@ -68,7 +68,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 									"Preview"
 								)}
 							</Button>
-							<Button variant="outline" className="w-full" asChild>
+							<Button variant="outline" className="grow" asChild>
 								<Link href={post.source} target="_blank" rel="noopener noreferrer">
 									Source
 								</Link>

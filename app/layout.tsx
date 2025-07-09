@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 import { clsx } from "clsx";
 
 import { GeistSans } from "geist/font/sans";
@@ -47,11 +49,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={clsx(GeistSans.className, GeistMono.variable, "antialiased")}>
+		<html
+			lang="en"
+			className={clsx(GeistSans.className, GeistMono.variable, "antialiased")}
+			suppressHydrationWarning
+		>
 			<body className="h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
-				<Navbar />
-				{children}
-				<Footer />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<Navbar />
+					{children}
+					<Footer />
+				</ThemeProvider>
 				<SpeedInsights />
 				<Analytics />
 			</body>
