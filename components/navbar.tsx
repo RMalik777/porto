@@ -1,4 +1,6 @@
 import Link from "next/link";
+
+import { ModeToggle } from "@/components/theme-toggle";
 interface NavLink {
 	title: string;
 	href: string;
@@ -40,6 +42,7 @@ export function Navbar() {
 						);
 					})}
 				</ul>
+				<ModeToggle />
 			</nav>
 		</header>
 	);
