@@ -40,35 +40,37 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Card className="group relative w-full">
-													<CardHeader className="group relative p-4">
-														<CardTitle className="flex items-center gap-2 text-xl font-medium">
-															{child.logo && child.logoAlt ? (
-																<>
+												<Card className="group relative px-6 py-6">
+													<CardHeader className="group relative gap-0 px-0">
+														<CardTitle className="flex items-center gap-2 font-medium">
+															<div className="h-5 w-auto max-w-5 ease-out *:h-full *:w-full *:object-contain *:object-center *:duration-150 *:ease-out">
+																{child.logo && child.logoAlt ? (
+																	<>
+																		<Image
+																			src={child.logo ?? ""}
+																			width={20}
+																			height={20}
+																			alt=""
+																			className="block group-hover:scale-125 dark:hidden"
+																		/>
+																		<Image
+																			src={child.logoAlt ?? ""}
+																			width={20}
+																			height={20}
+																			alt=""
+																			className="hidden group-hover:scale-125 dark:block"
+																		/>
+																	</>
+																) : child.logo ? (
 																	<Image
 																		src={child.logo ?? ""}
 																		width={20}
 																		height={20}
 																		alt=""
-																		className="block h-auto duration-200 ease-out group-hover:scale-125 dark:hidden"
+																		className="group-hover:scale-125"
 																	/>
-																	<Image
-																		src={child.logoAlt ?? ""}
-																		width={20}
-																		height={20}
-																		alt=""
-																		className="hidden h-auto duration-200 ease-out group-hover:scale-125 dark:block"
-																	/>
-																</>
-															) : child.logo ? (
-																<Image
-																	src={child.logo ?? ""}
-																	width={20}
-																	height={20}
-																	alt=""
-																	className="h-auto duration-200 ease-out group-hover:scale-125"
-																/>
-															) : null}
+																) : null}
+															</div>
 															{child.name}
 														</CardTitle>
 													</CardHeader>
@@ -204,7 +206,7 @@ export default function Home() {
 										Open
 									</Link>
 								</Button>
-								<Button variant="outline" size="sm" asChild>
+								<Button variant="secondary" size="sm" asChild>
 									<Link
 										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf"
 										download
@@ -227,7 +229,7 @@ export default function Home() {
 										Buka
 									</Link>
 								</Button>
-								<Button variant="outline" size="sm" asChild>
+								<Button variant="secondary" size="sm" asChild>
 									<Link
 										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf"
 										download
