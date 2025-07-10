@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,19 +14,116 @@ import {
 	skillsList,
 } from "@/lib/data";
 
-import { SquareArrowRight } from "lucide-react";
-import { Intro } from "@/components/home/first-section";
+import { Scroll, SquareArrowRight } from "lucide-react";
+
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger);
 
 export default function Home() {
+	const refIntro = useRef(null);
+	const refSkills = useRef(null);
+	useGSAP(
+		() => {
+			const tlIntro = gsap.timeline({ defaults: { ease: "expo.out" }, delay: 0.5 });
+			let split = SplitText.create(".texter", {
+				type: "chars, lines",
+				mask: "lines",
+			});
+
+			tlIntro
+				.from(split.chars, {
+					duration: 0.5,
+					y: 100,
+					rotation: "random(-90, 90)",
+					color: "#8E0DFF",
+					autoAlpha: 0,
+					stagger: 0.05,
+				})
+				.call(() => {
+					split.revert();
+				})
+
+				.to(".texter", {
+					duration: 0.75,
+					ease: "none",
+					text: {
+						value: "Lorem Ipsum",
+					},
+				})
+				.to(".texter", {
+					duration: 0.75,
+					delay: 0.5,
+					ease: "none",
+					text: {
+						value: "Rafli Malik",
+					},
+				})
+				.to(".box", {
+					duration: 0.75,
+					delay: 0.1,
+					width: "100%",
+					backgroundColor: "#8E0DFF",
+				})
+				.call(
+					() => {
+						split = new SplitText(".texter", { type: "chars, lines", mask: "lines" });
+						gsap.to(split.chars, {
+							color: "#FFFFFF",
+							stagger: 0.05,
+						});
+					},
+					undefined,
+					"<",
+				);
+		},
+		{ scope: refIntro },
+	);
+	useGSAP(
+		() => {
+			gsap.to(".scramble", {
+				scrollTrigger: {
+					trigger: refSkills.current,
+					start: "top center",
+					end: "bottom center",
+					toggleActions: "play reset play reset",
+				},
+				duration: 0.5,
+				ease: "expo.out",
+				scrambleText: {
+					text: "{original}",
+					chars: "upperLowerCase",
+					tweenLength: true,
+					revealDelay: 0.2,
+				},
+			});
+		},
+		{ scope: refSkills },
+	);
 	return (
-		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 text-black sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48 dark:text-white">
-			<Intro />
+		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48">
+			<section
+				ref={refIntro}
+				id="intro"
+				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-[size:50px_50px] sm:bg-[size:60px_60px] dark:from-violet-950"
+			>
+				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
+					<h1 className="texter z-10">Rafli Malik</h1>
+					<div className="box absolute z-0 -mx-6 h-full w-0 sm:-mx-10 md:-mx-14 lg:-mx-20 xl:-mx-24"></div>
+				</div>
+			</section>
 
 			<section
+				ref={refSkills}
 				id="skills"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="text-4xl font-semibold tracking-tighter">Skills</h2>
+				<h2 className="scramble text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
 						{skillsList?.map((skill) => (
