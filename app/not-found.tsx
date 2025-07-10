@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
 
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/grid";
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: {
 		absolute: "404 Not Found | Rafli Malik",
 	},

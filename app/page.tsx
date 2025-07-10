@@ -14,7 +14,7 @@ import {
 	skillsList,
 } from "@/lib/data";
 
-import { Scroll, SquareArrowRight } from "lucide-react";
+import { SquareArrowRight } from "lucide-react";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
