@@ -36,6 +36,10 @@ const otherWorks: LinkItem[] = [
 		name: "Font Calculator",
 		href: "https://font.raflimalik.com",
 	},
+	{
+		name: "Tailwind CSS Color",
+		href: "https://tailwind.raflimalik.com",
+	},
 ];
 
 const socialList: LinkItem[] = [
