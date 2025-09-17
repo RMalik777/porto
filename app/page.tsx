@@ -129,7 +129,7 @@ export default function Home() {
 						{skillsList?.map((skill) => (
 							<li key={skill.category}>
 								<h3 className="text-2xl font-semibold tracking-tight">{skill.category}</h3>
-								<div className="mb-4 h-px shrink-0 bg-neutral-200 ease-out dark:bg-neutral-800" />
+								<Separator className="line mb-2" />
 								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 									{skill?.children.map((child) => (
 										<li key={child.name}>
@@ -301,13 +301,13 @@ export default function Home() {
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
 								<Button variant="outline" size="sm" asChild>
-									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf">
+									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28EN%29-aZNwA825djwohb2r0jgYTYn8XUMcOD.pdf">
 										Open
 									</Link>
 								</Button>
 								<Button variant="secondary" size="sm" asChild>
 									<Link
-										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(EN)%20-GtjivhyTW1ZZufLMMYCM04Yy8Qxvna.pdf"
+										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28EN%29-aZNwA825djwohb2r0jgYTYn8XUMcOD.pdf"
 										download
 									>
 										Download
@@ -324,13 +324,13 @@ export default function Home() {
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
 								<Button variant="outline" size="sm" asChild>
-									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf">
+									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28ID%29-VgHU8W5d3FXBRR9r4XI3rPEks9P8iG.pdf">
 										Buka
 									</Link>
 								</Button>
 								<Button variant="secondary" size="sm" asChild>
 									<Link
-										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20(ID)-h8wD9VCI5V7SfbF2ETbJfszQLTR9rq.pdf"
+										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28ID%29-VgHU8W5d3FXBRR9r4XI3rPEks9P8iG.pdf"
 										download
 									>
 										Unduh
