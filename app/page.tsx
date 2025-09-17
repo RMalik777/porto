@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -38,7 +39,7 @@ export default function Home() {
 
 			tlIntro
 				.from(split.chars, {
-					duration: 0.5,
+					duration: 0.3,
 					y: 100,
 					rotation: "random(-90, 90)",
 					color: "#8E0DFF",
@@ -50,14 +51,14 @@ export default function Home() {
 				})
 
 				.to(".texter", {
-					duration: 0.75,
+					duration: 0.5,
 					ease: "none",
 					text: {
 						value: "Lorem Ipsum",
 					},
 				})
 				.to(".texter", {
-					duration: 0.75,
+					duration: 0.5,
 					delay: 0.5,
 					ease: "none",
 					text: {
@@ -65,7 +66,7 @@ export default function Home() {
 					},
 				})
 				.to(".box", {
-					duration: 0.75,
+					duration: 0.5,
 					delay: 0.1,
 					width: "100%",
 					backgroundColor: "#8E0DFF",
@@ -86,22 +87,35 @@ export default function Home() {
 	);
 	useGSAP(
 		() => {
-			gsap.to(".scramble", {
+			const tl = gsap.timeline({
+				defaults: { ease: "expo.out" },
 				scrollTrigger: {
 					trigger: refSkills.current,
 					start: "top center",
 					end: "bottom center",
 					toggleActions: "play reset play reset",
 				},
-				duration: 0.5,
-				ease: "expo.out",
-				scrambleText: {
-					text: "{original}",
-					chars: "upperLowerCase",
-					tweenLength: true,
-					revealDelay: 0.2,
-				},
 			});
+			tl.to(
+				".scramble",
+				{
+					duration: 0.5,
+					color: "#8E0DFF",
+					scrambleText: {
+						text: "{original}",
+						chars: "upperLowerCase",
+						tweenLength: true,
+						revealDelay: 0.2,
+					},
+					onComplete: () => {
+						gsap.to(".scramble", {
+							duration: 0.25,
+							color: "inherit",
+						});
+					},
+				},
+				"<",
+			);
 		},
 		{ scope: refSkills },
 	);
