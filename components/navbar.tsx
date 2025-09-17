@@ -22,6 +22,10 @@ const navLink: NavLink[] = [
 		title: "About",
 		href: "/#about",
 	},
+	{
+		title: "CV",
+		href: "/#cv",
+	},
 ];
 export function Navbar() {
 	return (
