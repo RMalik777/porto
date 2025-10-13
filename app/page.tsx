@@ -315,17 +315,13 @@ export default function Home() {
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
 								<Button variant="outline" size="sm" asChild>
-									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28EN%29-aZNwA825djwohb2r0jgYTYn8XUMcOD.pdf">
-										Open
-									</Link>
-								</Button>
-								<Button variant="secondary" size="sm" asChild>
-									<Link
-										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28EN%29-aZNwA825djwohb2r0jgYTYn8XUMcOD.pdf"
-										download
+									<a
+										href="https://media.raflimalik.com/cv/cv_en_raflimalik.pdf"
+										target="_blank"
+										rel="noopener noreferrer"
 									>
-										Download
-									</Link>
+										Open
+									</a>
 								</Button>
 							</CardFooter>
 						</Card>
@@ -338,17 +334,13 @@ export default function Home() {
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
 								<Button variant="outline" size="sm" asChild>
-									<Link href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28ID%29-VgHU8W5d3FXBRR9r4XI3rPEks9P8iG.pdf">
-										Buka
-									</Link>
-								</Button>
-								<Button variant="secondary" size="sm" asChild>
-									<Link
-										href="https://hz7grr1zawuqmuzy.public.blob.vercel-storage.com/CV/CV%20%28ID%29-VgHU8W5d3FXBRR9r4XI3rPEks9P8iG.pdf"
-										download
+									<a
+										href="https://media.raflimalik.com/cv/cv_id_raflimalik.pdf"
+										target="_blank"
+										rel="noopener noreferrer"
 									>
-										Unduh
-									</Link>
+										Buka
+									</a>
 								</Button>
 							</CardFooter>
 						</Card>
