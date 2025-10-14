@@ -91,6 +91,7 @@ export function Navbar() {
 											<li key={link.href} className="">
 												<Link
 													href={link.href}
+													onClick={() => setIsOpen(false)}
 													className="flex items-center p-2 text-center text-lg font-medium duration-150 ease-out hover:scale-105 hover:text-violet-500 focus-visible:text-violet-500"
 												>
 													{link.title}
