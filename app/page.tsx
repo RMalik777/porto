@@ -23,11 +23,13 @@ import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
 
-gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger);
+gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger, Observer);
 
 export default function Home() {
 	const refIntro = useRef(null);
+	const refIntroText = useRef(null);
 	const refSkills = useRef(null);
 	useGSAP(
 		() => {
@@ -74,9 +76,26 @@ export default function Home() {
 				.call(
 					() => {
 						split = new SplitText(".texter", { type: "chars, lines", mask: "lines" });
-						gsap.to(split.chars, {
+						const miniTl = gsap.timeline();
+						miniTl.to(split.chars, {
 							color: "#FFFFFF",
 							stagger: 0.05,
+						});
+						miniTl.to(".texter", { color: "#FFFFFF" }, ">");
+						Observer.create({
+							target: split.lines,
+							type: "touch,pointer",
+							onHover: () => {
+								gsap.to(split.chars, {
+									color: "#8E0DFF",
+									stagger: 0.05,
+								});
+								gsap.to(split.chars, {
+									color: "#FFFFFF",
+									delay: 0.1,
+									stagger: 0.05,
+								});
+							},
 						});
 					},
 					undefined,
@@ -127,7 +146,9 @@ export default function Home() {
 				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-[size:50px_50px] sm:bg-[size:60px_60px] dark:from-violet-950"
 			>
 				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
-					<h1 className="texter z-10">Rafli Malik</h1>
+					<h1 ref={refIntroText} className="texter z-10">
+						Rafli Malik
+					</h1>
 					<div className="box absolute z-0 -mx-6 h-full w-0 sm:-mx-10 md:-mx-14 lg:-mx-20 xl:-mx-24"></div>
 				</div>
 			</section>
