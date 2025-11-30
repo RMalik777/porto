@@ -149,7 +149,6 @@ export default function Home() {
 					trigger: refProjectChild.current,
 					start: "top 80%",
 					end: "bottom center",
-					markers: true,
 				},
 			});
 			tl.from(".project-odd", {
