@@ -31,6 +31,9 @@ export default function Home() {
 	const refIntro = useRef(null);
 	const refIntroText = useRef(null);
 	const refSkills = useRef(null);
+
+	const refProject = useRef(null);
+	const refProjectChild = useRef(null);
 	useGSAP(
 		() => {
 			const tlIntro = gsap.timeline({ defaults: { ease: "expo.out" }, delay: 0.5 });
@@ -138,6 +141,40 @@ export default function Home() {
 		},
 		{ scope: refSkills },
 	);
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				defaults: { ease: "expo.out" },
+				scrollTrigger: {
+					trigger: refProjectChild.current,
+					start: "top 80%",
+					end: "bottom center",
+					markers: true,
+				},
+			});
+			tl.from(".project-odd", {
+				duration: 0.25,
+				y: 50,
+				filter: "blur(20px)",
+				autoAlpha: 0,
+				stagger: 0.1,
+			});
+			tl.from(
+				".project-even",
+				{
+					delay: 0.25,
+					duration: 0.25,
+					y: 50,
+					filter: "blur(20px)",
+					autoAlpha: 0,
+					stagger: 0.1,
+				},
+				"<",
+			);
+		},
+
+		{ scope: refProject },
+	);
 	return (
 		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48">
 			<section
@@ -220,20 +257,24 @@ export default function Home() {
 			</section>
 
 			<section
+				ref={refProject}
 				id="projects"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
 				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
-				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+				<ul
+					ref={refProjectChild}
+					className="project-list grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
+				>
 					{projectsList?.map((project, index) => (
-						<li key={project.name} className="items-stretch">
+						<li
+							key={project.name}
+							className={`project-${index % 2 ? "even" : "odd"} items-stretch`}
+						>
 							<Link href={`/project/${project.name.replace(/\s+/g, "-").toLowerCase()}`}>
-								<Card
-									className="group flex h-full w-full flex-col justify-between duration-200 starting:translate-y-5 starting:opacity-0"
-									style={{ transitionDelay: `${index * 3}0ms` }}
-								>
+								<Card className="group flex h-full w-full flex-col justify-between duration-200">
 									<CardHeader>
-										<CardTitle>{project.name}</CardTitle>
+										<CardTitle className="project-text">{project.name}</CardTitle>
 										<CardDescription>{project.desc}</CardDescription>
 									</CardHeader>
 									<CardFooter>
@@ -268,8 +309,8 @@ export default function Home() {
 						{experienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
 								<h4 className="text-lg font-semibold">{experience.company}</h4>
-								<p className="text-neutral-500">{experience.position}</p>
-								<p className="text-neutral-500">
+								<p className="text-muted-foreground">{experience.position}</p>
+								<p className="text-muted-foreground">
 									{experience.from} &ndash; {experience.to}
 								</p>
 							</li>
@@ -286,11 +327,11 @@ export default function Home() {
 									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold underline underline-offset-1 duration-200 group-hover:text-theme-purple group-focus-visible:text-theme-purple dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
-											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-theme-purple opacity-0 duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
+											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-theme-purple opacity-0 duration-300 ease-custom group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
 										</span>
 									</h4>
-									<p className="text-neutral-500">{experience.position}</p>
-									<p className="text-neutral-500">
+									<p className="text-muted-foreground">{experience.position}</p>
+									<p className="text-muted-foreground">
 										{experience.from} &ndash; {experience.to}
 									</p>
 								</Link>
@@ -308,14 +349,14 @@ export default function Home() {
 							key={education.school}
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
 						>
-							<div className="absolute -left-1.5 mt-2 h-3 w-3 bg-theme-purple"></div>
+							<div className="absolute -left-[6.5px] mt-2 h-3 w-3 rotate-45 bg-theme-purple"></div>
 							<h3 className="text-lg font-semibold">{education.school}</h3>
-							<p className="text-neutral-500 dark:text-neutral-400">{education.major}</p>
-							<p className="text-neutral-500 dark:text-neutral-400">
+							<p className="text-muted-foreground">{education.major}</p>
+							<p className="text-muted-foreground">
 								{education.from} &ndash; {education.to}
 							</p>
 							{education.grade ? (
-								<p className="text-neutral-500 dark:text-neutral-400">GPA {education.grade}</p>
+								<p className="text-muted-foreground">GPA {education.grade}</p>
 							) : null}
 						</li>
 					))}
