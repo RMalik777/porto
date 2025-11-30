@@ -8,6 +8,12 @@ interface Experience {
 
 export const experienceList: Experience[] = [
 	{
+		company: "Paragoncorp",
+		position: "Frontend Developer Intern",
+		from: "November 2025",
+		to: "Current",
+	},
+	{
 		company: "CIMB Niaga",
 		position: "Application Developer Intern",
 		from: "February 2024",

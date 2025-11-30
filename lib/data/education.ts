@@ -12,7 +12,7 @@ export const educationList: Education[] = [
 		from: "2021",
 		to: "2025",
 		major: "Computer Science",
-		grade: "3.3",
+		grade: "3.55",
 	},
 	{
 		school: "SMAN 3 Kota Tangerang",
