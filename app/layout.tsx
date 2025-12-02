@@ -13,6 +13,8 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
+import { ODSAnalytics } from "./Analytics";
+
 export const metadata: Metadata = {
 	title: {
 		template: "%s | Rafli Malik",
@@ -67,6 +69,7 @@ export default function RootLayout({
 				</ThemeProvider>
 				<SpeedInsights />
 				<Analytics />
+				<ODSAnalytics />
 			</body>
 		</html>
 	);
