@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export function ODSAnalytics() {
 	useEffect(() => {
 		configure({
-			trackLocalhostAs: "local.raflimalik.com",
+			trackLocalhostAs: "raflimalik.com",
 		});
 	}, []);
 
