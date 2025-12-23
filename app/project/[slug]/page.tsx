@@ -18,7 +18,7 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
 	const posts = projectsList;
 	return posts.map((post) => ({
-		slug: post.name.replace(/\s+/g, "-").toLowerCase(),
+		slug: post.name.replaceAll(/\s+/g, "-").toLowerCase(),
 	}));
 }
 
