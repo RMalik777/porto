@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@import '@fontsource-variable/geist'; 
+@import '@fontsource-variable/geist-mono'; 
+
 @theme {
 	--color-theme-purple: oklch(54.94% 0.2913074585707993 298.24104057049317);
 	--font-sans:

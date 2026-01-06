@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import type { Metadata } from "next";
+import { Image } from "@unpic/react";
+import { Link } from "@tanstack/react-router";
 
 import { projectsList } from "@/lib/data/project";
 
@@ -13,25 +12,15 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export const dynamicParams = false;
+import { createFileRoute } from "@tanstack/react-router";
 
-export async function generateStaticParams() {
-	const posts = projectsList;
-	return posts.map((post) => ({
-		slug: post.name.replaceAll(/\s+/g, "-").toLowerCase(),
-	}));
-}
+export const Route = createFileRoute("/project/$slug")({
+	component: RouteComponent,
+});
 
-export const metadata: Metadata = {
-	title: "",
-	description: "",
-};
-
-export default async function Page({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
-	const slug = (await params).slug;
+function RouteComponent() {
+	const { slug } = Route.useParams();
 	const post = projectsList?.find((post) => post.name.replace(/\s+/g, "-").toLowerCase() === slug);
-	metadata.title = post?.name;
-	metadata.description = post?.desc;
 
 	return (
 		<main className="flex min-h-dvh scroll-pt-20 items-center justify-center px-6 pt-20 text-black sm:mb-24 md:mb-32 md:scroll-pt-20 md:px-10 md:pt-36 lg:mb-36 xl:mb-48 dark:text-white">
@@ -61,7 +50,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 								asChild={!!post.live}
 							>
 								{post.live ? (
-									<Link href={post.live} target="_blank">
+									<Link to={post.live} target="_blank">
 										Live
 									</Link>
 								) : (
@@ -69,7 +58,7 @@ export default async function Page({ params }: Readonly<{ params: Promise<{ slug
 								)}
 							</Button>
 							<Button variant="outline" className="grow" asChild>
-								<Link href={post.source} target="_blank" rel="noopener noreferrer">
+								<Link to={post.source} target="_blank" rel="noopener noreferrer">
 									Source
 								</Link>
 							</Button>
