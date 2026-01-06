@@ -1,14 +1,12 @@
-"use client";
-
 import { clsx } from "clsx";
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export function Grid({ children }: Readonly<{ children: React.ReactNode }>) {
 	const ref = useRef<HTMLDivElement>(null);
 	const [width, setWidth] = useState(0);
 	const [rows, setRows] = useState(0);
 	const [cols, setCols] = useState(0);
-	const [grid, setGrid] = useState<boolean[][]>();
+	const [grid, setGrid] = useState<Array<Array<boolean>>>();
 	const [fill, setFill] = useState(1);
 
 	function calcGrid() {

@@ -4,10 +4,10 @@ interface Experience {
 	from: string;
 	to: string;
 	externalLink?: string;
-	JobDescription?: string[];
+	JobDescription?: Array<string>;
 }
 
-export const experienceList: Experience[] = [
+export const experienceList: Array<Experience> = [
 	{
 		company: "ParagonCorp",
 		position: "Frontend Developer Intern",
@@ -27,7 +27,7 @@ export const experienceList: Experience[] = [
 	},
 ];
 
-export const otherExperienceList: Experience[] = [
+export const otherExperienceList: Array<Experience> = [
 	{
 		company: "2023 Jakarta E-Prix",
 		position: "Volunteer",

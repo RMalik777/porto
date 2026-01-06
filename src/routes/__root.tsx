@@ -1,15 +1,15 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import { ODSAnalytics } from "../components/analytics/one-dollar-stats";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-import { ODSAnalytics } from "./Analytics";
 
-import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import appCss from "./globals.css?url";
+import appCss from "@/globals.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({

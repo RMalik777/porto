@@ -1,9 +1,9 @@
 interface Skill {
 	category: string;
-	children: { name: string; link: string; logo?: string; logoAlt?: string }[];
+	children: Array<{ name: string; link: string; logo?: string; logoAlt?: string }>;
 }
 
-export const skillsList: Skill[] = [
+export const skillsList: Array<Skill> = [
 	{
 		category: "Front-End",
 		children: [

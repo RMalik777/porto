@@ -14,7 +14,7 @@ interface LicenseItem {
 		| "Unknown";
 	licenseLink?: string;
 }
-export const logoLicense: LicenseItem[] = [
+export const logoLicense: Array<LicenseItem> = [
 	// FRONT END
 	{
 		name: "HTML5",

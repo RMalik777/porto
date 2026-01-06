@@ -1,17 +1,9 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/grid";
 
-export const metadata: Metadata = {
-	title: {
-		absolute: "404 Not Found | Rafli Malik",
-	},
-	description: "Page not found.",
-};
-
-export default function notFound() {
+export function NotFound() {
 	return (
 		<main className="mt-2 flex h-dvh min-h-dvh w-full flex-col items-center justify-center gap-8 tracking-tight sm:mt-4">
 			<Grid>
@@ -23,7 +15,7 @@ export default function notFound() {
 						It&apos;s looks like you are lost
 					</p>
 					<Button asChild variant="outline" size="sm">
-						<Link href="/">Go Back Home</Link>
+						<Link to="/">Go Back Home</Link>
 					</Button>
 				</section>
 			</Grid>

@@ -1,8 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "@tanstack/react-router";
+import { Image } from "@unpic/react";
 
-import { type SimpleIcon, siInstagram, siGmail, siLinkedin, siGithub } from "simple-icons";
+import {  siGithub, siGmail, siInstagram, siLinkedin } from "simple-icons";
 import { clsx } from "clsx";
+import type {SimpleIcon} from "simple-icons";
 
 import portrait from "@/public/photosquarezoom.jpg";
 import symbol from "@/public/symbol.svg";
@@ -12,7 +13,7 @@ interface LinkItem {
 	href: string;
 	logo?: SimpleIcon;
 }
-const backLink: LinkItem[] = [
+const backLink: Array<LinkItem> = [
 	{
 		name: "Home",
 		href: "/",
@@ -23,7 +24,7 @@ const backLink: LinkItem[] = [
 	},
 ];
 
-const otherWorks: LinkItem[] = [
+const otherWorks: Array<LinkItem> = [
 	{
 		name: "Blog",
 		href: "https://blog.raflimalik.com",
@@ -42,7 +43,7 @@ const otherWorks: LinkItem[] = [
 	},
 ];
 
-const socialList: LinkItem[] = [
+const socialList: Array<LinkItem> = [
 	{
 		name: "Github",
 		href: "https://github.com/RMalik777",
@@ -83,12 +84,12 @@ export function Footer() {
 									return (
 										<li key={link.href}>
 											<Link
-												href={link.href}
+												to={link.href}
 												className={clsx(
 													link.logo
 														? "after:left-5 after:w-[calc(100%-1.25rem)]"
 														: "after:left-0 after:w-full",
-													"relative flex w-fit items-center gap-1 duration-200 ease-[cubic-bezier(0.83,0,0.17,1)] after:absolute after:bottom-0 after:z-[-1] after:h-[2px] after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.83,0,0.17,1)] hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500",
+													"relative flex w-fit items-center gap-1 duration-200 ease-custom after:absolute after:bottom-0 after:z-[-1] after:h-0.5 after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-custom hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500",
 												)}
 											>
 												{link.logo ? (
@@ -113,19 +114,20 @@ export function Footer() {
 					<div className="group relative h-12 w-12 rounded-full">
 						<Image
 							src={portrait}
+							layout="fullWidth"
 							className="absolute inset-0 h-full w-full rounded-full"
 							alt="Portrait of Rafli Malik, the owner of this website"
 						/>
 						<div
 							className="absolute inset-0 -z-10 h-full w-full rounded-full bg-cover bg-no-repeat blur-sm brightness-125 saturate-150 duration-200 ease-out"
 							// use inline style so the background image can be dynamic and follow the <Image/> src
-							style={{ background: `url(${portrait.src})` }}
+							style={{ background: `url(${portrait})` }}
 						></div>
 					</div>
 				</div>
 			</div>
 			<div className="flex flex-col items-center justify-center gap-1 self-center sm:flex-row sm:items-end sm:gap-4">
-				<Image src={symbol} alt="" className="h-4 w-auto sm:mb-px"></Image>
+				<Image src={symbol} layout="fullWidth" alt="" className="h-4 w-auto sm:mb-px" />
 				<p className="leading-none tracking-tight">&copy; 2024 Rafli Malik </p>
 			</div>
 		</footer>

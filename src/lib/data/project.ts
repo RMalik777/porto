@@ -2,13 +2,13 @@ interface Project {
 	name: string;
 	desc: string;
 	longdesc?: string;
-	image: string[];
+	image: Array<string>;
 	live?: string;
 	source: string;
-	tech: string[];
+	tech: Array<string>;
 }
 
-export const projectsList: Project[] = [
+export const projectsList: Array<Project> = [
 	{
 		name: "Blog Website",
 		desc: "A blog website to write and share my thoughts and experiences.",

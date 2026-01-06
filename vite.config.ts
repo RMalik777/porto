@@ -5,17 +5,24 @@ import { devtools } from "@tanstack/devtools-vite";
 import viteReact from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
 	server: {
 		port: 3000,
 	},
 	plugins: [
+		// cloudflare({ viteEnvironment: { name: 'prerender' } }),
 		devtools(),
 		tailwindcss(),
 		// Enables Vite to resolve imports using path aliases.
 		tsconfigPaths(),
-		tanstackStart(),
+		tanstackStart({
+			prerender: {
+				enabled: true,
+				crawlLinks: true,
+			},
+		}),
 		viteReact(),
 	],
 });

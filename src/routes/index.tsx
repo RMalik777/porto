@@ -1,19 +1,8 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
+import { Image } from "@unpic/react";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { useRef } from "react";
 
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 
-import {
-	educationList,
-	experienceList,
-	otherExperienceList,
-	projectsList,
-	skillsList,
-} from "@/lib/data";
 
 import { SquareArrowRight } from "lucide-react";
 
@@ -24,10 +13,19 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
+import {
+	educationList,
+	experienceList,
+	otherExperienceList,
+	projectsList,
+	skillsList,
+} from "@/lib/data";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger, Observer);
 
-import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
 	component: Home,
 });
@@ -184,16 +182,16 @@ function Home() {
 			<section
 				ref={refIntro}
 				id="intro"
-				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-[size:50px_50px] sm:bg-[size:60px_60px] dark:from-violet-950"
+				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-950"
 			>
+				a
 				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
-					<h1 ref={refIntroText} className="texter z-10">
+					{/* <h1 ref={refIntroText} className="texter z-10">
 						Rafli Malik
-					</h1>
+					</h1> */}
 					<div className="box absolute z-0 -mx-6 h-full w-0 sm:-mx-10 md:-mx-14 lg:-mx-20 xl:-mx-24"></div>
 				</div>
 			</section>
-
 			<section
 				ref={refSkills}
 				id="skills"
@@ -209,12 +207,7 @@ function Home() {
 								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 									{skill?.children.map((child) => (
 										<li key={child.name}>
-											<Link
-												href={child.link}
-												className=""
-												target="_blank"
-												rel="noopener noreferrer"
-											>
+											<Link to={child.link} className="" target="_blank" rel="noopener noreferrer">
 												<Card className="group relative px-6 py-6">
 													<CardHeader className="group relative gap-0 px-0">
 														<CardTitle className="flex items-center gap-2 font-medium">
@@ -259,7 +252,6 @@ function Home() {
 					</ul>
 				</div>
 			</section>
-
 			<section
 				ref={refProject}
 				id="projects"
@@ -275,7 +267,10 @@ function Home() {
 							key={project.name}
 							className={`project-${index % 2 ? "even" : "odd"} items-stretch`}
 						>
-							<Link href={`/project/${project.name.replace(/\s+/g, "-").toLowerCase()}`}>
+							<Link
+								to={"/project/$slug"}
+								params={{ slug: project.name.replaceAll(/\s+/g, "-").toLowerCase() }}
+							>
 								<Card className="group flex h-full w-full flex-col justify-between duration-200">
 									<CardHeader>
 										<CardTitle className="project-text">{project.name}</CardTitle>
@@ -300,7 +295,6 @@ function Home() {
 					))}
 				</ul>
 			</section>
-
 			<section
 				id="about"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
@@ -327,7 +321,7 @@ function Home() {
 					<ul className="flex flex-col gap-4">
 						{otherExperienceList?.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
-								<Link href={experience.externalLink ?? ""} className="group">
+								<Link to={experience.externalLink ?? ""} className="group">
 									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold underline underline-offset-1 duration-200 group-hover:text-theme-purple group-focus-visible:text-theme-purple dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
@@ -344,7 +338,6 @@ function Home() {
 					</ul>
 				</section>
 			</section>
-
 			<section className="mb-8 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="ml-2 flex flex-col gap-4 border-l border-theme-purple">
@@ -366,7 +359,6 @@ function Home() {
 					))}
 				</ul>
 			</section>
-
 			<section
 				id="cv"
 				className="mb-4 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"

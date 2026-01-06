@@ -6,7 +6,7 @@ interface Education {
 	grade?: string;
 }
 
-export const educationList: Education[] = [
+export const educationList: Array<Education> = [
 	{
 		school: "BINUS University",
 		from: "2021",

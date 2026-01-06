@@ -1,19 +1,19 @@
-"use client";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
+import { PanelRight, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
-import { PanelRight, X } from "lucide-react";
 import { ModeToggle } from "@/components/theme-toggle";
+
 interface NavLink {
 	title: string;
 	href: string;
 }
-const navLink: NavLink[] = [
+const navLink: Array<NavLink> = [
 	{
 		title: "Home",
 		href: "/#intro",
@@ -50,7 +50,7 @@ export function Navbar() {
 		<header
 			className={cn(
 				isMobile ? "justify-end" : "justify-between",
-				"fixed top-0 left-0 z-20 flex min-h-12 w-full items-center bg-radial from-white/10 from-[1px] via-white to-[3px] bg-[size:3px_3px] px-4 py-2 text-black backdrop-blur-[4px] transition sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:bg-neutral-950/50 dark:via-neutral-950 dark:text-white",
+				"fixed top-0 left-0 z-20 flex min-h-12 w-full items-center bg-radial from-white/10 from-[1px] via-white to-[3px] bg-size-[3px_3px] px-4 py-2 text-black backdrop-blur-xs transition sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:bg-neutral-950/50 dark:via-neutral-950 dark:text-white",
 			)}
 		>
 			{isMobile ? (
@@ -80,7 +80,7 @@ export function Navbar() {
 							</Button>
 						</PopoverTrigger>
 						<PopoverContent
-							className={cn(!isMobile ? "hidden" : "", "flex w-fit flex-col items-end")}
+							className={cn(isMobile ? "" : "hidden", "flex w-fit flex-col items-end")}
 							align="end"
 							side="bottom"
 						>
@@ -90,7 +90,7 @@ export function Navbar() {
 										return (
 											<li key={link.href} className="">
 												<Link
-													href={link.href}
+													to={link.href}
 													onClick={() => setIsOpen(false)}
 													className="flex items-center p-2 text-center text-lg font-medium duration-150 ease-out hover:scale-105 hover:text-violet-500 focus-visible:text-violet-500"
 												>
@@ -116,11 +116,11 @@ export function Navbar() {
 							return (
 								<li key={link.href} className="group">
 									<Link
-										href={link.href}
+										to={link.href}
 										className="group relative flex items-center px-3 py-1 text-center delay-300 duration-150 ease-out hover:text-white focus-visible:text-white"
 									>
 										{link.title}
-										<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-theme-purple transition-transform duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:duration-0 dark:bg-theme-purple"></div>
+										<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-theme-purple transition-transform duration-300 ease-custom group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:duration-0 dark:bg-theme-purple"></div>
 									</Link>
 								</li>
 							);

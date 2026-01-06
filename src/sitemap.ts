@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { projectsList } from "@/lib/data/project";
 
 const ROOT_URL = "https://raflimalik.com";

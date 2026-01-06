@@ -10,12 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LicenseIndexRouteImport } from './routes/license/index'
 import { Route as ProjectSlugRouteImport } from './routes/project/$slug'
-import { Route as ProjectParamRouteImport } from './routes/project/$param'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LicenseIndexRoute = LicenseIndexRouteImport.update({
+  id: '/license/',
+  path: '/license/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectSlugRoute = ProjectSlugRouteImport.update({
@@ -23,40 +28,35 @@ const ProjectSlugRoute = ProjectSlugRouteImport.update({
   path: '/project/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectParamRoute = ProjectParamRouteImport.update({
-  id: '/project/$param',
-  path: '/project/$param',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/project/$param': typeof ProjectParamRoute
   '/project/$slug': typeof ProjectSlugRoute
+  '/license': typeof LicenseIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/project/$param': typeof ProjectParamRoute
   '/project/$slug': typeof ProjectSlugRoute
+  '/license': typeof LicenseIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/project/$param': typeof ProjectParamRoute
   '/project/$slug': typeof ProjectSlugRoute
+  '/license/': typeof LicenseIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/project/$param' | '/project/$slug'
+  fullPaths: '/' | '/project/$slug' | '/license'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/project/$param' | '/project/$slug'
-  id: '__root__' | '/' | '/project/$param' | '/project/$slug'
+  to: '/' | '/project/$slug' | '/license'
+  id: '__root__' | '/' | '/project/$slug' | '/license/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProjectParamRoute: typeof ProjectParamRoute
   ProjectSlugRoute: typeof ProjectSlugRoute
+  LicenseIndexRoute: typeof LicenseIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -68,6 +68,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/license/': {
+      id: '/license/'
+      path: '/license'
+      fullPath: '/license'
+      preLoaderRoute: typeof LicenseIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/project/$slug': {
       id: '/project/$slug'
       path: '/project/$slug'
@@ -75,20 +82,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/project/$param': {
-      id: '/project/$param'
-      path: '/project/$param'
-      fullPath: '/project/$param'
-      preLoaderRoute: typeof ProjectParamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProjectParamRoute: ProjectParamRoute,
   ProjectSlugRoute: ProjectSlugRoute,
+  LicenseIndexRoute: LicenseIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

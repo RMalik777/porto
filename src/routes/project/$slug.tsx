@@ -1,5 +1,5 @@
 import { Image } from "@unpic/react";
-import { Link } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { projectsList } from "@/lib/data/project";
 
@@ -12,15 +12,15 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { createFileRoute } from "@tanstack/react-router";
-
 export const Route = createFileRoute("/project/$slug")({
 	component: RouteComponent,
 });
 
 function RouteComponent() {
 	const { slug } = Route.useParams();
-	const post = projectsList?.find((post) => post.name.replace(/\s+/g, "-").toLowerCase() === slug);
+	const post = projectsList?.find(
+		(post) => post.name.replaceAll(/\s+/g, "-").toLowerCase() === slug,
+	);
 
 	return (
 		<main className="flex min-h-dvh scroll-pt-20 items-center justify-center px-6 pt-20 text-black sm:mb-24 md:mb-32 md:scroll-pt-20 md:px-10 md:pt-36 lg:mb-36 xl:mb-48 dark:text-white">
@@ -77,11 +77,11 @@ function RouteComponent() {
 										<CarouselItem key={image}>
 											<Image
 												src={image}
+												layout="constrained"
 												alt={post.name}
 												width={1280}
 												height={720}
 												className="h-auto w-full border border-neutral-700 dark:border-neutral-300"
-												priority
 											/>
 										</CarouselItem>
 									))}
