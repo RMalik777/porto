@@ -4,12 +4,18 @@ interface Experience {
 	from: string;
 	to: string;
 	externalLink?: string;
+	JobDescription?: string[];
 }
 
 export const experienceList: Experience[] = [
 	{
 		company: "ParagonCorp",
 		position: "Frontend Developer Intern",
+		JobDescription: [
+			"Developed and maintain internal web application for leasing spaces",
+			"Developed web applications using React.js, Supabase, Axios and Tanstack Query",
+			"Debug and solve problems",
+		],
 		from: "November 2025",
 		to: "Current",
 	},
