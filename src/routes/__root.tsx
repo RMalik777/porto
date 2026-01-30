@@ -8,7 +8,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-
 import appCss from "@/globals.css?url";
 
 export const Route = createRootRoute({

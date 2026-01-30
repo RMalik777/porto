@@ -175,6 +175,7 @@ function Home() {
 
 		{ scope: refProject },
 	);
+
 	return (
 		<main className="mt-10 mb-20 flex w-full flex-col items-stretch justify-start gap-8 sm:mb-24 md:mt-11 md:mb-32 lg:mb-36 xl:mb-48">
 			<section
@@ -205,7 +206,7 @@ function Home() {
 									{skill.children.map((child) => (
 										<li key={child.name}>
 											<Link to={child.link} className="" target="_blank" rel="noopener noreferrer">
-												<Card className="group relative px-6 py-6">
+												<Card className="group relative px-4 py-4">
 													<CardHeader className="group relative gap-0 px-0">
 														<CardTitle className="flex items-center gap-2 font-medium">
 															<div className="h-5 w-auto max-w-5 ease-out *:h-full *:w-full *:object-contain *:object-center *:duration-150 *:ease-out">
