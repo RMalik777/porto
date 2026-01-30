@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 
-import {  siGithub, siGmail, siInstagram, siLinkedin } from "simple-icons";
+import { siGithub, siGmail, siInstagram, siLinkedin } from "simple-icons";
 import { clsx } from "clsx";
-import type {SimpleIcon} from "simple-icons";
+import type { SimpleIcon } from "simple-icons";
 
-import portrait from "@/public/photosquarezoom.jpg";
-import symbol from "@/public/symbol.svg";
+import portrait from "@/lib/assets/photosquarezoom.jpg";
+import symbol from "@/lib/assets/symbol.svg";
 
 interface LinkItem {
 	name: string;

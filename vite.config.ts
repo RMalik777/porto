@@ -12,7 +12,7 @@ export default defineConfig({
 		port: 3000,
 	},
 	plugins: [
-		// cloudflare({ viteEnvironment: { name: 'prerender' } }),
+		cloudflare({ viteEnvironment: { name: "ssr" } }),
 		devtools(),
 		tailwindcss(),
 		// Enables Vite to resolve imports using path aliases.
@@ -21,6 +21,7 @@ export default defineConfig({
 			prerender: {
 				enabled: true,
 				crawlLinks: true,
+				autoStaticPathsDiscovery: true,
 			},
 		}),
 		viteReact(),

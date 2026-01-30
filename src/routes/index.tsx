@@ -2,8 +2,6 @@ import { Image } from "@unpic/react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useRef } from "react";
 
-
-
 import { SquareArrowRight } from "lucide-react";
 
 import { gsap } from "gsap";
@@ -184,11 +182,10 @@ function Home() {
 				id="intro"
 				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-950"
 			>
-				a
 				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
-					{/* <h1 ref={refIntroText} className="texter z-10">
+					<h1 ref={refIntroText} className="texter z-10">
 						Rafli Malik
-					</h1> */}
+					</h1>
 					<div className="box absolute z-0 -mx-6 h-full w-0 sm:-mx-10 md:-mx-14 lg:-mx-20 xl:-mx-24"></div>
 				</div>
 			</section>
@@ -200,44 +197,45 @@ function Home() {
 				<h2 className="scramble text-4xl font-semibold tracking-tighter">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
-						{skillsList?.map((skill) => (
+						{skillsList.map((skill) => (
 							<li key={skill.category}>
 								<h3 className="text-2xl font-semibold tracking-tight">{skill.category}</h3>
 								<Separator className="line mb-2" />
 								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-									{skill?.children.map((child) => (
+									{skill.children.map((child) => (
 										<li key={child.name}>
 											<Link to={child.link} className="" target="_blank" rel="noopener noreferrer">
 												<Card className="group relative px-6 py-6">
 													<CardHeader className="group relative gap-0 px-0">
 														<CardTitle className="flex items-center gap-2 font-medium">
 															<div className="h-5 w-auto max-w-5 ease-out *:h-full *:w-full *:object-contain *:object-center *:duration-150 *:ease-out">
-																{child.logo && child.logoAlt ? (
-																	<>
+																{child.logo &&
+																	(child.logoAlt ? (
+																		<>
+																			<Image
+																				src={child.logo}
+																				width={20}
+																				height={20}
+																				alt=""
+																				className="block group-hover:scale-125 dark:hidden"
+																			/>
+																			<Image
+																				src={child.logoAlt}
+																				width={20}
+																				height={20}
+																				alt=""
+																				className="hidden group-hover:scale-125 dark:block"
+																			/>
+																		</>
+																	) : (
 																		<Image
-																			src={child.logo ?? ""}
+																			src={child.logo}
 																			width={20}
 																			height={20}
 																			alt=""
-																			className="block group-hover:scale-125 dark:hidden"
+																			className="group-hover:scale-125"
 																		/>
-																		<Image
-																			src={child.logoAlt ?? ""}
-																			width={20}
-																			height={20}
-																			alt=""
-																			className="hidden group-hover:scale-125 dark:block"
-																		/>
-																	</>
-																) : child.logo ? (
-																	<Image
-																		src={child.logo ?? ""}
-																		width={20}
-																		height={20}
-																		alt=""
-																		className="group-hover:scale-125"
-																	/>
-																) : null}
+																	))}
 															</div>
 															{child.name}
 														</CardTitle>
@@ -262,7 +260,7 @@ function Home() {
 					ref={refProjectChild}
 					className="project-list grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
 				>
-					{projectsList?.map((project, index) => (
+					{projectsList.map((project, index) => (
 						<li
 							key={project.name}
 							className={`project-${index % 2 ? "even" : "odd"} items-stretch`}
@@ -278,7 +276,7 @@ function Home() {
 									</CardHeader>
 									<CardFooter>
 										<ul className="flex flex-wrap gap-2">
-											{project?.tech.map((tech, childIndex) => (
+											{project.tech.map((tech, childIndex) => (
 												<li
 													className="w-fit border border-neutral-100 px-2 py-1 text-xs font-medium duration-200 ease-out group-hover:border-violet-100 group-hover:bg-violet-100 group-hover:text-violet-700 dark:border-neutral-900 dark:group-hover:border-violet-900 dark:group-hover:bg-violet-900 dark:group-hover:text-purple-100"
 													style={{ transitionDelay: `${childIndex * 3}0ms` }}
@@ -304,7 +302,7 @@ function Home() {
 					<h3 className="text-2xl font-medium tracking-tight">Work Experience</h3>
 					<hr className="mb-1 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
 					<ul className="flex flex-col gap-4">
-						{experienceList?.map((experience) => (
+						{experienceList.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
 								<h4 className="text-lg font-semibold">{experience.company}</h4>
 								<p className="text-muted-foreground">{experience.position}</p>
@@ -319,9 +317,9 @@ function Home() {
 					<h3 className="text-2xl font-medium tracking-tight">Other Experience</h3>
 					<hr className="mb-1 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
 					<ul className="flex flex-col gap-4">
-						{otherExperienceList?.map((experience) => (
+						{otherExperienceList.map((experience) => (
 							<li key={experience.company} className="flex flex-col items-start gap-0 duration-200">
-								<Link to={experience.externalLink ?? ""} className="group">
+								<a href={experience.externalLink ?? ""} className="group">
 									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold underline underline-offset-1 duration-200 group-hover:text-theme-purple group-focus-visible:text-theme-purple dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
@@ -332,7 +330,7 @@ function Home() {
 									<p className="text-muted-foreground">
 										{experience.from} &ndash; {experience.to}
 									</p>
-								</Link>
+								</a>
 							</li>
 						))}
 					</ul>
@@ -341,7 +339,7 @@ function Home() {
 			<section className="mb-8 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
 				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
 				<ul className="ml-2 flex flex-col gap-4 border-l border-theme-purple">
-					{educationList?.map((education) => (
+					{educationList.map((education) => (
 						<li
 							key={education.school}
 							className="relative flex flex-col items-start gap-0 pl-4 duration-200"
