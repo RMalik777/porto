@@ -22,6 +22,33 @@ export const Route = createFileRoute("/project/$slug")({
 		if (!post) throw notFound();
 		return { post: post };
 	},
+	head: ({ loaderData }) => ({
+		title: `${loaderData?.post.name} | Rafli Malik`,
+		meta: [
+			{
+				name: "description",
+				content: loaderData?.post.desc,
+			},
+			{ property: "og:title", content: `${loaderData?.post.name} | Rafli Malik` },
+			{
+				property: "og:description",
+				content: loaderData?.post.desc,
+			},
+			{ property: "og:image", content: loaderData?.post.image[0] },
+			{ property: "og:type", content: "website" },
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: `${loaderData?.post.name} | Rafli Malik` },
+			{
+				name: "twitter:description",
+				content: loaderData?.post.desc,
+			},
+			{ name: "twitter:image", content: loaderData?.post.image[0] },
+			{
+				name: "canonical",
+				content: `https://raflimalik.com/project/${loaderData?.post.name.replaceAll(/\s+/g, "-").toLowerCase()}`,
+			},
+		],
+	}),
 });
 
 function RouteComponent() {

@@ -5,6 +5,16 @@ import { Separator } from "@/components/ui/separator";
 
 export const Route = createFileRoute("/license/")({
 	component: RouteComponent,
+	head: () => ({
+		title: "License and Trademark Information - Rafli Malik",
+		meta: [
+			{
+				name: "description",
+				content:
+					"License and trademark information for third-party logos used on Rafli Malik's portfolio website.",
+			},
+		],
+	}),
 });
 
 function RouteComponent() {

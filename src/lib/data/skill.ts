@@ -154,7 +154,8 @@ export const skillsList: Array<Skill> = [
 			{
 				name: "Sanity",
 				link: "https://www.sanity.io/",
-				logo: "/Logo/[SANITY]+Proprietary.svg",
+				logo: "/Logo/[SANITY]_light+Proprietary.svg",
+				logoAlt: "/Logo/[SANITY]_dark+Proprietary.svg",
 			},
 		],
 	},

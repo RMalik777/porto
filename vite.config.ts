@@ -23,6 +23,10 @@ export default defineConfig({
 				crawlLinks: true,
 				autoStaticPathsDiscovery: true,
 			},
+			sitemap: {
+				enabled: true,
+				host: "https://raflimalik.com",
+			},
 		}),
 		viteReact(),
 	],

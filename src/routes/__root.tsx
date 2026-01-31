@@ -19,7 +19,34 @@ export const Route = createRootRoute({
 				name: "viewport",
 				content: "width=device-width, initial-scale=1",
 			},
-			{ title: "TanStack Start Starter" },
+			{
+				name: "theme-color",
+				color: "oklch(54.94% 0.2913074585707993 298.24104057049317)",
+			},
+			{ title: "Rafli Malik" },
+			{
+				name: "description",
+				content:
+					"Rafli Malik, a Front-End Developer, sometimes Back-End Developer, and a Tech Enthusiast. See what I've built and the technologies I use.",
+			},
+			// Open Graph
+			{ property: "og:title", content: "Rafli Malik Portfolio" },
+			{
+				property: "og:description",
+				content:
+					"Rafli Malik, a Front-End Developer, sometimes Back-End Developer, and a Tech Enthusiast. See what I've built and the technologies I use.",
+			},
+			{ property: "og:image", content: "/photosquarezoom.jpg" },
+			{ property: "og:type", content: "website" },
+			// Twitter Card
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "Rafli Malik Portfolio" },
+			{
+				name: "twitter:description",
+				content:
+					"Rafli Malik, a Front-End Developer, sometimes Back-End Developer, and a Tech Enthusiast. See what I've built and the technologies I use.",
+			},
+			{ name: "twitter:image", content: "/photosquarezoom.jpg" },
 		],
 		links: [
 			{
