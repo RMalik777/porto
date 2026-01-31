@@ -16,7 +16,7 @@ interface NavLink {
 const navLink: Array<NavLink> = [
 	{
 		title: "Home",
-		href: "/#intro",
+		href: "/",
 	},
 	{
 		title: "Skills",
@@ -57,33 +57,31 @@ export function Navbar() {
 				<>
 					<ModeToggle />
 					<Popover open={isOpen} onOpenChange={setIsOpen}>
-						<PopoverTrigger asChild>
-							<Button
-								variant="outline"
-								size="icon"
-								onClick={() => setIsOpen(!isOpen)}
-								className={cn("m-1 hover:*:scale-110")}
-							>
-								<span className="sr-only">Toggle Menu</span>
-								<X
-									className={cn(
-										isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0",
-										"absolute transition duration-200 ease-custom",
-									)}
-								/>
-								<PanelRight
-									className={cn(
-										isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100",
-										"absolute transition duration-200 ease-custom",
-									)}
-								/>
-							</Button>
-						</PopoverTrigger>
-						<PopoverContent
-							className={cn(isMobile ? "" : "hidden", "flex w-fit flex-col items-end")}
-							align="end"
-							side="bottom"
-						>
+						<PopoverTrigger
+							render={
+								<Button
+									variant="outline"
+									size="icon"
+									onClick={() => setIsOpen(!isOpen)}
+									className={cn("m-1 hover:*:scale-110")}
+								>
+									<span className="sr-only">Toggle Menu</span>
+									<X
+										className={cn(
+											isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0",
+											"absolute transition duration-200 ease-custom",
+										)}
+									/>
+									<PanelRight
+										className={cn(
+											isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100",
+											"absolute transition duration-200 ease-custom",
+										)}
+									/>
+								</Button>
+							}
+						></PopoverTrigger>
+						<PopoverContent className="flex w-fit flex-col items-end" align="end" side="bottom">
 							<nav>
 								<ul className="flex flex-col items-end">
 									{navLink.map((link) => {
@@ -106,10 +104,9 @@ export function Navbar() {
 				</>
 			) : (
 				<nav
-					className={cn(
-						"flex w-full flex-row items-center justify-center gap-2 overflow-hidden transition-all duration-300 sm:justify-end sm:gap-4 md:gap-8",
-						isMobile ? "hidden" : "",
-					)}
+					className={
+						"flex w-full flex-row items-center justify-center gap-2 overflow-hidden transition-all duration-300 sm:justify-end sm:gap-4 md:gap-8"
+					}
 				>
 					<ul className="flex flex-row items-center justify-start gap-2 font-medium transition duration-200 sm:gap-6 md:gap-8 lg:gap-10 lg:text-xl xl:gap-16">
 						{navLink.map((link) => {

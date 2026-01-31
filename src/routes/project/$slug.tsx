@@ -73,20 +73,32 @@ function RouteComponent() {
 				</ul>
 				<hr className="mb-px h-[2px] w-full border-violet-500 duration-500 dark:border-violet-700 starting:w-0" />
 				<div className="my-2 flex w-full flex-row items-center justify-evenly gap-2">
-					<Button variant="outline" className="grow" disabled={!post.live} asChild={!!post.live}>
-						{post.live ? (
-							<Link to={post.live} target="_blank">
-								Live
+					{post.live ? (
+						<Button
+							variant="outline"
+							className="grow"
+							render={
+								<Link to={post.live} target="_blank">
+									Live
+								</Link>
+							}
+							nativeButton={false}
+						/>
+					) : (
+						<Button variant="outline" className="grow" disabled>
+							Preview
+						</Button>
+					)}
+					<Button
+						variant="outline"
+						className="grow"
+						nativeButton={false}
+						render={
+							<Link to={post.source} target="_blank" rel="noopener noreferrer">
+								Source
 							</Link>
-						) : (
-							"Preview"
-						)}
-					</Button>
-					<Button variant="outline" className="grow" asChild>
-						<Link to={post.source} target="_blank" rel="noopener noreferrer">
-							Source
-						</Link>
-					</Button>
+						}
+					/>
 				</div>
 				<p className="text-left">{post.longdesc}</p>
 				<figure className="px-10 md:px-4 lg:px-0">

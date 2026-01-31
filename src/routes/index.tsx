@@ -277,7 +277,7 @@ function Home() {
 										<CardTitle className="project-text">{project.name}</CardTitle>
 										<CardDescription>{project.desc}</CardDescription>
 									</CardHeader>
-									<CardFooter>
+									<CardFooter className="border-transparent">
 										<ul className="flex flex-wrap gap-2">
 											{project.tech.map((tech, childIndex) => (
 												<li
@@ -373,15 +373,20 @@ function Home() {
 								<CardDescription>Bahasa Inggris</CardDescription>
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
-								<Button variant="outline" size="sm" asChild>
-									<a
-										href="https://media.raflimalik.com/cv/cv_en_raflimalik.pdf"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Open
-									</a>
-								</Button>
+								<Button
+									variant="outline"
+									size="sm"
+									nativeButton={false}
+									render={
+										<a
+											href="https://media.raflimalik.com/cv/cv_en_raflimalik.pdf"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Open
+										</a>
+									}
+								/>
 							</CardFooter>
 						</Card>
 					</li>
@@ -392,15 +397,20 @@ function Home() {
 								<CardDescription>Bahasa Indonesia</CardDescription>
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
-								<Button variant="outline" size="sm" asChild>
-									<a
-										href="https://media.raflimalik.com/cv/cv_id_raflimalik.pdf"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Buka
-									</a>
-								</Button>
+								<Button
+									variant="outline"
+									size="sm"
+									nativeButton={false}
+									render={
+										<a
+											href="https://media.raflimalik.com/cv/cv_id_raflimalik.pdf"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Buka
+										</a>
+									}
+								/>
 							</CardFooter>
 						</Card>
 					</li>

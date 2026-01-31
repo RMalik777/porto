@@ -53,7 +53,7 @@ export function Grid({ children }: Readonly<{ children: React.ReactNode }>) {
 						key={parentIndex}
 						className="grid h-full w-full flex-1 auto-cols-[var(--cell)] grid-flow-col -space-x-px"
 					>
-						{child?.map((value, childIndex) => {
+						{child.map((value, childIndex) => {
 							const index = parentIndex * cols + childIndex + 1;
 							return (
 								<div
