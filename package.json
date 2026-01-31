@@ -19,11 +19,11 @@
 		"@fontsource-variable/inter": "^5.2.8",
 		"@gsap/react": "^2.1.2",
 		"@tanstack/react-devtools": "^0.9.4",
-		"@tanstack/react-router": "^1.157.17",
-		"@tanstack/react-router-devtools": "^1.157.17",
-		"@tanstack/react-router-ssr-query": "^1.157.17",
-		"@tanstack/react-start": "^1.157.17",
-		"@tanstack/router-plugin": "^1.157.17",
+		"@tanstack/react-router": "^1.157.18",
+		"@tanstack/react-router-devtools": "^1.157.18",
+		"@tanstack/react-router-ssr-query": "^1.157.18",
+		"@tanstack/react-start": "^1.157.18",
+		"@tanstack/router-plugin": "^1.157.18",
 		"@unpic/react": "^1.0.2",
 		"embla-carousel-react": "^8.6.0",
 		"gsap": "^3.14.2",
@@ -32,7 +32,7 @@
 		"onedollarstats": "^0.0.11",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4",
-		"simple-icons": "^13.21.0"
+		"simple-icons": "^16.6.1"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.22.1",

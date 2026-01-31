@@ -5,7 +5,7 @@ interface Skill {
 
 export const skillsList: Array<Skill> = [
 	{
-		category: "Front-End",
+		category: "Web",
 		children: [
 			{
 				name: "HTML",
@@ -22,6 +22,11 @@ export const skillsList: Array<Skill> = [
 				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 				logo: "/Logo/[JS]+MIT.svg",
 			},
+      {
+        name:"TypeScript",
+        link:"https://www.typescriptlang.org/",
+        logo:"/Logo/[TYPESCRIPT]+Proprietary.svg",
+      }
 		],
 	},
 	{
@@ -48,6 +53,12 @@ export const skillsList: Array<Skill> = [
 				link: "https://reactjs.org/",
 				logo: "/Logo/[REACT]_light+CC-by-4.0.svg",
 				logoAlt: "/Logo/[REACT]_dark+CC-by-4.0.svg",
+			},
+			{
+				name: "Tanstack Router",
+				link: "https://tanstack.com/start",
+				logo: "/Logo/[TANSTACK]_light+Proprietary.svg",
+				logoAlt: "/Logo/[TANSTACK]_dark+Proprietary.svg",
 			},
 			{
 				name: "Next.js",
@@ -121,6 +132,11 @@ export const skillsList: Array<Skill> = [
 				logo: "/Logo/[TAURI]_light+Proprietary.svg",
 				logoAlt: "/Logo/[TAURI]_dark+Proprietary.svg",
 			},
+      {
+        name:"Hono",
+        link:"https://hono.dev/",
+        logo:"/Logo/[HONO]+MIT.svg",
+      },
 			{
 				name: "ASP.NET",
 				link: "https://dotnet.microsoft.com/apps/aspnet",
@@ -160,7 +176,7 @@ export const skillsList: Array<Skill> = [
 		],
 	},
 	{
-		category: "Programming Language",
+		category: "Other Programming Language",
 		children: [
 			{
 				name: "Python",

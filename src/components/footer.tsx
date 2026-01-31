@@ -5,13 +5,14 @@ import { siGithub, siGmail, siInstagram, siLinkedin } from "simple-icons";
 import { clsx } from "clsx";
 import type { SimpleIcon } from "simple-icons";
 
+import LinkedIn from "@/lib/assets/InLogo.png";
 import portrait from "@/lib/assets/photosquarezoom.jpg";
 import symbol from "@/lib/assets/symbol.svg";
 
 interface LinkItem {
 	name: string;
 	href: string;
-	logo?: SimpleIcon;
+	logo?: SimpleIcon | string;
 }
 const backLink: Array<LinkItem> = [
 	{
@@ -62,7 +63,7 @@ const socialList: Array<LinkItem> = [
 	{
 		name: "LinkedIn",
 		href: "https://www.linkedin.com/in/raflimalik",
-		logo: siLinkedin,
+		logo: LinkedIn,
 	},
 ];
 const linkParent = [
@@ -77,10 +78,22 @@ export function Footer() {
 			<div className="flex w-full flex-col items-start justify-between gap-4 tracking-tight sm:flex-row sm:gap-0">
 				{linkParent.map((linkList) => {
 					return (
-						<div key={linkList.title}>
-							<h2 className="text-xl font-medium">{linkList.title}</h2>
-							<ul>
+						<div key={linkList.title} className="space-y-2">
+							<h2 className="text-xl font-medium sm:text-2xl">{linkList.title}</h2>
+							<ul className="space-y-1">
 								{linkList.child.map((link) => {
+									function renderLogo() {
+										if (!link.logo) return null;
+										if (typeof link.logo === "string") {
+											return <Image src={link.logo} layout="fullWidth" className="h-auto w-4" />;
+										}
+										return (
+											<span
+												dangerouslySetInnerHTML={{ __html: link.logo.svg }}
+												className="h-4 w-4 fill-black duration-200 dark:fill-white"
+											/>
+										);
+									}
 									return (
 										<li key={link.href}>
 											<Link
@@ -92,12 +105,7 @@ export function Footer() {
 													"relative flex w-fit items-center gap-1 duration-200 ease-custom after:absolute after:bottom-0 after:z-[-1] after:h-0.5 after:origin-right after:scale-x-0 after:bg-theme-purple after:transition-transform after:duration-300 after:ease-custom hover:text-theme-purple hover:after:origin-left hover:after:scale-x-100 focus-visible:text-theme-purple focus-visible:after:origin-left focus-visible:after:scale-x-100 motion-reduce:duration-0 motion-reduce:after:duration-0 dark:after:bg-violet-500 dark:hover:text-violet-500 dark:focus-visible:text-violet-500",
 												)}
 											>
-												{link.logo ? (
-													<span
-														dangerouslySetInnerHTML={{ __html: link.logo.svg }}
-														className="h-4 w-4 fill-black duration-200 dark:fill-white"
-													></span>
-												) : null}
+												{renderLogo()}
 												{link.name}
 											</Link>
 										</li>

@@ -37,6 +37,13 @@ export const logoLicense: Array<LicenseItem> = [
 		license: "MIT",
 		licenseLink: "https://github.com/voodootikigod/logo.js/blob/master/LICENSE",
 	},
+	{
+		name: "TypeScript",
+		author: "Microsoft",
+		source: "https://www.typescriptlang.org/branding/",
+		license: "Proprietary",
+		licenseLink: "https://www.typescriptlang.org/branding/",
+	},
 	// CSS FRAMEWORKS
 	{
 		name: "Tailwind CSS",
@@ -59,6 +66,13 @@ export const logoLicense: Array<LicenseItem> = [
 		source: "https://github.com/reactjs/react.dev/tree/main/public/images/brand",
 		license: "CC BY 4.0",
 		licenseLink: "https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md",
+	},
+	{
+		name: "Tanstack Router",
+		author: "TanStack LLC",
+		source: "https://tanstack.com/images/logos/logo-black.svg",
+		license: "Proprietary",
+		licenseLink: "https://tanstack.com/brand-guide",
 	},
 	{
 		name: "Next.js",
@@ -134,6 +148,13 @@ export const logoLicense: Array<LicenseItem> = [
 		licenseLink: "https://tauri.app/about/trademark/",
 	},
 	{
+		name: "Hono",
+		author: "Yusuke Wada and Hono contributors",
+		source: "https://github.com/honojs/hono/blob/main/docs/images/hono-logo.svg",
+		license: "MIT",
+		licenseLink: "https://github.com/honojs/hono/blob/main/LICENSE",
+	},
+	{
 		name: ".NET",
 		author: "Microsoft",
 		source: "https://github.com/dotnet/brand",
@@ -177,5 +198,13 @@ export const logoLicense: Array<LicenseItem> = [
 		source: "https://git-scm.com/downloads/logos",
 		license: "CC BY 3.0",
 		licenseLink: "https://creativecommons.org/licenses/by/3.0/",
+	},
+	// Other
+	{
+		name: "LinkedIn",
+		author: "LinkedIn Corporation",
+		source: "https://brand.linkedin.com/downloads",
+		license: "Proprietary",
+		licenseLink: "https://brand.linkedin.com/in-logo",
 	},
 ];
