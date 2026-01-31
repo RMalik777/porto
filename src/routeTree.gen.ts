@@ -32,7 +32,7 @@ const ProjectSlugRoute = ProjectSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/project/$slug': typeof ProjectSlugRoute
-  '/license': typeof LicenseIndexRoute
+  '/license/': typeof LicenseIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -47,7 +47,7 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/project/$slug' | '/license'
+  fullPaths: '/' | '/project/$slug' | '/license/'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/project/$slug' | '/license'
   id: '__root__' | '/' | '/project/$slug' | '/license/'
@@ -71,7 +71,7 @@ declare module '@tanstack/react-router' {
     '/license/': {
       id: '/license/'
       path: '/license'
-      fullPath: '/license'
+      fullPath: '/license/'
       preLoaderRoute: typeof LicenseIndexRouteImport
       parentRoute: typeof rootRouteImport
     }

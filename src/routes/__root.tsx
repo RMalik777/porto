@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { ODSAnalytics } from "../components/analytics/one-dollar-stats";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -46,6 +47,7 @@ function RootLayout() {
 					<Outlet />
 					<Scripts />
 					<Footer />
+					<TanStackRouterDevtools />
 				</ThemeProvider>
 				<SpeedInsights />
 				<Analytics />

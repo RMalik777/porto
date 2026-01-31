@@ -1,6 +1,6 @@
 import { Image } from "@unpic/react";
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { SquareArrowRight } from "lucide-react";
 
@@ -35,6 +35,7 @@ function Home() {
 
 	const refProject = useRef(null);
 	const refProjectChild = useRef(null);
+
 	useGSAP(
 		() => {
 			const tlIntro = gsap.timeline({ defaults: { ease: "expo.out" }, delay: 0.5 });
@@ -67,6 +68,7 @@ function Home() {
 					duration: 0.5,
 					delay: 0.5,
 					ease: "none",
+					overflow: "visible",
 					text: {
 						value: "Rafli Malik",
 					},
@@ -79,7 +81,7 @@ function Home() {
 				})
 				.call(
 					() => {
-						split = new SplitText(".texter", { type: "chars, lines", mask: "lines" });
+						split = new SplitText(".texter", { type: "chars, lines" });
 						const miniTl = gsap.timeline();
 						miniTl.to(split.chars, {
 							color: "#FFFFFF",

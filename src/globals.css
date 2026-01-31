@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@import "@fontsource-variable/geist";
+@import "@fontsource-variable/inter/opsz.css";
 @import "@fontsource-variable/geist-mono";
 
 @theme {
 	--color-theme-purple: oklch(54.94% 0.2913074585707993 298.24104057049317);
 	--font-sans:
-		"Geist Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol", "Noto Color Emoji";
 	--font-mono:
 		"Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
