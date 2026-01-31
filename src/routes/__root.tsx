@@ -1,9 +1,8 @@
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { configure } from "onedollarstats";
+import { useEffect } from "react";
 
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { ODSAnalytics } from "../components/analytics/one-dollar-stats";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Navbar } from "@/components/navbar";
@@ -58,6 +57,12 @@ export const Route = createRootRoute({
 	component: RootLayout,
 });
 function RootLayout() {
+	useEffect(() => {
+		configure({
+			trackLocalhostAs: "raflimalik.com",
+		});
+	}, []);
+
 	return (
 		<html lang="en">
 			<head>
@@ -76,9 +81,6 @@ function RootLayout() {
 					<Footer />
 					<TanStackRouterDevtools />
 				</ThemeProvider>
-				<SpeedInsights />
-				<Analytics />
-				<ODSAnalytics />
 			</body>
 		</html>
 	);

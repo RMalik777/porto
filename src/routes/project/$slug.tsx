@@ -1,5 +1,6 @@
 import { Image } from "@unpic/react";
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
+import { event } from "onedollarstats";
 
 import { projectsList } from "@/lib/data/project";
 
@@ -23,8 +24,10 @@ export const Route = createFileRoute("/project/$slug")({
 		return { post: post };
 	},
 	head: ({ loaderData }) => ({
-		title: `${loaderData?.post.name} | Rafli Malik`,
 		meta: [
+			{
+				title: `${loaderData?.post.name} | Rafli Malik`,
+			},
 			{
 				name: "description",
 				content: loaderData?.post.desc,
@@ -71,18 +74,22 @@ function RouteComponent() {
 						</li>
 					))}
 				</ul>
-				<hr className="mb-px h-[2px] w-full border-violet-500 duration-500 dark:border-violet-700 starting:w-0" />
+				<hr className="mb-px h-0.5 w-full border-violet-500 duration-500 dark:border-violet-700 starting:w-0" />
 				<div className="my-2 flex w-full flex-row items-center justify-evenly gap-2">
 					{post.live ? (
 						<Button
 							variant="outline"
 							className="grow"
+							nativeButton={false}
+							onClick={() => {
+								event("Project Page Click");
+								event("Project Page Click", { project_title: post.name, action: "live" });
+							}}
 							render={
 								<Link to={post.live} target="_blank">
 									Live
 								</Link>
 							}
-							nativeButton={false}
 						/>
 					) : (
 						<Button variant="outline" className="grow" disabled>
@@ -93,6 +100,9 @@ function RouteComponent() {
 						variant="outline"
 						className="grow"
 						nativeButton={false}
+						onClick={() =>
+							event("Project Page Click", { project_title: post.name, action: "source" })
+						}
 						render={
 							<Link to={post.source} target="_blank" rel="noopener noreferrer">
 								Source

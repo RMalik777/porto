@@ -1,8 +1,9 @@
 import { Image } from "@unpic/react";
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { SquareArrowRight } from "lucide-react";
+import { event } from "onedollarstats";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -271,6 +272,11 @@ function Home() {
 							<Link
 								to={"/project/$slug"}
 								params={{ slug: project.name.replaceAll(/\s+/g, "-").toLowerCase() }}
+								onClick={() =>
+									event("Project Click", {
+										project_title: project.name,
+									})
+								}
 							>
 								<Card className="group flex h-full w-full flex-col justify-between duration-200">
 									<CardHeader>

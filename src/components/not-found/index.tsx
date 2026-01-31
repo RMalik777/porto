@@ -14,9 +14,12 @@ export function NotFound() {
 					<p className="text-center text-lg font-medium sm:text-xl lg:text-2xl">
 						It&apos;s looks like you are lost
 					</p>
-					<Button asChild variant="outline" size="sm">
-						<Link to="/">Go Back Home</Link>
-					</Button>
+					<Button
+						variant="outline"
+						size="sm"
+						nativeButton={false}
+						render={<Link to="/">Go Back Home</Link>}
+					/>
 				</section>
 			</Grid>
 		</main>
