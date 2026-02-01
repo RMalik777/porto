@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
+
+A modern portfolio website built with TanStack Start and deployed on Cloudflare.
+
+## Tech Stack
+
+### Core Framework
+
+- **[TanStack Start](https://tanstack.com/start)** - Full-stack React framework with SSR support
+- **[TanStack Router](https://tanstack.com/router)** - Type-safe file-based routing with SSR query integration
+- **React 19** - Latest React with enhanced features
+- **TypeScript** - Type-safe development
+
+### Build & Development
+
+- **Vite** - Lightning-fast build tool and dev server
+- **pnpm** - Efficient package management
+
+### Styling & UI
+
+- **Tailwind CSS 4** - Utility-first CSS framework with the new engine
+- **tailwindcss-animate** - Animation utilities for Tailwind
+- **Base UI** - Headless UI components
+- **next-themes** - Theme management with dark mode support
+
+### Animation & Interactions
+
+- **GSAP** - Professional-grade animations
+- **Embla Carousel** - Smooth carousel component
+- **Lucide React** - Modern icon library
+
+### Utilities
+
+- **@unpic/react** - Universal image component with optimization
+- **simple-icons** - Brand icon collection
+- **Fontsource Variable** - Self-hosted variable fonts (Inter, JetBrains Mono)
+
+### Deployment
+
+- **Cloudflare** - Edge deployment with Wrangler CLI
+- **@cloudflare/vite-plugin** - Cloudflare integration for Vite
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open your browser to see the result. Edit routes in `src/routes/` - changes auto-update.
 
-## Learn More
+## Available Commands
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev        # Start development server
+pnpm build      # Build for production
+pnpm preview    # Preview production build
+pnpm deploy     # Build and deploy to Cloudflare
+pnpm lint       # Check formatting and linting
+pnpm fix        # Auto-fix formatting and linting issues
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/routes/` - File-based routing
+- `src/components/` - Reusable UI components
+- `src/lib/` - Utilities and data
+- `public/` - Static assets
