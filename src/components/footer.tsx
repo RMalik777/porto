@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 
-import { siGithub, siGmail, siInstagram, siLinkedin } from "simple-icons";
+import { siGithub, siGmail, siInstagram } from "simple-icons";
 import { clsx } from "clsx";
 import type { SimpleIcon } from "simple-icons";
 
