@@ -3,7 +3,26 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import "@fontsource-variable/inter/opsz.css";
-@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/jetbrains-mono";
+
+@font-face {
+	font-family: "Alpha Lyrae";
+	font-style: normal;
+	src:
+		local("Alpha Lyrae"),
+		url("./lib/assets/fonts/AlphaLyrae-Medium.woff2") format("woff2"),
+		url("./lib/assets/fonts/AlphaLyrae-Medium.woff") format("woff"),
+		url("./lib/assets/fonts/AlphaLyrae-Medium.otf") format("opentype");
+}
+@font-feature-values 'Alpha Lyrae' {
+	@styleset {
+		ss01: 1;
+		ss02: 2;
+		ss03: 3;
+		ss04: 4;
+		ss05: 5;
+	}
+}
 
 @theme {
 	--color-theme-purple: oklch(54.94% 0.2913074585707993 298.24104057049317);
@@ -11,8 +30,9 @@
 		"Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol", "Noto Color Emoji";
 	--font-mono:
-		"Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-		"Courier New", monospace;
+		"JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
+	--font-stylized: "Alpha Lyrae", ui-sans-serif, system-ui, sans-serif;
 
 	--ease-custom: cubic-bezier(0.83, 0, 0.17, 1);
 }

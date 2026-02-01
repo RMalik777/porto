@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 import appCss from "@/globals.css?url";
+import favicon from "@/favicon.ico?url";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -51,6 +52,10 @@ export const Route = createRootRoute({
 			{
 				rel: "stylesheet",
 				href: appCss,
+			},
+			{
+				rel: "icon",
+				href: favicon,
 			},
 		],
 	}),

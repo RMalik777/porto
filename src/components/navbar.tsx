@@ -50,7 +50,7 @@ export function Navbar() {
 		<header
 			className={cn(
 				isMobile ? "justify-end" : "justify-between",
-				"fixed top-0 left-0 z-20 flex min-h-12 w-full items-center bg-radial from-white/10 from-[1px] via-white to-[3px] bg-size-[3px_3px] px-4 py-2 text-black backdrop-blur-xs transition sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:bg-neutral-950/50 dark:via-neutral-950 dark:text-white",
+				"fixed top-0 left-0 z-20 flex min-h-12 w-full items-center bg-radial from-white/10 from-[1px] via-white to-[3px] bg-size-[3px_3px] px-4 py-2 text-black backdrop-blur-xs transition sm:px-10 md:px-14 lg:px-20 xl:px-24 dark:from-neutral-950/50 dark:via-neutral-950 dark:text-white",
 			)}
 		>
 			{isMobile ? (

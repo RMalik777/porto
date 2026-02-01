@@ -184,7 +184,7 @@ function Home() {
 			<section
 				ref={refIntro}
 				id="intro"
-				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-950"
+				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-900/40"
 			>
 				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
 					<h1 ref={refIntroText} className="texter z-10">

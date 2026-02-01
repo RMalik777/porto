@@ -22,11 +22,11 @@ export const skillsList: Array<Skill> = [
 				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 				logo: "/Logo/[JS]+MIT.svg",
 			},
-      {
-        name:"TypeScript",
-        link:"https://www.typescriptlang.org/",
-        logo:"/Logo/[TYPESCRIPT]+Proprietary.svg",
-      }
+			{
+				name: "TypeScript",
+				link: "https://www.typescriptlang.org/",
+				logo: "/Logo/[TYPESCRIPT]+Proprietary.svg",
+			},
 		],
 	},
 	{
@@ -132,11 +132,11 @@ export const skillsList: Array<Skill> = [
 				logo: "/Logo/[TAURI]_light+Proprietary.svg",
 				logoAlt: "/Logo/[TAURI]_dark+Proprietary.svg",
 			},
-      {
-        name:"Hono",
-        link:"https://hono.dev/",
-        logo:"/Logo/[HONO]+MIT.svg",
-      },
+			{
+				name: "Hono",
+				link: "https://hono.dev/",
+				logo: "/Logo/[HONO]+MIT.svg",
+			},
 			{
 				name: "ASP.NET",
 				link: "https://dotnet.microsoft.com/apps/aspnet",

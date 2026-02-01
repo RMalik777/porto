@@ -59,8 +59,8 @@ export function Grid({ children }: Readonly<{ children: React.ReactNode }>) {
 								<div
 									key={index}
 									className={clsx(
-										fill === index ? "bg-violet-100/80 dark:bg-violet-950/40" : "",
-										"border-collapse border border-violet-100/80 duration-500 ease-in dark:border-violet-950/40",
+										fill === index ? "bg-violet-100/80 dark:bg-violet-900/20" : "",
+										"border-collapse border border-violet-100/80 duration-500 ease-in dark:border-violet-900/20",
 									)}
 								></div>
 							);
