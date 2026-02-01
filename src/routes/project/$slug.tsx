@@ -58,9 +58,9 @@ function RouteComponent() {
 	const { post } = Route.useLoaderData();
 
 	return (
-		<main className="flex min-h-dvh scroll-pt-20 items-center justify-center px-6 pt-20 text-black sm:mb-24 md:mb-32 md:scroll-pt-20 md:px-10 md:pt-36 lg:mb-36 xl:mb-48 dark:text-white">
+		<main className="flex min-h-svh scroll-pt-20 items-center justify-center px-6 pt-20 text-black sm:mb-24 md:mb-32 md:scroll-pt-20 md:px-10 md:pt-36 lg:mb-36 xl:mb-48 dark:text-white">
 			<section className="flex w-full max-w-prose flex-col items-center justify-start gap-1 tracking-tight">
-				<h1 className="mt-4 text-center text-3xl font-semibold tracking-tighter sm:text-4xl">
+				<h1 className="mt-4 text-center text-3xl font-semibold tracking-tight sm:text-4xl">
 					{post.name}
 				</h1>
 				<p className="text-center text-lg">{post.desc}</p>

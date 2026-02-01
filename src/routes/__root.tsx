@@ -73,7 +73,7 @@ function RootLayout() {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="h-fit min-h-dvh bg-white text-black dark:bg-neutral-950 dark:text-white">
+			<body className="h-fit min-h-svh bg-white text-black dark:bg-neutral-950 dark:text-white">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"

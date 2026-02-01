@@ -19,7 +19,7 @@ export const Route = createFileRoute("/license/")({
 
 function RouteComponent() {
 	return (
-		<main className="mt-32 mb-32 flex h-fit min-h-dvh flex-col items-start gap-16 px-6 sm:mt-40 sm:gap-20 sm:px-10 md:mt-48 md:gap-24 md:px-14 lg:mt-56 lg:gap-28 lg:px-20 xl:px-24">
+		<main className="mt-32 mb-32 flex h-fit min-h-svh flex-col items-start gap-16 px-6 sm:mt-40 sm:gap-20 sm:px-10 md:mt-48 md:gap-24 md:px-14 lg:mt-56 lg:gap-28 lg:px-20 xl:px-24">
 			<h1 className="w-full text-4xl font-bold tracking-tight lg:text-5xl">
 				License and Trademark Information
 			</h1>

@@ -184,7 +184,7 @@ function Home() {
 			<section
 				ref={refIntro}
 				id="intro"
-				className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-900/40"
+				className="relative mb-12 flex h-fit min-h-svh w-full flex-col items-start justify-center gap-4 bg-radial from-violet-100 from-[2px] to-0% bg-size-[50px_50px] sm:bg-size-[60px_60px] dark:from-violet-900/40"
 			>
 				<div className="relative z-10 flex h-fit w-fit flex-col px-6 py-px text-6xl leading-none font-normal tracking-tighter [font-kerning:none] sm:px-10 md:px-14 md:text-7xl lg:px-20 lg:text-8xl xl:px-24 xl:text-9xl">
 					<h1 ref={refIntroText} className="texter z-10">
@@ -198,7 +198,7 @@ function Home() {
 				id="skills"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="scramble text-4xl font-semibold tracking-tighter">Skills</h2>
+				<h2 className="scramble text-4xl font-semibold tracking-tight">Skills</h2>
 				<div className="flex flex-col items-stretch gap-5">
 					<ul className="flex flex-col gap-8">
 						{skillsList.map((skill) => (
@@ -259,7 +259,7 @@ function Home() {
 				id="projects"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="text-4xl font-semibold tracking-tighter">Projects</h2>
+				<h2 className="text-4xl font-semibold tracking-tight">Projects</h2>
 				<ul
 					ref={refProjectChild}
 					className="project-list grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
@@ -306,7 +306,7 @@ function Home() {
 				id="about"
 				className="mb-8 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="text-4xl font-semibold tracking-tighter">Experience</h2>
+				<h2 className="text-4xl font-semibold tracking-tight">Experience</h2>
 				<section>
 					<h3 className="text-2xl font-medium tracking-tight">Work Experience</h3>
 					<hr className="mb-1 shrink-0 border border-neutral-200 delay-200 duration-500 ease-out dark:border-neutral-800" />
@@ -346,7 +346,7 @@ function Home() {
 				</section>
 			</section>
 			<section className="mb-8 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">
-				<h2 className="text-4xl font-semibold tracking-tighter">Education</h2>
+				<h2 className="text-4xl font-semibold tracking-tight">Education</h2>
 				<ul className="ml-2 flex flex-col gap-4 border-l border-theme-purple">
 					{educationList.map((education) => (
 						<li
@@ -370,7 +370,7 @@ function Home() {
 				id="cv"
 				className="mb-4 scroll-mt-14 space-y-4 px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24"
 			>
-				<h2 className="text-4xl font-semibold tracking-tighter">Curriculum Vitae (CV)</h2>
+				<h2 className="text-4xl font-semibold tracking-tight">Curriculum Vitae (CV)</h2>
 				<ul className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
 					<li className="group min-w-fit grow basis-0">
 						<Card className="hover:shadow-none">

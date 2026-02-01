@@ -44,7 +44,7 @@ export function Grid({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<div
 			ref={ref}
-			className="relative mb-12 flex h-fit min-h-dvh w-full flex-col items-start justify-center gap-4"
+			className="relative mb-12 flex h-fit min-h-svh w-full flex-col items-start justify-center gap-4"
 			style={{ "--cell": `${width / cols}px`, "--rows": rows - 1 } as React.CSSProperties}
 		>
 			<div className="absolute inset-0 -z-1 grid h-full w-full auto-rows-[var(--cell)] justify-center -space-y-px">
