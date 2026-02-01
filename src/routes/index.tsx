@@ -332,7 +332,7 @@ function Home() {
 									<h4 className="flex items-center gap-0 overflow-hidden text-lg font-semibold underline underline-offset-1 duration-200 group-hover:text-theme-purple group-focus-visible:text-theme-purple dark:group-hover:text-violet-500 dark:group-focus-visible:text-violet-500">
 										{experience.company}
 										<span className="-ml-px overflow-hidden">
-											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-theme-purple opacity-0 duration-300 ease-custom group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
+											<SquareArrowRight className="ml-2 h-full w-auto -translate-x-full text-theme-purple opacity-0 blur-xs duration-300 ease-custom group-hover:translate-x-0 group-hover:opacity-100 group-hover:blur-none group-focus:translate-x-0 group-focus:opacity-100 dark:text-violet-500" />
 										</span>
 									</h4>
 									<p className="text-muted-foreground">{experience.position}</p>
