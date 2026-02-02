@@ -5,9 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/grid";
 
-gsap.registerPlugin(useGSAP);
-
 export function NotFound() {
+	gsap.registerPlugin(useGSAP);
 	return (
 		<main className="mt-2 flex h-svh min-h-svh w-full flex-col items-center justify-center gap-8 tracking-tight sm:mt-4">
 			<Grid>

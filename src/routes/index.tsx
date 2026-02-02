@@ -23,13 +23,12 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger, Observer);
-
 export const Route = createFileRoute("/")({
 	component: Home,
 });
 
 function Home() {
+	gsap.registerPlugin(useGSAP, SplitText, ScrambleTextPlugin, TextPlugin, ScrollTrigger, Observer);
 	const refIntro = useRef(null);
 	const refIntroText = useRef(null);
 	const refSkills = useRef(null);
