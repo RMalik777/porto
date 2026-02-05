@@ -37,7 +37,7 @@ export const Route = createRootRoute({
 				content:
 					"Rafli Malik, a Front-End Developer, sometimes Back-End Developer, and a Tech Enthusiast. See what I've built and the technologies I use.",
 			},
-			{ property: "og:image", content: { ogImage } },
+			{ property: "og:image", content: ogImage },
 			{ property: "og:type", content: "website" },
 			// Twitter Card
 			{ name: "twitter:card", content: "summary_large_image" },
@@ -47,7 +47,7 @@ export const Route = createRootRoute({
 				content:
 					"Rafli Malik, a Front-End Developer, sometimes Back-End Developer, and a Tech Enthusiast. See what I've built and the technologies I use.",
 			},
-			{ name: "twitter:image", content: { ogImage } },
+			{ name: "twitter:image", content: ogImage },
 		],
 		links: [
 			{
