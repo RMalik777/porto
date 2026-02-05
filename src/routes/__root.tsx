@@ -22,7 +22,7 @@ export const Route = createRootRoute({
 			},
 			{
 				name: "theme-color",
-				color: "oklch(54.94% 0.2913074585707993 298.24104057049317)",
+				content: "oklch(54.94% 0.2913074585707993 298.24104057049317)",
 			},
 			{ title: "Rafli Malik" },
 			{
