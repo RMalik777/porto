@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer";
 
 import appCss from "@/globals.css?url";
 import favicon from "@/favicon.ico?url";
-import ogImage from "@/photosquarezoom.jpg?url";
+import ogImage from "@/lib/assets/photosquarezoom.jpg?url";
 
 export const Route = createRootRoute({
 	head: () => ({
