@@ -85,7 +85,9 @@ export function Footer() {
 									function renderLogo() {
 										if (!link.logo) return null;
 										if (typeof link.logo === "string") {
-											return <Image src={link.logo} layout="fullWidth" className="h-auto w-4" />;
+											return (
+												<Image src={link.logo} layout="fullWidth" className="h-auto w-4" alt="" />
+											);
 										}
 										return (
 											<span
