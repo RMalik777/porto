@@ -54,8 +54,8 @@ importers:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       onedollarstats:
-        specifier: ^0.0.14
-        version: 0.0.14
+        specifier: ^0.0.16
+        version: 0.0.16
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -2602,9 +2602,8 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  onedollarstats@0.0.14:
-    resolution: {integrity: sha512-OEMSMbIGcpOt5v5M54SjhaXkJI/OvdlrwPIjhcHRBhVVsHKS1KyOBe/P7hPxnvqjCeQFur6s/S5bxi8ja4nEiQ==}
-    deprecated: 'Improved event method: cleaner path/props handling. Use >=0.0.16'
+  onedollarstats@0.0.16:
+    resolution: {integrity: sha512-nv1zZYIiVXW0me4fiFUB6VL0WByJSMMnP2wo/UjYDdihUTBq7PPeWwdpwwoAxG4dIqFYIhFbPX+pS2qIIlHOaw==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -5497,7 +5496,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  onedollarstats@0.0.14: {}
+  onedollarstats@0.0.16: {}
 
   optionator@0.9.4:
     dependencies:
