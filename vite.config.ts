@@ -18,7 +18,6 @@ export default defineConfig({
 		cloudflare({ viteEnvironment: { name: "ssr" } }),
 		devtools(),
 		tailwindcss(),
-		// Enables Vite to resolve imports using path aliases.
 		tanstackStart({
 			prerender: {
 				enabled: true,
