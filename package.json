@@ -29,7 +29,7 @@
 		"gsap": "^3.15.0",
 		"lucide-react": "^1.11.0",
 		"next-themes": "^0.4.6",
-		"onedollarstats": "^0.0.18",
+		"onedollarstats": "^0.0.19",
 		"react": "^19.2.5",
 		"react-dom": "^19.2.5",
 		"simple-icons": "^16.13.0"
