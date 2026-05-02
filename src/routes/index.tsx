@@ -24,6 +24,9 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Route = createFileRoute("/")({
+	headers: () => ({
+		"Cache-Control": "max-age=60, s-maxage=3600, stale-while-revalidate=7200",
+	}),
 	component: Home,
 });
 
@@ -57,22 +60,6 @@ function Home() {
 					split.revert();
 				})
 
-				.to(".texter", {
-					duration: 0.5,
-					ease: "none",
-					text: {
-						value: "Lorem Ipsum",
-					},
-				})
-				.to(".texter", {
-					duration: 0.5,
-					delay: 0.5,
-					ease: "none",
-					overflow: "visible",
-					text: {
-						value: "Rafli Malik",
-					},
-				})
 				.to(".box", {
 					duration: 0.5,
 					delay: 0.1,
