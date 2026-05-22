@@ -17,7 +17,7 @@ export const experienceList: Array<Experience> = [
 			"Debug and solve problems",
 		],
 		from: "November 2025",
-		to: "Current",
+		to: "May 2026",
 	},
 	{
 		company: "CIMB Niaga",
