@@ -57,8 +57,8 @@ importers:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       onedollarstats:
-        specifier: ^0.0.19
-        version: 0.0.19
+        specifier: ^0.0.23
+        version: 0.0.23(react@19.2.6)
       react:
         specifier: ^19.2.6
         version: 19.2.6
@@ -3348,8 +3348,19 @@ packages:
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
 
-  onedollarstats@0.0.19:
-    resolution: {integrity: sha512-aO/EHiaKSGPnlinNBOeaOGcsw3vC/uw1tgYfj+5MIN1NBI0uutJFi2sZlRmQG6/ko+j/ZOxgo39OAHX/oi0XOw==}
+  onedollarstats@0.0.23:
+    resolution: {integrity: sha512-wn8hy4wDJjeC9+1lVcKyLQ69iWmyIKx55t4IehaaJhDW/P1lbAXV25CDsICgAGbtljyszNpAf9hzr09af8Waxw==}
+    peerDependencies:
+      expo-router: '>=3.0.0'
+      react: '>=18.0.0'
+      react-native: '>=0.73.0'
+    peerDependenciesMeta:
+      expo-router:
+        optional: true
+      react:
+        optional: true
+      react-native:
+        optional: true
 
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
@@ -7222,7 +7233,9 @@ snapshots:
     dependencies:
       wrappy: 1.0.2
 
-  onedollarstats@0.0.19: {}
+  onedollarstats@0.0.23(react@19.2.6):
+    optionalDependencies:
+      react: 19.2.6
 
   onetime@5.1.2:
     dependencies:
