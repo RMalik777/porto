@@ -61,13 +61,5 @@
 		"typescript": "^6.0.3",
 		"vite": "^8.0.14",
 		"wrangler": "^4.95.0"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"sharp",
-			"workerd",
-			"unrs-resolver"
-		]
 	}
 }
