@@ -23,7 +23,7 @@
 		"@tanstack/react-router-devtools": "^1.167.0",
 		"@tanstack/react-router-ssr-query": "^1.167.1",
 		"@tanstack/react-start": "^1.168.25",
-		"@tanstack/router-plugin": "^1.167.32",
+		"@tanstack/router-plugin": "^1.168.18",
 		"@unpic/react": "^1.0.2",
 		"embla-carousel-react": "^8.6.0",
 		"gsap": "^3.15.0",
