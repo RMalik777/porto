@@ -369,6 +369,11 @@ function Home() {
 									variant="outline"
 									size="sm"
 									nativeButton={false}
+									onClick={() =>
+										event("CV Open", {
+											language: "English",
+										})
+									}
 									render={
 										<a
 											href="https://media.raflimalik.com/cv/cv_en_raflimalik.pdf"
@@ -393,6 +398,11 @@ function Home() {
 									variant="outline"
 									size="sm"
 									nativeButton={false}
+									onClick={() =>
+										event("CV Open", {
+											language: "Indonesian",
+										})
+									}
 									render={
 										<a
 											href="https://media.raflimalik.com/cv/cv_id_raflimalik.pdf"

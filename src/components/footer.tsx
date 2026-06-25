@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
+import { event } from "onedollarstats";
 
 import { clsx } from "clsx";
 import { useTheme } from "next-themes";
@@ -110,6 +111,14 @@ export function Footer() {
 											<li key={link.href}>
 												<Link
 													to={link.href}
+													onClick={() => {
+														if (linkList.title === "Social" || linkList.title === "Other Works") {
+															event("Footer Link Click", {
+																link_name: link.name,
+																link_href: link.href,
+															});
+														}
+													}}
 													className={clsx(
 														link.logo
 															? "after:left-5 after:w-[calc(100%-1.25rem)]"
