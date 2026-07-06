@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.29.7",
-		"@cloudflare/vite-plugin": "^1.42.2",
+		"@cloudflare/vite-plugin": "^1.43.0",
 		"@rolldown/plugin-babel": "^0.2.3",
 		"@tailwindcss/vite": "^4.3.2",
 		"@tanstack/devtools-vite": "^0.8.0",
