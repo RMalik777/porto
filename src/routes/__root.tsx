@@ -1,6 +1,8 @@
 import { configure } from "onedollarstats";
 import { useEffect } from "react";
 
+import { MotionConfig } from "motion/react";
+
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -73,6 +75,11 @@ function RootLayout() {
 		<html lang="en">
 			<head>
 				<HeadContent />
+				{/* Scroll reveals are server-rendered at opacity 0 and only revealed
+				    once Motion runs. Without JS they would never appear. */}
+				<noscript>
+					<style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+				</noscript>
 			</head>
 			<body className="h-fit min-h-svh bg-white text-black dark:bg-neutral-950 dark:text-white">
 				<ThemeProvider
@@ -81,11 +88,16 @@ function RootLayout() {
 					enableSystem
 					disableTransitionOnChange
 				>
-					<Navbar />
-					<Outlet />
-					<Scripts />
-					<Footer />
-					<TanStackRouterDevtools />
+					{/* `reducedMotion="user"` skips transform/layout animations for anyone
+					    with prefers-reduced-motion set, matching the `motion-reduce:`
+					    utilities already used in the CSS animations. */}
+					<MotionConfig reducedMotion="user">
+						<Navbar />
+						<Outlet />
+						<Scripts />
+						<Footer />
+						<TanStackRouterDevtools />
+					</MotionConfig>
 				</ThemeProvider>
 			</body>
 		</html>

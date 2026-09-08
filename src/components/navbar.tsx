@@ -1,7 +1,11 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
+import { motion } from "motion/react";
+
 import { PanelRight, X } from "lucide-react";
+import { easeSignature } from "@/lib/motion";
+import { useActiveSection } from "@/hooks/use-active-section";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
@@ -12,33 +16,42 @@ import { ModeToggle } from "@/components/theme-toggle";
 interface NavLink {
 	title: string;
 	href: string;
+	section: string;
 }
 const navLink: Array<NavLink> = [
 	{
 		title: "Home",
-		href: "/",
+		href: "/#",
+		section: "intro",
 	},
 	{
 		title: "Skills",
 		href: "/#skills",
+		section: "skills",
 	},
 	{
 		title: "Projects",
 		href: "/#projects",
+		section: "projects",
 	},
 	{
 		title: "About",
 		href: "/#about",
+		section: "about",
 	},
 	{
 		title: "CV",
 		href: "/#cv",
+		section: "cv",
 	},
 ];
+const navSections = navLink.map((link) => link.section);
 
 export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const isMobile = useIsMobile();
+	const pathname = useRouterState({ select: (state) => state.location.pathname });
+	const activeSection = useActiveSection(navSections, pathname === "/");
 	useEffect(() => {
 		// Close the popover when switching to desktop view
 		if (!isMobile) {
@@ -90,7 +103,10 @@ export function Navbar() {
 												<Link
 													to={link.href}
 													onClick={() => setIsOpen(false)}
-													className="flex items-center p-2 text-center text-lg font-medium duration-150 ease-out hover:scale-105 hover:text-violet-500 focus-visible:text-violet-500"
+													className={cn(
+														activeSection === link.section && "text-primary",
+														"flex items-center p-2 text-center text-lg font-medium transition duration-150 ease-out hover:scale-105 hover:text-primary",
+													)}
 												>
 													{link.title}
 												</Link>
@@ -114,10 +130,17 @@ export function Navbar() {
 								<li key={link.href} className="group">
 									<Link
 										to={link.href}
-										className="group relative flex items-center px-3 py-1 text-center delay-300 duration-150 ease-out hover:text-white focus-visible:text-white"
+										className="group relative flex items-center px-3 py-1 text-center transition delay-300 duration-150 ease-out hover:text-white focus-visible:text-white"
 									>
 										{link.title}
-										<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-theme-purple transition-transform duration-300 ease-custom group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:duration-0 dark:bg-theme-purple"></div>
+										<div className="absolute top-0 left-0 z-[-1] h-full w-full origin-right scale-x-0 bg-primary transition-transform duration-300 ease-custom group-hover:origin-left group-hover:scale-x-100 group-focus-visible:origin-left group-focus-visible:scale-x-100 motion-reduce:duration-0"></div>
+										{activeSection === link.section ? (
+											<motion.div
+												layoutId="nav-active"
+												transition={{ duration: 0.3, ease: easeSignature }}
+												className="absolute bottom-0 left-0 h-0.5 w-full bg-primary transition-colors"
+											/>
+										) : null}
 									</Link>
 								</li>
 							);
