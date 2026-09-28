@@ -35,7 +35,7 @@
 		"simple-icons": "^16.31.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^8.0.5",
+		"@babel/core": "^8.0.6",
 		"@cloudflare/vite-plugin": "^1.54.11",
 		"@rolldown/plugin-babel": "^0.2.4",
 		"@tailwindcss/vite": "^4.3.3",
