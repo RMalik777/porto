@@ -1,14 +1,8 @@
 "use client";
 
 import * as React from "react";
-import {
-	type HTMLMotionProps,
-	motion,
-	useMotionValue,
-	useSpring,
-	type SpringOptions,
-	type Transition,
-} from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
+import type { HTMLMotionProps, SpringOptions, Transition } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -20,7 +14,7 @@ type StarLayerProps = HTMLMotionProps<"div"> & {
 };
 
 function generateStars(count: number, starColor: string) {
-	const shadows: string[] = [];
+	const shadows: Array<string> = [];
 	for (let i = 0; i < count; i++) {
 		const x = Math.floor(Math.random() * 4000) - 2000;
 		const y = Math.floor(Math.random() * 4000) - 2000;

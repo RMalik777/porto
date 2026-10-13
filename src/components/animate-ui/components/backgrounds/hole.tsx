@@ -24,9 +24,9 @@ function HoleBackground({
 	const canvasRef = React.useRef<HTMLCanvasElement>(null);
 	const animationFrameIdRef = React.useRef<number>(0);
 	const stateRef = React.useRef<any>({
-		discs: [] as any[],
-		lines: [] as any[],
-		particles: [] as any[],
+		discs: [] as Array<any>,
+		lines: [] as Array<any>,
+		particles: [] as Array<any>,
 		clip: {},
 		startDisc: {},
 		endDisc: {},

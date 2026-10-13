@@ -15,6 +15,7 @@ type LiProps = React.ComponentProps<typeof motion.li>;
  * Standalone fade + rise on scroll. Use for headings and one-off blocks.
  * For a list of siblings that should stagger, use `RevealList`/`RevealItem`.
  */
+
 export function Reveal({ delay = 0, ...props }: DivProps & { delay?: number }) {
 	return (
 		<motion.div
