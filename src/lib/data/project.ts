@@ -10,6 +10,26 @@ interface Project {
 
 export const projectsList: Array<Project> = [
 	{
+		name: "Url Shortener",
+		desc: "A URL shortener with a dashboard to create, manage, and share short links.",
+		image: [
+			"/thumbnail/url-shortener/home.webp",
+			"/thumbnail/url-shortener/list.webp",
+			"/thumbnail/url-shortener/profile.webp",
+			"/thumbnail/url-shortener/signin.webp",
+		],
+		live: "https://url.raflimalik.com",
+		source: "https://github.com/RMalik777/url-shortener",
+		tech: [
+			"TanStack Start",
+			"TanStack Query",
+			"Better Auth",
+			"Drizzle ORM",
+			"Cloudflare D1",
+			"Tailwind CSS",
+		],
+	},
+	{
 		name: "Blog Website",
 		desc: "A blog website to write and share my thoughts and experiences.",
 		image: ["/thumbnail/blog/home.webp", "/thumbnail/blog/posts.webp"],
