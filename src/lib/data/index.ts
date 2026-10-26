@@ -1,3 +1,4 @@
+export { certificateList } from "./certificate";
 export { educationList } from "./education";
 export { experienceList, otherExperienceList } from "./experience";
 export { projectsList } from "./project";

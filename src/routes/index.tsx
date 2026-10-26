@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/home/projects-section";
 import { ExperienceSection } from "@/components/home/experience-section";
 import { EducationSection } from "@/components/home/education-section";
 import { CvSection } from "@/components/home/cv-section";
+import { CertificateSection } from "@/components/home/certificate-section";
 
 export const Route = createFileRoute("/")({
 	headers: () => ({
@@ -23,6 +24,7 @@ function Home() {
 			<ExperienceSection />
 			<EducationSection />
 			<CvSection />
+			<CertificateSection />
 		</main>
 	);
 }
