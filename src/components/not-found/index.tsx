@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Grid } from "@/components/grid";
 
 export function NotFound() {
@@ -14,12 +14,9 @@ export function NotFound() {
 					<p className="text-center text-lg font-medium sm:text-xl lg:text-2xl">
 						It looks like you are lost
 					</p>
-					<Button
-						variant="outline"
-						size="lg"
-						nativeButton={false}
-						render={<Link to="/">Go Back Home</Link>}
-					/>
+					<Link to="/" className={buttonVariants({ variant: "outline", size: "lg" })}>
+						Go Back Home
+					</Link>
 				</section>
 			</Grid>
 		</main>

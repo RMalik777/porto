@@ -4,7 +4,8 @@ import { event } from "onedollarstats";
 
 import { projectsList } from "@/lib/data/project";
 
-import { Button } from "@/components/ui/button";
+import { cn } from "cn";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
 	Carousel,
 	CarouselContent,
@@ -77,38 +78,35 @@ function RouteComponent() {
 				<hr className="mb-px h-0.5 w-full border-violet-500 duration-500 dark:border-violet-700 starting:w-0" />
 				<div className="my-2 flex w-full flex-row items-center justify-evenly gap-2">
 					{post.live ? (
-						<Button
-							variant="outline"
-							className="grow"
-							nativeButton={false}
-							onClick={() => {
-								event("Project Page Click");
-								event("Project Page Click", { project_title: post.name, action: "live" });
+						<a
+							href={post.live}
+							target="_blank"
+							className={cn(buttonVariants({ variant: "outline" }), "grow")}
+							onClick={async () => {
+								await Promise.all([
+									event("Project Page Click"),
+									event("Project Page Click", { project_title: post.name, action: "live" }),
+								]);
 							}}
-							render={
-								<Link to={post.live} target="_blank">
-									Live
-								</Link>
-							}
-						/>
+						>
+							Live
+						</a>
 					) : (
 						<Button variant="outline" className="grow" disabled>
 							Preview
 						</Button>
 					)}
-					<Button
-						variant="outline"
-						className="grow"
-						nativeButton={false}
-						onClick={() =>
-							event("Project Page Click", { project_title: post.name, action: "source" })
-						}
-						render={
-							<Link to={post.source} target="_blank" rel="noopener noreferrer">
-								Source
-							</Link>
-						}
-					/>
+					<a
+						href={post.source}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={cn(buttonVariants({ variant: "outline" }), "grow")}
+						onClick={async () => {
+							await event("Project Page Click", { project_title: post.name, action: "source" });
+						}}
+					>
+						Source
+					</a>
 				</div>
 				<p className="text-left">{post.longdesc}</p>
 				<figure className="px-10 md:px-4 lg:px-0">

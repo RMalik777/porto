@@ -1,6 +1,7 @@
 import { event } from "onedollarstats";
 
-import { Button } from "@/components/ui/button";
+import { cn } from "cn";
+import { buttonVariants } from "@/components/ui/button";
 import { Reveal, RevealItem, RevealList } from "@/components/motion/reveal";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -31,27 +32,25 @@ export function CvSection() {
 			<RevealList className="flex w-full flex-row flex-wrap items-start justify-stretch gap-4 font-medium tracking-tight">
 				{cvList.map((cv, index) => (
 					<RevealItem key={cv.language} index={index} className="group min-w-fit grow basis-0">
-						<Card className="h-full transition duration-200 ease-out group-hover:ring-primary">
+						<Card className="h-full">
 							<CardHeader>
 								<CardTitle>{cv.language}</CardTitle>
 								<CardDescription>{cv.label}</CardDescription>
 							</CardHeader>
 							<CardFooter className="flex flex-row flex-wrap gap-2">
-								<Button
-									variant="outline"
-									size="sm"
-									nativeButton={false}
+								<a
+									className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+									href={cv.href}
+									target="_blank"
+									rel="noopener noreferrer"
 									onClick={() =>
 										event("CV Open", {
 											language: cv.language,
 										})
 									}
-									render={
-										<a href={cv.href} target="_blank" rel="noopener noreferrer">
-											{cv.action}
-										</a>
-									}
-								/>
+								>
+									{cv.action}
+								</a>
 							</CardFooter>
 						</Card>
 					</RevealItem>
