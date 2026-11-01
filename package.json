@@ -32,7 +32,7 @@
 		"onedollarstats": "^0.0.23",
 		"react": "^19.3.1",
 		"react-dom": "^19.3.1",
-		"shadcn": "^4.22.1",
+		"shadcn": "^4.23.0",
 		"simple-icons": "^16.35.0"
 	},
 	"devDependencies": {
